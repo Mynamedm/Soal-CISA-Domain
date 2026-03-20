@@ -1,0 +1,902 @@
+// Soal 1: Bloom - Mengingat (C1)
+::Q1:: Dalam model tanggung jawab bersama (Shared Responsibility Model) di lingkungan Cloud, siapa yang bertanggung jawab atas keamanan fisik infrastruktur pusat data? {
+    =A. Penyedia Layanan Cloud (Cloud Service Provider) [cite: 2]
+    ~B. Pelanggan Cloud (Cloud Customer) [cite: 2]
+    ~C. Auditor Eksternal [cite: 2]
+    ~D. ISP Lokal [cite: 2]
+    #### Feedback: Dalam Shared Responsibility Model (SRM), penyedia layanan cloud (CSP) bertanggung jawab penuh atas keamanan fisik fasilitas infrastruktur[cite: 2].
+}
+
+// Soal 2: Bloom - Memahami (C2)
+::Q2:: Apa risiko utama yang terkait dengan penggunaan Software-Defined Networking (SDN)? {
+    ~A. Biaya perangkat keras yang terlalu mahal [cite: 2]
+    =B. Kompromi pada pengontrol pusat dapat menyebabkan kegagalan seluruh jaringan [cite: 2]
+    ~C. SDN tidak mendukung virtualisasi [cite: 2]
+    ~D. SDN hanya dapat digunakan pada jaringan lokal kecil [cite: 2]
+    #### Feedback: SDN memiliki kelemahan di mana serangan pada pengontrol pusat (centralized controller) dapat berdampak pada seluruh infrastruktur jaringan karena kontrol dilakukan secara terpusat[cite: 2].
+}
+
+// Soal 3: Bloom - Menerapkan (C3)
+::Q3:: Sebuah organisasi ingin mengisolasi sistem yang tidak aman namun kritis pada segmen jaringan tertentu. Ini adalah contoh dari penerapan... {
+    ~A. Kontrol Preventif [cite: 33, 35]
+    ~B. Kontrol Detektif [cite: 33, 35]
+    =C. Kontrol Kompensasi [cite: 33, 35]
+    ~D. Kontrol Administratif [cite: 31]
+    #### Feedback: Menempatkan sistem yang tidak aman pada segmen jaringan terisolasi dengan keamanan perimeter kuat adalah contoh kontrol kompensasi yang digunakan saat kontrol baseline tidak dapat dipenuhi[cite: 33, 35].
+}
+
+// Soal 4: Bloom - Menganalisis (C4)
+::Q4:: Manakah dari berikut ini yang merupakan risiko paling signifikan dari penggunaan kontainer (containerization)? {
+    ~A. Kontainer memakan terlalu banyak memori RAM [cite: 2]
+    =B. Kerentanan pada kernel host dapat dieksploitasi untuk mengakses semua kontainer yang berjalan di atasnya [cite: 2]
+    ~C. Kontainer tidak mendukung sistem operasi Linux [cite: 2]
+    ~D. Kontainer hanya bisa dijalankan di lingkungan on-premise [cite: 2]
+    #### Feedback: Risiko keamanan kontainer mencakup potensi eksploitasi kernel host yang dapat menyebabkan penyerang mengakses seluruh kontainer (breakout)[cite: 2].
+}
+
+// Soal 5: Bloom - Mengingat (C1)
+::Q5:: Protokol mana yang digunakan untuk memeriksa status pencabutan sertifikat digital secara real-time? {
+    ~A. Certificate Revocation List (CRL) [cite: 1, 2]
+    =B. Online Certificate Status Protocol (OCSP) [cite: 1, 2]
+    ~C. Public Key Infrastructure (PKI) [cite: 1]
+    ~D. Secure Sockets Layer (SSL) [cite: 1]
+    #### Feedback: OCSP digunakan untuk memeriksa status pencabutan sertifikat secara online dan real-time[cite: 1, 2].
+}
+
+// Soal 6: Bloom - Memahami (C2)
+::Q6:: Apa tujuan utama dari penggunaan honeypots dalam strategi keamanan informasi? {
+    ~A. Menyimpan cadangan data sensitif secara aman [cite: 3]
+    =B. Mengalihkan perhatian penyerang dan mempelajari teknik serangan mereka [cite: 3]
+    ~C. Mempercepat koneksi internet perusahaan [cite: 3]
+    ~D. Melakukan enkripsi pada seluruh log sistem [cite: 3]
+    #### Feedback: Honeypots dan Honeynets digunakan sebagai umpan untuk mengalihkan penyerang dari jaringan asli dan mengumpulkan informasi tentang aktivitas mereka[cite: 3].
+}
+
+// Soal 7: Bloom - Menerapkan (C3)
+::Q7:: Seorang auditor IS sedang meninjau keamanan email. Langkah kontrol manakah yang paling efektif untuk mengurangi risiko serangan phishing? {
+    ~A. Mengenkripsi semua email keluar [cite: 32]
+    =B. Spam filtering, verifikasi hyperlink, dan pelatihan kesadaran pengguna [cite: 32]
+    ~C. Menambah kapasitas penyimpanan kotak masuk [cite: 32]
+    ~D. Menggunakan font standar pada setiap email [cite: 32]
+    #### Feedback: Phishing adalah teknik social engineering yang paling efektif dimitigasi melalui filter teknis (spam filtering) dan edukasi pengguna[cite: 32].
+}
+
+// Soal 8: Bloom - Menganalisis (C4)
+::Q8:: Mengapa pemisahan tugas (Segregation of Duties) antara pengembang aplikasi dan administrator database (DBA) sangat krusial dalam perlindungan aset? {
+    ~A. Agar pekerjaan selesai lebih cepat [cite: 31]
+    =B. Untuk mencegah pengembang memodifikasi data produksi secara langsung tanpa pengawasan [cite: 31]
+    ~C. Karena pengembang tidak memiliki keterampilan teknis database [cite: 31]
+    ~D. Untuk mengurangi biaya gaji karyawan [cite: 31]
+    #### Feedback: Pemisahan tugas mencegah penyalahgunaan akses; pengembang tidak boleh memiliki akses tulis ke data produksi demi menjaga integritas aset[cite: 31].
+}
+
+// Soal 9: Bloom - Mengingat (C1)
+::Q9:: Tahap pertama dalam proses digital forensik menurut manual adalah... {
+    ~A. Pelaporan (Reporting) [cite: 3]
+    ~B. Analisis (Extraction) [cite: 3]
+    =C. Akuisisi Data (Data Acquisition) [cite: 3]
+    ~D. Interogasi (Interrogation) [cite: 3]
+    #### Feedback: Proses forensik dimulai dengan perlindungan data dan akuisisi data untuk memastikan bukti tidak berubah[cite: 3].
+}
+
+// Soal 10: Bloom - Memahami (C2)
+::Q10:: Apa perbedaan utama antara Intrusion Detection System (IDS) dan Intrusion Prevention System (IPS)? {
+    ~A. IDS lebih mahal daripada IPS [cite: 3]
+    =B. IDS hanya memantau dan memberi peringatan, sedangkan IPS dapat secara aktif memblokir lalu lintas berbahaya [cite: 3]
+    ~C. IDS adalah perangkat lunak, sedangkan IPS adalah perangkat keras [cite: 3]
+    ~D. Tidak ada perbedaan fungsional antara keduanya [cite: 3]
+    #### Feedback: IDS berfungsi sebagai detektif, sedangkan IPS memiliki kemampuan tambahan untuk mencegah serangan secara real-time[cite: 3].
+}
+
+// Soal 11: Bloom - Menganalisis (C4)
+::Q11:: Dalam audit nirkabel (wireless), manakah risiko terbesar dari penggunaan protokol WEP? {
+    ~A. WEP terlalu lambat dalam mentransfer data [cite: 2]
+    =B. WEP mudah ditembus karena kunci enkripsinya dapat dipecahkan dalam waktu singkat [cite: 2]
+    ~C. WEP tidak kompatibel dengan semua router [cite: 2]
+    ~D. WEP membutuhkan terlalu banyak daya baterai [cite: 2]
+    #### Feedback: WEP dianggap tidak aman secara global karena kerentanan algoritma yang memungkinkan kunci didekripsi dengan mudah oleh penyerang[cite: 2].
+}
+
+// Soal 12: Bloom - Mengingat (C1)
+::Q12:: Komponen PKI yang bertanggung jawab untuk memverifikasi identitas pemohon sertifikat sebelum diterbitkan adalah... {
+    ~A. Certification Authority (CA) [cite: 2]
+    =B. Registration Authority (RA) [cite: 2]
+    ~C. Digital Certificate [cite: 1]
+    ~D. OCSP [cite: 2]
+    #### Feedback: RA bertindak sebagai validator identitas sebelum CA menerbitkan sertifikat digital[cite: 1, 2].
+}
+
+// Soal 13: Bloom - Memahami (C2)
+::Q13:: Apa yang dimaksud dengan "Chain of Custody" dalam pengumpulan bukti digital? {
+    ~A. Urutan kunci enkripsi yang digunakan [cite: 4]
+    =B. Dokumentasi kronologis yang menunjukkan penyitaan, kontrol, dan transfer bukti [cite: 4]
+    ~C. Daftar semua tersangka dalam kasus kejahatan siber [cite: 4]
+    ~D. Protokol komunikasi antar server forensik [cite: 4]
+    #### Feedback: Chain of Custody sangat penting untuk membuktikan integritas bukti di pengadilan agar tidak ada keraguan bahwa bukti telah dimanipulasi[cite: 4].
+}
+
+// Soal 14: Bloom - Menerapkan (C3)
+::Q14:: Seorang auditor menemukan bahwa kunci enkripsi organisasi disimpan di lokasi yang sama dengan data terenkripsi. Risiko utamanya adalah... {
+    ~A. Kunci enkripsi akan rusak karena suhu server [cite: 2]
+    =B. Jika folder tersebut diakses, penyerang dapat dengan mudah mendekripsi data [cite: 2]
+    ~C. Enkripsi akan berjalan lebih lambat [cite: 2]
+    ~D. Data akan terhapus secara otomatis [cite: 2]
+    #### Feedback: Manajemen kunci (Key Management) mengharuskan kunci disimpan secara terpisah dari data yang dilindungi untuk mencegah akses tidak sah secara simultan[cite: 2].
+}
+
+// Soal 15: Bloom - Menganalisis (C4)
+::Q15:: Manakah dari berikut ini yang merupakan keuntungan utama penggunaan SDN (Software-Defined Networking)? {
+    ~A. Menghilangkan kebutuhan akan kabel fisik [cite: 2]
+    =B. Memberikan fleksibilitas dan kontrol terpusat atas infrastruktur jaringan [cite: 2]
+    ~C. SDN lebih aman secara alami daripada jaringan tradisional [cite: 2]
+    ~D. SDN tidak memerlukan administrator jaringan [cite: 2]
+    #### Feedback: SDN memisahkan control plane dari data plane, memungkinkan manajemen jaringan yang lebih adaptif melalui pemrograman[cite: 2].
+}
+
+// Soal 16: Bloom - Mengingat (C1)
+::Q16:: Perangkat yang digunakan untuk menyaring lalu lintas email berdasarkan reputasi pengirim dan pola kata kunci disebut... {
+    ~A. Firewall [cite: 31]
+    ~B. IDS [cite: 3]
+    =C. Spam Filter [cite: 32]
+    ~D. Proxy [cite: 2]
+    #### Feedback: Filter spam adalah kontrol teknis khusus untuk mengurangi risiko malware dan social engineering melalui email[cite: 32].
+}
+
+// Soal 17: Bloom - Memahami (C2)
+::Q17:: Apa risiko terbesar dari strategi Bring Your Own Device (BYOD)? {
+    ~A. Karyawan akan sering bermain game di kantor [cite: 1]
+    =B. Pencampuran data pribadi dan perusahaan pada perangkat yang tidak dikelola secara penuh oleh organisasi [cite: 1]
+    ~C. Perusahaan harus membayar pulsa karyawan [cite: 1]
+    ~D. Perangkat pribadi tidak bisa terhubung ke Wi-Fi kantor [cite: 1]
+    #### Feedback: BYOD meningkatkan risiko kebocoran data karena perangkat pribadi mungkin tidak memiliki standar keamanan yang sama dengan aset perusahaan[cite: 1].
+}
+
+// Soal 18: Bloom - Menerapkan (C3)
+::Q18:: Dalam mengaudit keamanan Cloud, langkah pertama yang harus dilakukan auditor IS adalah... {
+    ~A. Melakukan penetration testing tanpa izin [cite: 2]
+    =B. Meninjau kontrak dan Shared Responsibility Model (SRM) yang berlaku [cite: 1, 2]
+    ~C. Mengunduh semua data perusahaan ke hard drive lokal [cite: 2]
+    ~D. Menghapus akun admin CSP [cite: 2]
+    #### Feedback: Memahami batasan tanggung jawab antara CSP dan pelanggan adalah dasar dari audit Cloud[cite: 1, 2].
+}
+
+// Soal 19: Bloom - Menganalisis (C4)
+::Q19:: Manakah dari berikut ini yang merupakan indikator efektivitas dari Security Information and Event Management (SIEM)? {
+    ~A. Jumlah server yang dibeli setiap tahun [cite: 3]
+    =B. Kemampuan untuk mengorelasikan log dari berbagai sumber dan mendeteksi anomali secara cepat [cite: 3]
+    ~C. Kecepatan printer di kantor pusat [cite: 3]
+    ~D. Jumlah karyawan yang memiliki sertifikat ITIL [cite: 3]
+    #### Feedback: Nilai utama SIEM terletak pada analisis korelasi data untuk identifikasi insiden keamanan secara real-time[cite: 3].
+}
+
+// Soal 20: Bloom - Mengingat (C1)
+::Q20:: Teknik pembuatan salinan data bit-per-bit tanpa mengubah data asli dalam forensik disebut... {
+    ~A. Extraction [cite: 3]
+    =B. Imaging [cite: 3]
+    ~C. Normalization [cite: 3]
+    ~D. Interrogation [cite: 3]
+    #### Feedback: Imaging memastikan bahwa analisis dilakukan pada salinan identik agar bukti asli tetap terjaga integritasnya untuk kebutuhan pengadilan[cite: 3].
+}
+
+// Soal 21: Bloom - Memahami (C2)
+::Q21:: Apa risiko utama dari penggunaan teknologi IoT (Internet of Things) di jaringan perusahaan? {
+    ~A. Perangkat IoT menghabiskan terlalu banyak listrik [cite: 2]
+    =B. Banyak perangkat IoT memiliki celah keamanan bawaan dan sulit diperbarui (patched) [cite: 2]
+    ~C. IoT hanya bisa digunakan untuk keperluan rumah tangga [cite: 2]
+    ~D. Perangkat IoT tidak mendukung koneksi Bluetooth [cite: 2]
+    #### Feedback: Kurangnya standarisasi keamanan pada perangkat IoT menjadikannya titik masuk yang lemah bagi penyerang di jaringan korporat[cite: 2].
+}
+
+// Soal 22: Bloom - Menerapkan (C3)
+::Q22:: Saat menerapkan kontrol keamanan pada perangkat mobile, penggunaan "Remote Wipe" bertujuan untuk... {
+    ~A. Memperbarui sistem operasi secara otomatis [cite: 1]
+    =B. Menghapus semua data dari jarak jauh jika perangkat hilang atau dicuri [cite: 1]
+    ~C. Menemukan lokasi geografis karyawan [cite: 1]
+    ~D. Mematikan layar perangkat saat rapat [cite: 1]
+    #### Feedback: Remote wipe adalah kontrol korektif untuk mencegah kebocoran data dari perangkat yang hilang[cite: 1].
+}
+
+// Soal 23: Bloom - Menganalisis (C4)
+::Q23:: Manakah dari skenario berikut yang menunjukkan kegagalan kontrol administratif dalam perlindungan aset? {
+    ~A. Firewall mengalami kerusakan perangkat keras [cite: 31]
+    =B. Kebijakan keamanan tidak pernah ditinjau atau dikomunikasikan kepada karyawan [cite: 31]
+    ~C. Antivirus gagal mendeteksi malware baru (zero-day) [cite: 31]
+    ~D. Pintu ruang server tidak sengaja terbuka karena engsel rusak [cite: 31]
+    #### Feedback: Kontrol administratif berkaitan dengan manajemen, kebijakan, dan prosedur; kegagalan dalam tata kelola kebijakan adalah masalah administratif[cite: 31].
+}
+
+// Soal 24: Bloom - Mengingat (C1)
+::Q24:: Metode enkripsi yang menggunakan satu kunci rahasia yang sama untuk proses enkripsi dan dekripsi disebut... {
+    =A. Symmetric Encryption [cite: 1]
+    ~B. Asymmetric Encryption [cite: 1]
+    ~C. Hashing [cite: 3]
+    ~D. PKI [cite: 1]
+    #### Feedback: Enkripsi simetris lebih cepat namun memiliki tantangan dalam distribusi kunci yang aman[cite: 1].
+}
+
+// Soal 25: Bloom - Memahami (C2)
+::Q25:: Apa fungsi dari digital signature (tanda tangan digital) dalam keamanan informasi? {
+    ~A. Mengenkripsi pesan agar tidak bisa dibaca orang lain [cite: 1]
+    =B. Memberikan jaminan integritas data dan non-repudiation pengirim [cite: 1]
+    ~C. Mempercepat pengiriman email [cite: 1]
+    ~D. Menyimpan kata sandi pengguna secara aman [cite: 1]
+    #### Feedback: Tanda tangan digital menggunakan kunci privat pengirim untuk memastikan pesan tidak berubah dan membuktikan identitas pengirim[cite: 1].
+}
+// Batch 2: Protection of Information Assets (Soal 26-50)
+
+// Soal 26: Bloom - Mengingat (C1)
+::Q26:: Manakah dari berikut ini yang merupakan komponen utama dari Public Key Infrastructure (PKI) yang berfungsi sebagai repositori publik untuk sertifikat? {
+    ~A. Registration Authority (RA)
+    ~B. Certification Practice Statement (CPS)
+    =C. Certificate Revocation List (CRL) atau Repositori Sertifikat
+    ~D. Kunci Privat Pengguna
+    #### Feedback: PKI menggunakan repositori atau daftar pencabutan (CRL) untuk mempublikasikan status sertifikat digital agar dapat diverifikasi oleh pihak lain[cite: 2].
+}
+
+// Soal 27: Bloom - Memahami (C2)
+::Q27:: Apa keuntungan utama dari arsitektur Software-Defined Networking (SDN) dalam pengelolaan keamanan? {
+    ~A. Menghilangkan kebutuhan akan firewall fisik sepenuhnya
+    =B. Memungkinkan kontrol jaringan yang terpusat dan kemampuan untuk memprogram respons keamanan
+    ~C. Membuat jaringan kebal terhadap semua jenis serangan DDoS
+    ~D. Menurunkan biaya penggunaan listrik di pusat data secara drastis
+    #### Feedback: Keuntungan SDN adalah pemisahan control plane yang memungkinkan fleksibilitas dan kontrol terpusat atas seluruh infrastruktur jaringan[cite: 2].
+}
+
+// Soal 28: Bloom - Menerapkan (C3)
+::Q28:: Seorang auditor IS sedang meninjau implementasi enkripsi. Jika organisasi membutuhkan kecepatan pemrosesan data yang sangat tinggi untuk volume besar, jenis enkripsi mana yang paling tepat direkomendasikan? {
+    =A. Symmetric Encryption
+    ~B. Asymmetric Encryption
+    ~C. Digital Signature
+    ~D. Public Key Infrastructure (PKI)
+    #### Feedback: Enkripsi simetris jauh lebih cepat daripada asimetris dan sangat cocok untuk mengenkripsi volume data yang besar secara efisien[cite: 17].
+}
+
+// Soal 29: Bloom - Menganalisis (C4)
+::Q29:: Risiko "Virtual Machine (VM) Escape" dalam lingkungan virtualisasi terjadi ketika... {
+    ~A. Pengguna lupa mematikan mesin virtual
+    =B. Penyerang berhasil menembus isolasi antar VM untuk mengakses hypervisor atau VM lain pada host yang sama
+    ~C. Mesin virtual berpindah lokasi fisik secara otomatis
+    ~D. Lisensi perangkat lunak virtualisasi telah kedaluwarsa
+    #### Feedback: VM Escape adalah risiko keamanan serius di mana penyerang keluar dari lingkungan tamu (guest) untuk mengompromis kernel host atau VM lainnya[cite: 2].
+}
+
+// Soal 30: Bloom - Mengingat (C1)
+::Q30:: Dalam pengumpulan bukti digital, "Imaging" dilakukan untuk memastikan bahwa... {
+    ~A. Foto pelaku terekam dengan jelas
+    =B. Salinan identik bit-demi-bit dibuat sehingga data asli tidak berubah selama analisis
+    ~C. Kapasitas penyimpanan hard drive meningkat
+    ~D. Seluruh perangkat lunak diperbarui ke versi terbaru
+    #### Feedback: Imaging atau pembuatan salinan forensik sangat penting untuk menjaga integritas bukti asli agar tetap sah di pengadilan[cite: 17].
+}
+
+// Soal 31: Bloom - Memahami (C2)
+::Q31:: Apa fungsi utama dari Mobile Device Management (MDM)? {
+    ~A. Menjual perangkat mobile kepada karyawan
+    =B. Memberikan kontrol administratif terpusat atas perangkat mobile, termasuk kebijakan keamanan dan remote wipe
+    ~C. Mempercepat koneksi internet pada ponsel pribadi
+    ~D. Menyadap pembicaraan telepon karyawan secara otomatis
+    #### Feedback: MDM memungkinkan organisasi untuk mengelola perangkat mobile secara efisien, menerapkan kebijakan keamanan, dan melindungi data jika perangkat hilang[cite: 2].
+}
+
+// Soal 32: Bloom - Menerapkan (C3)
+::Q32:: Manakah dari berikut ini yang merupakan contoh kontrol teknis untuk melindungi kerahasiaan data dalam email? {
+    ~A. Kebijakan penggunaan email yang ditandatangani karyawan
+    ~B. Pelatihan kesadaran keamanan setiap enam bulan
+    =C. Penggunaan Transport Layer Security (TLS) atau S/MIME untuk enkripsi
+    ~D. Menghapus email lama secara otomatis setelah 30 hari
+    #### Feedback: TLS dan S/MIME adalah mekanisme teknis (logical) yang digunakan untuk melindungi data email agar tidak dapat dibaca oleh pihak yang tidak sah[cite: 2].
+}
+
+// Soal 33: Bloom - Menganalisis (C4)
+::Q33:: Seorang auditor menemukan bahwa organisasi menggunakan WEP untuk jaringan nirkabel di gudang. Risiko paling signifikan adalah... {
+    ~A. Sinyal nirkabel tidak mencapai seluruh area gudang
+    =B. WEP dapat dengan mudah didekripsi oleh penyerang menggunakan alat yang tersedia secara gratis dalam waktu singkat
+    ~C. WEP membatasi jumlah perangkat yang dapat terhubung
+    ~D. WEP tidak mendukung koneksi ke internet publik
+    #### Feedback: WEP memiliki kerentanan kriptografi yang signifikan, menjadikannya protokol yang sangat tidak aman untuk melindungi data[cite: 10].
+}
+
+// Soal 34: Bloom - Mengingat (C1)
+::Q34:: Protokol OCSP (Online Certificate Status Protocol) digunakan sebagai alternatif untuk... {
+    ~A. Enkripsi data di hard drive
+    =B. Certificate Revocation Lists (CRL)
+    ~C. Digital Signature
+    ~D. Virtual Private Network (VPN)
+    #### Feedback: OCSP menyediakan status pencabutan sertifikat secara real-time, mengatasi keterlambatan pembaruan yang sering terjadi pada CRL[cite: 2].
+}
+
+// Soal 35: Bloom - Memahami (C2)
+::Q35:: Dalam model Shared Responsibility Cloud, keamanan sistem operasi tamu (guest OS) pada layanan IaaS adalah tanggung jawab... {
+    ~A. Penyedia Layanan Cloud (CSP)
+    =B. Pelanggan Cloud
+    ~C. Auditor Eksternal
+    ~D. Produsen perangkat keras server
+    #### Feedback: Pada model IaaS, pelanggan bertanggung jawab penuh atas keamanan sistem operasi, aplikasi, dan data yang mereka jalankan di cloud[cite: 2].
+}
+
+// Soal 36: Bloom - Menerapkan (C3)
+::Q36:: Kontrol apa yang paling efektif untuk mencegah serangan "Man-in-the-Middle" pada komunikasi nirkabel? {
+    ~A. Menyembunyikan SSID (Service Set Identifier)
+    ~B. Menggunakan filter alamat MAC
+    =C. Mengimplementasikan enkripsi kuat seperti WPA3 dan autentikasi berbasis sertifikat
+    ~D. Membatasi daya pancar antena Wi-Fi
+    #### Feedback: Enkripsi kuat dan autentikasi timbal balik adalah perlindungan terbaik terhadap upaya intersepsi data[cite: 10].
+}
+
+// Soal 37: Bloom - Menganalisis (C4)
+::Q37:: Apa risiko keamanan terbesar yang terkait dengan penggunaan "Containers" dibandingkan dengan Virtual Machines tradisional? {
+    ~A. Containers membutuhkan lebih banyak ruang penyimpanan daripada VM
+    =B. Containers berbagi kernel sistem operasi host yang sama, sehingga kerentanan kernel dapat mengekspos semua kontainer
+    ~C. Containers tidak dapat dijalankan di lingkungan cloud
+    ~D. Containers tidak mendukung aplikasi berbasis web
+    #### Feedback: Karena kontainer berbagi kernel host, isolasi di tingkat kontainer dianggap lebih lemah dibandingkan isolasi perangkat keras pada VM[cite: 2].
+}
+
+// Soal 38: Bloom - Mengingat (C1)
+::Q38:: Teknik forensik yang digunakan untuk mengidentifikasi dan mengekstrak data dari media penyimpanan tanpa bergantung pada sistem file disebut... {
+    ~A. Hashing
+    ~B. Imaging
+    =C. Data Carving atau Extraction
+    ~D. Normalization
+    #### Feedback: Extraction atau data carving memungkinkan pemulihan file yang telah dihapus atau rusak dengan mencari pola header file spesifik[cite: 17].
+}
+
+// Soal 39: Bloom - Memahami (C2)
+::Q39:: Mengapa "Chain of Custody" sangat krusial dalam investigasi insiden keamanan? {
+    ~A. Untuk mempercepat proses perbaikan sistem yang rusak
+    =B. Untuk memastikan integritas bukti digital sehingga dapat diterima di pengadilan
+    ~C. Untuk menentukan siapa yang harus membayar biaya investigasi
+    ~D. Untuk memudahkan proses backup data perusahaan
+    #### Feedback: Rantai hak asuh mendokumentasikan siapa yang memegang bukti sejak disita hingga dipresentasikan di pengadilan, mencegah klaim manipulasi bukti[cite: 26].
+}
+
+// Soal 40: Bloom - Menganalisis (C4)
+::Q40:: Auditor IS menemukan bahwa organisasi menggunakan "Honeypot" di dalam jaringan internal mereka. Apa risiko utama yang harus diperhatikan? {
+    ~A. Honeypot dapat memperlambat kinerja database utama
+    =B. Jika tidak diisolasi dengan benar, penyerang dapat menggunakan honeypot sebagai batu loncatan untuk menyerang jaringan internal lainnya
+    ~C. Honeypot akan menghapus semua log sistem secara otomatis
+    ~D. Honeypot hanya bisa mendeteksi serangan dari orang dalam (insider)
+    #### Feedback: Meskipun berguna untuk deteksi, honeypot yang dikonfigurasi secara buruk dapat memberikan akses lebih dalam bagi penyerang ke infrastruktur organisasi[cite: 17].
+}
+
+// Soal 41: Bloom - Mengingat (C1)
+::Q41:: Standar keamanan industri yang mengatur perlindungan data pemegang kartu kredit disebut... {
+    ~A. ISO 27001
+    ~B. COBIT
+    =C. PCI DSS (Payment Card Industry Data Security Standard)
+    ~D. HIPAA
+    #### Feedback: PCI DSS adalah kumpulan persyaratan teknis dan operasional yang wajib dipatuhi oleh organisasi yang memproses data kartu kredit[cite: 36].
+}
+
+// Soal 42: Bloom - Memahami (C2)
+::Q42:: Apa peran utama dari "Digital Signature"? {
+    ~A. Mengenkripsi seluruh pesan agar tidak bisa dibaca
+    =B. Memastikan integritas data dan otentikasi pengirim (non-repudiation)
+    ~C. Mempercepat pengiriman data di jaringan
+    ~D. Menghapus virus secara otomatis dari lampiran email
+    #### Feedback: Tanda tangan digital menggunakan kriptografi asimetris untuk menjamin bahwa pesan tidak diubah dan benar-benar berasal dari pengirim yang diklaim[cite: 2].
+}
+
+// Soal 43: Bloom - Menerapkan (C3)
+::Q43:: Dalam lingkungan Bring Your Own Device (BYOD), kontrol manakah yang paling efektif untuk melindungi data perusahaan pada perangkat pribadi? {
+    ~A. Melarang karyawan membawa ponsel ke kantor
+    =B. Menggunakan "Containerization" pada perangkat mobile untuk memisahkan data pribadi dan perusahaan
+    ~C. Menghapus semua foto pribadi karyawan setiap minggu
+    ~D. Memaksa karyawan menggunakan sistem operasi yang sudah usang
+    #### Feedback: Pemisahan data (containerization/partitioning) memungkinkan organisasi mengelola data bisnis tanpa mengganggu privasi data pribadi karyawan[cite: 2].
+}
+
+// Soal 44: Bloom - Menganalisis (C4)
+::Q44:: Manakah dari berikut ini yang merupakan indikator terbaik bahwa proses "Incident Response" sebuah organisasi telah efektif? {
+    ~A. Tidak ada insiden yang terjadi selama setahun penuh
+    =B. Waktu rata-rata untuk mendeteksi dan memulihkan (Mean Time to Recover) insiden menurun secara signifikan
+    ~C. Anggaran keamanan informasi meningkat setiap tahun
+    ~D. Semua karyawan telah lulus ujian sertifikasi keamanan
+    #### Feedback: Efektivitas respon insiden diukur dari seberapa cepat dan efisien organisasi dapat meminimalkan dampak serangan dan kembali ke operasi normal[cite: 17].
+}
+
+// Soal 45: Bloom - Mengingat (C1)
+::Q45:: Perangkat atau sistem yang mengumpulkan dan mengorelasikan log dari berbagai perangkat keamanan untuk memberikan pandangan terpadu tentang ancaman disebut... {
+    ~A. Firewall
+    ~B. Intrusion Prevention System (IPS)
+    =C. SIEM (Security Information and Event Management)
+    ~D. Proxy Server
+    #### Feedback: SIEM berfungsi untuk analisis log secara terpusat dan membantu deteksi serangan yang kompleks melalui korelasi data[cite: 17].
+}
+
+// Soal 46: Bloom - Memahami (C2)
+::Q46:: Apa risiko utama yang terkait dengan penggunaan Internet of Things (IoT) di jaringan korporat? {
+    ~A. Perangkat IoT terlalu mahal untuk dipelihara
+    =B. Banyak perangkat IoT memiliki kontrol keamanan yang lemah dan sulit untuk diperbarui (patching)
+    ~C. IoT tidak dapat terhubung ke jaringan Wi-Fi standar
+    ~D. Perangkat IoT hanya berfungsi di luar ruangan
+    #### Feedback: Perangkat IoT seringkali menjadi titik masuk yang lemah bagi penyerang karena kurangnya fitur keamanan bawaan[cite: 10].
+}
+
+// Soal 47: Bloom - Menerapkan (C3)
+::Q47:: Seorang auditor menemukan bahwa log audit sistem tidak dilindungi dari modifikasi. Apa risiko terbesar dari temuan ini? {
+    ~A. Ukuran file log akan menjadi terlalu kecil
+    =B. Penyerang dapat menghapus jejak aktivitas ilegal mereka tanpa terdeteksi
+    ~C. Sistem akan berjalan lebih lambat saat menulis log
+    ~D. Log akan dikirim ke printer secara otomatis
+    #### Feedback: Melindungi integritas log sangat penting agar log tersebut tetap sah sebagai bukti selama investigasi forensik[cite: 17].
+}
+
+// Soal 48: Bloom - Menganalisis (C4)
+::Q48:: Dalam strategi "Defense in Depth", kontrol manakah yang merupakan lapisan terakhir untuk melindungi data sensitif jika perimeter jaringan berhasil ditembus? {
+    ~A. Firewall Perbatasan
+    ~B. Sistem Deteksi Intrusi (IDS)
+    =C. Enkripsi Data dan Manajemen Akses yang Ketat
+    ~D. Kamera CCTV di ruang server
+    #### Feedback: Jika semua lapisan luar gagal, enkripsi adalah pertahanan terakhir yang memastikan data tetap tidak terbaca oleh penyerang[cite: 33].
+}
+
+// Soal 49: Bloom - Mengingat (C1)
+::Q49:: Istilah yang merujuk pada praktik mengamankan bukti digital agar tidak terkontaminasi selama proses penyitaan adalah... {
+    ~A. Hashing
+    =B. Preservation (Pelestarian)
+    ~C. Ingestion
+    ~D. Reporting
+    #### Feedback: Pelestarian bukti digital sangat penting untuk memastikan data tidak berubah sejak ditemukan hingga dianalisis[cite: 17].
+}
+
+// Soal 50: Bloom - Memahami (C2)
+::Q50:: Apa perbedaan utama antara "Vulnerability Assessment" dan "Penetration Testing"? {
+    ~A. Tidak ada perbedaan nyata antara keduanya
+    =B. Vulnerability Assessment mengidentifikasi celah, sedangkan Penetration Testing mencoba mengeksploitasi celah tersebut untuk membuktikan dampak
+    ~C. Penetration Testing dilakukan secara otomatis, sedangkan Vulnerability Assessment secara manual
+    ~D. Vulnerability Assessment hanya dilakukan pada perangkat keras
+    #### Feedback: Penilaian kerentanan fokus pada identifikasi, sedangkan uji penetrasi mensimulasikan serangan nyata untuk mengevaluasi efektivitas kontrol[cite: 10].
+}
+// Batch 3: Protection of Information Assets (Soal 51-75)
+
+// Soal 51: Bloom - Mengingat (C1)
+::Q51:: Manakah dari berikut ini yang merupakan tujuan utama dari fase "Ingestion/Normalization" dalam proses forensik komputer? {
+    ~A. Menghapus data yang tidak relevan secara permanen
+    =B. Mengonversi data dari berbagai format ke dalam format standar untuk analisis lebih lanjut
+    ~C. Menangkap foto tersangka di tempat kejadian perkara
+    ~D. Menjual data bukti kepada pihak ketiga
+    #### Feedback: Ingestion/Normalization adalah tahap di mana data yang diambil diproses dan diubah ke format yang seragam agar dapat diinterogasi oleh alat forensik.
+}
+
+// Soal 52: Bloom - Memahami (C2)
+::Q52:: Apa perbedaan mendasar antara Intrusion Detection System (IDS) dan Intrusion Prevention System (IPS)? {
+    ~A. IDS lebih murah untuk dipelihara daripada IPS
+    =B. IDS hanya memantau dan memberi peringatan, sedangkan IPS dapat secara aktif memblokir lalu lintas berbahaya
+    ~C. IDS adalah perangkat keras, sedangkan IPS selalu berupa perangkat lunak
+    ~D. IDS tidak memerlukan aturan (rules), sedangkan IPS memerlukannya
+    #### Feedback: IDS berfungsi sebagai detektif yang memberikan peringatan, sementara IPS memiliki kemampuan untuk mencegah serangan secara real-time.
+}
+
+// Soal 53: Bloom - Menerapkan (C3)
+::Q53:: Sebuah organisasi ingin mendeteksi upaya serangan brute force pada akun administratif mereka secara real-time. Alat mana yang paling tepat untuk diimplementasikan? {
+    ~A. Antivirus standar
+    ~B. Backup harian offline
+    =C. SIEM (Security Information and Event Management) yang dikonfigurasi dengan aturan korelasi
+    ~D. Kebijakan penggunaan kata sandi yang dicetak di kertas
+    #### Feedback: SIEM mampu mengumpulkan dan mengorelasikan log dari berbagai sumber untuk mendeteksi pola serangan seperti brute force secara cepat.
+}
+
+// Soal 54: Bloom - Menganalisis (C4)
+::Q54:: Manakah dari berikut ini yang merupakan risiko paling signifikan jika tim Incident Response (CSIRT) tidak memiliki otoritas yang cukup dalam organisasi? {
+    ~A. Biaya lembur staf akan meningkat
+    =B. Keterlambatan dalam isolasi sistem yang terinfeksi karena hambatan birokrasi, yang memperluas dampak serangan
+    ~C. Staf CSIRT akan lupa cara menggunakan alat forensik
+    ~D. Dokumentasi audit akan menjadi terlalu pendek
+    #### Feedback: CSIRT membutuhkan mandat dan otoritas yang jelas agar dapat mengambil tindakan cepat (seperti memutus koneksi jaringan) saat terjadi krisis.
+}
+
+// Soal 55: Bloom - Mengingat (C1)
+::Q55:: Teknik forensik yang digunakan untuk memulihkan file berdasarkan struktur datanya tanpa bergantung pada tabel sistem file disebut... {
+    ~A. Imaging
+    ~B. Hashing
+    =C. Data Carving atau Extraction
+    ~D. Encryption
+    #### Feedback: Data carving atau extraction memungkinkan pemulihan data dari area penyimpanan yang tidak teralokasi dengan mencari header atau footer file yang spesifik.
+}
+
+// Soal 56: Bloom - Memahami (C2)
+::Q56:: Mengapa dokumentasi "Chain of Custody" harus mencakup setiap orang yang menyentuh bukti digital? {
+    ~A. Untuk menentukan siapa yang paling rajin bekerja
+    =B. Untuk mencegah klaim bahwa bukti telah terkontaminasi atau dimanipulasi saat dipresentasikan di pengadilan
+    ~C. Agar organisasi dapat menghemat biaya penyimpanan
+    ~D. Karena standar ISO mewajibkan tanda tangan semua staf
+    #### Feedback: Rantai hak asuh yang lengkap membuktikan bahwa integritas bukti terjaga dari saat penyitaan hingga persidangan.
+}
+
+// Soal 57: Bloom - Menerapkan (C3)
+::Q57:: Seorang auditor IS menemukan bahwa log akses ke server sensitif hanya disimpan selama 7 hari karena keterbatasan ruang disk. Rekomendasi apa yang paling tepat diberikan? {
+    ~A. Menghapus log tersebut segera untuk mengosongkan ruang
+    ~B. Membeli server baru hanya untuk menjalankan game
+    =C. Mengimplementasikan kebijakan retensi log yang sesuai dengan persyaratan hukum dan memindahkan log lama ke penyimpanan arsip yang aman
+    ~D. Berhenti mencatat log agar disk tidak penuh
+    #### Feedback: Log audit harus dilindungi dan disimpan untuk jangka waktu yang cukup guna mendukung investigasi insiden di masa mendatang.
+}
+
+// Soal 58: Bloom - Menganalisis (C4)
+::Q58:: Apa risiko utama dari penggunaan "Public Key Infrastructure" (PKI) jika kunci privat Certification Authority (CA) terkompromi? {
+    ~A. Kecepatan internet perusahaan akan menurun
+    =B. Seluruh sertifikat yang diterbitkan oleh CA tersebut tidak dapat lagi dipercaya, dan penyerang dapat menerbitkan sertifikat palsu yang sah
+    ~C. Pengguna akan diminta mengganti kata sandi laptop mereka
+    ~D. Database perusahaan akan terhapus secara otomatis
+    #### Feedback: Keamanan seluruh hierarki PKI bergantung pada perlindungan kunci privat CA; kompromi pada level ini menghancurkan kepercayaan seluruh infrastruktur.
+}
+
+// Soal 59: Bloom - Mengingat (C1)
+::Q59:: Komponen dalam rencana respon insiden yang berisi instruksi teknis spesifik untuk menangani jenis serangan tertentu (seperti malware atau DDoS) disebut... {
+    ~A. Audit Charter
+    ~B. SLA
+    =C. Playbook atau Incident Response Procedures
+    ~D. Risk Register
+    #### Feedback: Playbook menyediakan panduan langkah-demi-langkah bagi tim teknis untuk menangani insiden secara konsisten dan cepat.
+}
+
+// Soal 60: Bloom - Memahami (C2)
+::Q60:: Apa fungsi utama dari "Digital Watermarking" dalam perlindungan aset informasi? {
+    ~A. Untuk menghias dokumen agar terlihat menarik
+    =B. Untuk menyematkan informasi identifikasi ke dalam konten digital guna melacak kepemilikan dan mencegah distribusi ilegal
+    ~C. Untuk mempercepat proses download file video
+    ~D. Untuk menghapus virus dari file gambar
+    #### Feedback: Watermarking digital membantu dalam perlindungan hak cipta dan pembuktian asal usul dokumen atau media digital.
+}
+
+// Soal 61: Bloom - Menerapkan (C3)
+::Q61:: Saat mengaudit keamanan IoT, manakah dari langkah berikut yang paling efektif untuk melindungi jaringan korporat dari perangkat IoT yang tidak aman? {
+    ~A. Memberikan akses administratif penuh kepada semua perangkat IoT
+    =B. Menempatkan perangkat IoT pada segmen jaringan (VLAN) yang terisolasi dari data sensitif
+    ~C. Menggunakan kata sandi default pabrikan agar mudah diingat
+    ~D. Mematikan enkripsi pada komunikasi IoT untuk menghemat bandwidth
+    #### Feedback: Isolasi jaringan adalah strategi kunci untuk membatasi dampak jika salah satu perangkat IoT berhasil dikompromi.
+}
+
+// Soal 62: Bloom - Menganalisis (C4)
+::Q62:: Auditor menemukan bahwa organisasi tidak memiliki proses formal untuk mencabut sertifikat digital karyawan yang telah berhenti (terminated). Risiko terbesarnya adalah... {
+    ~A. Karyawan tersebut akan kehilangan akses ke email pribadinya
+    =B. Mantan karyawan masih dapat menggunakan sertifikat tersebut untuk mengakses sistem organisasi atau menandatangani dokumen secara sah
+    ~C. Biaya lisensi PKI akan meningkat drastis
+    ~D. Server CA akan mengalami kelebihan beban (overload)
+    #### Feedback: Pencabutan sertifikat (revocation) segera setelah pengakhiran hubungan kerja sangat penting untuk mencegah akses yang tidak sah.
+}
+
+// Soal 63: Bloom - Mengingat (C1)
+::Q63:: Jenis serangan pasif yang melibatkan pemantauan lalu lintas jaringan untuk menangkap informasi sensitif seperti kata sandi tanpa mengubah data disebut... {
+    =A. Eavesdropping atau Sniffing
+    ~B. Denial of Service (DoS)
+    ~C. SQL Injection
+    ~D. Ransomware
+    #### Feedback: Serangan pasif sulit dideteksi karena tidak mengubah sumber daya sistem; fokus utamanya adalah kerahasiaan.
+}
+
+// Soal 64: Bloom - Memahami (C2)
+::Q64:: Apa kegunaan dari "Post-Incident Review" setelah sebuah insiden keamanan berhasil ditangani? {
+    ~A. Untuk mencari siapa yang harus disalahkan dan dipecat
+    =B. Untuk mengidentifikasi pelajaran yang didapat (lessons learned) dan meningkatkan rencana respon insiden di masa depan
+    ~C. Untuk merayakan keberhasilan tim keamanan dengan pesta besar
+    ~D. Untuk menghapus semua bukti insiden agar tidak diaudit
+    #### Feedback: Evaluasi pasca-insiden sangat penting untuk perbaikan berkelanjutan pada postur keamanan organisasi.
+}
+
+// Soal 65: Bloom - Menerapkan (C3)
+::Q65:: Seorang auditor ingin memverifikasi bahwa hanya perangkat mobile yang diotorisasi yang dapat mengakses email perusahaan. Kontrol mana yang harus diperiksa? {
+    ~A. Kebijakan kebersihan kantor
+    =B. Konfigurasi Mobile Device Management (MDM) dan kontrol akses berbasis sertifikat
+    ~C. Kecepatan prosesor pada ponsel karyawan
+    ~D. Jumlah aplikasi game yang diinstal karyawan
+    #### Feedback: MDM memungkinkan organisasi untuk memberlakukan standar keamanan dan membatasi akses hanya untuk perangkat yang patuh (compliant).
+}
+
+// Soal 66: Bloom - Menganalisis (C4)
+::Q66:: Mengapa penggunaan "Honeytokens" (data palsu yang disisipkan dalam database) dianggap sebagai kontrol detektif yang efektif? {
+    ~A. Karena Honeytokens secara otomatis mengenkripsi database
+    =B. Karena setiap akses atau penggunaan Honeytoken merupakan indikator kuat adanya aktivitas akses data yang tidak sah atau kebocoran data
+    ~C. Karena Honeytokens membuat database berjalan lebih cepat
+    ~D. Karena Honeytokens menggantikan kebutuhan akan backup
+    #### Feedback: Honeytokens tidak memiliki nilai bisnis asli, sehingga interaksi apa pun dengannya hampir pasti merupakan tanda aktivitas berbahaya.
+}
+
+// Soal 67: Bloom - Mengingat (C1)
+::Q67:: Standar keamanan nirkabel yang mengharuskan autentikasi pengguna secara individual melalui server RADIUS adalah... {
+    ~A. WPA-Personal
+    =B. WPA-Enterprise (802.1X)
+    ~C. WEP
+    ~D. Open System Authentication
+    #### Feedback: WPA-Enterprise memberikan keamanan yang jauh lebih tinggi dengan menggunakan kredensial unik untuk setiap pengguna.
+}
+
+// Soal 68: Bloom - Memahami (C2)
+::Q68:: Dalam keamanan fisik, apa perbedaan fungsi antara "Deadbolt Lock" dan "Electronic Badge Reader"? {
+    ~A. Deadbolt lebih mahal daripada badge reader
+    =B. Deadbolt adalah kontrol fisik murni, sedangkan badge reader menyediakan jejak audit (audit trail) digital tentang siapa yang masuk
+    ~C. Badge reader hanya bisa digunakan di siang hari
+    ~D. Deadbolt tidak memerlukan kunci fisik
+    #### Feedback: Kontrol elektronik memiliki keunggulan dalam hal pemantauan dan akuntabilitas melalui log akses.
+}
+
+// Soal 69: Bloom - Menerapkan (C3)
+::Q69:: Organisasi mendeteksi adanya malware yang menyebar melalui drive USB. Langkah kontrol administratif apa yang paling tepat untuk memitigasi risiko ini? {
+    ~A. Membeli drive USB yang lebih besar untuk semua karyawan
+    =B. Mengembangkan kebijakan penggunaan media yang dapat dilepas dan melakukan pelatihan kesadaran keamanan
+    ~C. Menghapus semua port USB dari komputer menggunakan lem
+    ~D. Membiarkan saja karena USB adalah hak karyawan
+    #### Feedback: Kebijakan dan edukasi adalah fondasi dari kontrol administratif untuk mengubah perilaku pengguna yang berisiko.
+}
+
+// Soal 70: Bloom - Menganalisis (C4)
+::Q70:: Apa risiko keamanan siber terbesar jika organisasi melakukan migrasi ke cloud tanpa menggunakan "Multi-Factor Authentication" (MFA) untuk akun administratif? {
+    ~A. Tagihan cloud akan menjadi sulit dibaca
+    =B. Serangan kredensial (credential stuffing/phishing) dapat dengan mudah memberikan kontrol penuh atas seluruh infrastruktur cloud organisasi kepada penyerang
+    ~C. Pengguna tidak akan bisa mengakses file mereka di malam hari
+    ~D. Kecepatan upload data ke cloud akan menurun
+    #### Feedback: MFA adalah salah satu kontrol paling krusial untuk melindungi akses administratif di lingkungan yang dapat diakses publik seperti cloud.
+}
+
+// Soal 71: Bloom - Mengingat (C1)
+::Q71:: Alat pemantauan yang digunakan untuk menganalisis kode sumber aplikasi guna menemukan kerentanan keamanan sebelum aplikasi tersebut dijalankan disebut... {
+    ~A. Dynamic Application Security Testing (DAST)
+    =B. Static Application Security Testing (SAST)
+    ~C. Antivirus
+    ~D. Network Sniffer
+    #### Feedback: SAST dilakukan pada tahap pengembangan untuk menemukan cacat logika atau celah keamanan dalam kode mentah.
+}
+
+// Soal 72: Bloom - Memahami (C2)
+::Q72:: Apa yang dimaksud dengan "Data Sovereignty" dalam konteks penyimpanan data di Cloud? {
+    ~A. Pemilik data memiliki hak mutlak untuk menghapus data kapan saja
+    =B. Data tunduk pada hukum dan yurisdiksi negara tempat data tersebut secara fisik disimpan
+    ~C. Data hanya boleh disimpan di satu negara saja
+    ~D. Penyedia cloud tidak boleh melihat isi data pelanggan
+    #### Feedback: Kedaulatan data merupakan pertimbangan hukum penting dalam audit kepatuhan cloud internasional.
+}
+
+// Soal 73: Bloom - Menerapkan (C3)
+::Q73:: Untuk memastikan integritas log yang dikumpulkan oleh SIEM, auditor harus memverifikasi bahwa... {
+    ~A. Log dapat diedit oleh administrator sistem kapan saja
+    =B. Log dikirim secara real-time ke server log terpusat dan dilindungi dengan kontrol akses yang ketat serta enkripsi
+    ~C. Log disimpan dalam format teks biasa (plain text) agar mudah dibaca
+    ~D. Log dihapus setiap hari untuk menjaga privasi
+    #### Feedback: Perlindungan terhadap log sangat penting agar log tersebut tidak dapat dimanipulasi oleh penyerang untuk menutupi jejak mereka.
+}
+
+// Soal 74: Bloom - Menganalisis (C4)
+::Q74:: Manakah dari skenario berikut yang menunjukkan penggunaan "Steganografi" sebagai ancaman bagi organisasi? {
+    ~A. Penyerang mengirimkan email phishing yang jelas terlihat
+    =B. Orang dalam (insider) membocorkan rahasia dagang dengan menyembunyikan data sensitif di dalam file gambar digital yang tampak normal
+    ~C. Karyawan lupa kata sandi mereka sendiri
+    ~D. Server mengalami kegagalan daya (power failure)
+    #### Feedback: Steganografi menyembunyikan eksistensi pesan, menjadikannya teknik yang efektif untuk eksfiltrasi data tanpa terdeteksi oleh sistem keamanan standar.
+}
+
+// Soal 75: Bloom - Memahami (C2)
+::Q75:: Apa risiko utama dari penggunaan "Public Wi-Fi" untuk mengakses sumber daya perusahaan tanpa menggunakan VPN? {
+    ~A. Kecepatan koneksi akan menjadi sangat lambat
+    =B. Data yang dikirimkan dapat disadap melalui serangan Man-in-the-Middle (MitM) oleh penyerang di jaringan yang sama
+    ~C. Baterai laptop akan lebih cepat habis
+    ~D. Layar laptop akan otomatis terkunci
+    #### Feedback: VPN menyediakan terowongan terenkripsi yang melindungi data dari intersepsi di jaringan yang tidak dipercaya.
+}
+// Batch 4: Protection of Information Assets (Soal 76-100)
+
+// Soal 76: Bloom - Mengingat (C1)
+::Q76:: Manakah dari berikut ini yang merupakan contoh dari serangan "Man-in-the-Middle" (MitM) pada komunikasi nirkabel? {
+    ~A. SQL Injection
+    =B. Session Hijacking atau Evil Twin Access Point
+    ~C. Brute Force Attack
+    ~D. Buffer Overflow
+    #### Feedback: Serangan MitM melibatkan intersepsi komunikasi antara dua pihak tanpa sepengetahuan mereka, seringkali melalui Access Point palsu (Evil Twin).
+}
+
+// Soal 77: Bloom - Memahami (C2)
+::Q77:: Apa fungsi utama dari teknologi "Data Loss Prevention" (DLP) dalam sebuah organisasi? {
+    ~A. Menghapus data yang sudah tua secara otomatis
+    =B. Mengidentifikasi, memantau, dan melindungi data sensitif agar tidak keluar dari jaringan organisasi tanpa izin
+    ~C. Menambah kapasitas penyimpanan hard drive
+    ~D. Mempercepat proses backup data ke cloud
+    #### Feedback: DLP bekerja dengan memeriksa konten dan konteks data yang keluar untuk mencegah eksfiltrasi informasi rahasia.
+}
+
+// Soal 78: Bloom - Menerapkan (C3)
+::Q78:: Seorang auditor IS sedang meninjau keamanan basis data. Kontrol mana yang paling efektif untuk melindungi data pelanggan yang sensitif (seperti NIK) agar tidak terlihat oleh administrator sistem yang tidak berwenang? {
+    ~A. Firewall Jaringan
+    ~B. Antivirus Server
+    =C. Data Masking atau Encryption di tingkat kolom (Field-level Encryption)
+    ~D. Mengganti sistem operasi server
+    #### Feedback: Data masking dan enkripsi kolom memastikan bahwa meskipun admin memiliki akses ke sistem, mereka tidak dapat melihat data asli yang sensitif.
+}
+
+// Soal 79: Bloom - Menganalisis (C4)
+::Q79:: Risiko utama dari penggunaan "Public Key Infrastructure" (PKI) yang tidak memiliki kebijakan manajemen kunci yang ketat adalah... {
+    ~A. Biaya lisensi akan menjadi sangat mahal
+    =B. Kompromi pada kunci privat dapat merusak seluruh kepercayaan pada sertifikat digital yang diterbitkan
+    ~C. Pengguna akan lupa cara menggunakan email
+    ~D. Kecepatan transfer data akan menurun drastis
+    #### Feedback: Seluruh keamanan PKI bergantung pada kerahasiaan kunci privat. Jika bocor, maka integritas dan otentikasi sistem hancur.
+}
+
+// Soal 80: Bloom - Mengingat (C1)
+::Q80:: Apa yang dimaksud dengan "Perfect Forward Secrecy" (PFS) dalam sesi enkripsi SSL/TLS? {
+    =A. Properti yang memastikan bahwa jika satu kunci sesi bocor, hal itu tidak akan membocorkan sesi lain di masa lalu atau masa depan
+    ~B. Metode enkripsi yang tidak bisa ditembus oleh komputer kuantum
+    ~C. Aturan untuk mengganti password setiap 10 menit
+    ~D. Teknik untuk menyembunyikan alamat IP server
+    #### Feedback: PFS menggunakan kunci yang bersifat sementara (ephemeral) untuk setiap sesi, sehingga kompromi kunci jangka panjang tidak membuka sesi lama.
+}
+
+// Soal 81: Bloom - Memahami (C2)
+::Q81:: Dalam pengamanan perangkat IoT, mengapa segmentasi jaringan dianggap sebagai kontrol yang krusial? {
+    ~A. Agar perangkat IoT bisa berkomunikasi lebih cepat
+    =B. Untuk mengisolasi perangkat IoT yang mungkin memiliki kerentanan dari sistem bisnis inti organisasi
+    ~C. Untuk mengurangi jumlah kabel yang digunakan
+    ~D. Agar semua perangkat memiliki alamat IP yang sama
+    #### Feedback: Banyak perangkat IoT memiliki keamanan rendah; segmentasi mencegah penyerang bergerak dari perangkat IoT ke server sensitif (Lateral Movement).
+}
+
+// Soal 82: Bloom - Menerapkan (C3)
+::Q82:: Auditor menemukan bahwa sebuah aplikasi web rentan terhadap "Cross-Site Scripting" (XSS). Rekomendasi kontrol teknis yang paling tepat adalah... {
+    ~A. Mengganti server web dengan versi yang lebih baru
+    =B. Melakukan input validation dan output encoding pada aplikasi
+    ~C. Menambah jumlah bandwidth internet
+    ~D. Menggunakan font yang lebih sulit dibaca pada website
+    #### Feedback: XSS dimitigasi dengan memastikan input pengguna dibersihkan dan output yang ditampilkan ke browser di-encode dengan benar.
+}
+
+// Soal 83: Bloom - Menganalisis (C4)
+::Q83:: Manakah dari skenario berikut yang menunjukkan kegagalan pada kontrol "Non-repudiation"? {
+    ~A. Pengguna tidak bisa login karena lupa password
+    =B. Seorang pengirim email berhasil menyangkal bahwa dia yang mengirimkan instruksi transfer dana karena tidak ada tanda tangan digital
+    ~C. Server mati karena kehabisan daya listrik
+    ~D. Database tidak bisa diakses saat jam sibuk
+    #### Feedback: Non-repudiation memastikan pengirim tidak dapat menyangkal pengiriman pesan, biasanya dicapai melalui tanda tangan digital (digital signature).
+}
+
+// Soal 84: Bloom - Mengingat (C1)
+::Q84:: Jenis serangan yang membanjiri server dengan lalu lintas data yang sangat besar hingga server tersebut tidak dapat melayani pengguna yang sah disebut... {
+    ~A. Phishing
+    ~B. Ransomware
+    =C. Distributed Denial of Service (DDoS)
+    ~D. Spyware
+    #### Feedback: DDoS bertujuan merusak ketersediaan (availability) layanan dengan cara membebani sumber daya sistem secara berlebihan.
+}
+
+// Soal 85: Bloom - Memahami (C2)
+::Q85:: Apa kegunaan utama dari "Salt" dalam proses penyimpanan password menggunakan teknik hashing? {
+    ~A. Untuk mengenkripsi password agar bisa dikembalikan ke bentuk asli
+    =B. Untuk mencegah serangan "Rainbow Table" dengan menambahkan data acak sebelum proses hashing
+    ~C. Untuk mempercepat proses verifikasi password
+    ~D. Untuk menghapus password secara otomatis setelah 90 hari
+    #### Feedback: Salting membuat hash dari password yang sama menjadi berbeda bagi setiap pengguna, sehingga menyulitkan penggunaan tabel hash yang sudah dihitung sebelumnya.
+}
+
+// Soal 86: Bloom - Menerapkan (C3)
+::Q86:: Saat mengaudit keamanan cloud, auditor menemukan bahwa log akses hanya dapat diakses oleh penyedia layanan (CSP). Tindakan terbaik auditor adalah... {
+    ~A. Mengabaikan karena itu adalah kebijakan cloud
+    =B. Memverifikasi apakah kontrak layanan mencakup hak audit dan akses log bagi pelanggan
+    ~C. Mencoba meretas sistem CSP untuk mendapatkan log
+    ~D. Menyarankan perusahaan untuk segera berhenti menggunakan cloud
+    #### Feedback: Dalam cloud, visibilitas auditor bergantung pada Service Level Agreement (SLA) dan kontrak yang disepakati di awal.
+}
+
+// Soal 87: Bloom - Menganalisis (C4)
+::Q87:: Mengapa "Dynamic Application Security Testing" (DAST) harus dilakukan bersamaan dengan "Static Application Security Testing" (SAST)? {
+    ~A. Karena DAST lebih murah daripada SAST
+    =B. SAST menemukan celah di kode sumber, sedangkan DAST menemukan celah saat aplikasi berjalan di lingkungan nyata
+    ~C. Karena auditor ingin menghabiskan waktu lebih lama
+    ~D. Karena sistem otomatis mewajibkan keduanya
+    #### Feedback: Kombinasi keduanya memberikan cakupan keamanan yang lebih luas (baik dari sisi struktur kode maupun perilaku runtime).
+}
+
+// Soal 88: Bloom - Mengingat (C1)
+::Q88:: Istilah "Air Gap" dalam keamanan informasi merujuk pada... {
+    ~A. Menggunakan kipas angin yang besar di ruang server
+    =B. Isolasi fisik total sebuah sistem dari jaringan eksternal atau internet
+    ~C. Memberikan jarak antara rak server
+    ~D. Kecepatan transfer data melalui udara (nirkabel)
+    #### Feedback: Air gap digunakan untuk sistem yang sangat kritis agar tidak dapat diakses dari jarak jauh melalui jaringan apa pun.
+}
+
+// Soal 89: Bloom - Memahami (C2)
+::Q89:: Apa perbedaan utama antara "Tokenization" dan "Encryption" dalam perlindungan data kartu kredit? {
+    ~A. Tokenization tidak memerlukan komputer
+    =B. Tokenization mengganti data dengan nilai acak (token) yang tidak memiliki hubungan matematis dengan data asli, sedangkan enkripsi menggunakan algoritma matematis
+    ~C. Enkripsi selalu lebih aman daripada tokenization
+    ~D. Tokenization hanya bisa digunakan untuk data teks
+    #### Feedback: Tokenization sering digunakan untuk mengurangi cakupan kepatuhan PCI DSS karena token tidak dianggap sebagai data kartu yang dapat didekripsi.
+}
+
+// Soal 90: Bloom - Menerapkan (C3)
+::Q90:: Sebuah perusahaan sering mengalami kehilangan laptop karyawan. Kontrol manakah yang memberikan perlindungan terbaik terhadap kerahasiaan data di dalam laptop tersebut? {
+    ~A. Menggunakan kabel pengunci laptop fisik
+    ~B. Memasang stiker nama perusahaan pada laptop
+    =C. Full Disk Encryption (FDE) dan otentikasi pre-boot
+    ~D. Menginstal antivirus yang paling mahal
+    #### Feedback: Enkripsi seluruh disk memastikan bahwa meskipun hard drive dilepas atau laptop dicuri, data tetap tidak bisa dibaca tanpa kunci yang benar.
+}
+
+// Soal 91: Bloom - Menganalisis (C4)
+::Q91:: Manakah dari berikut ini yang merupakan kelemahan utama dari otentikasi biometrik? {
+    ~A. Biometrik terlalu mudah untuk dilupakan pengguna
+    =B. Sekali data biometrik (seperti sidik jari) bocor, data tersebut tidak dapat diubah atau diganti seperti password
+    ~C. Biometrik hanya bekerja pada perangkat mobile
+    ~D. Biometrik tidak memerlukan perangkat keras tambahan
+    #### Feedback: Karakteristik biometrik bersifat permanen; kompromi pada data ini memiliki dampak jangka panjang yang sulit dipulihkan.
+}
+
+// Soal 92: Bloom - Mengingat (C1)
+::Q92:: Protokol yang digunakan untuk mengamankan transfer file melalui jaringan dengan menggunakan enkripsi SSH disebut... {
+    ~A. FTP
+    ~B. Telnet
+    =C. SFTP (Secure File Transfer Protocol)
+    ~D. HTTP
+    #### Feedback: SFTP menggunakan SSH untuk menyediakan enkripsi dan otentikasi yang kuat saat mentransfer file.
+}
+
+// Soal 93: Bloom - Memahami (C2)
+::Q93:: Apa risiko keamanan utama dari penggunaan "Remote Desktop Protocol" (RDP) yang terbuka langsung ke internet? {
+    ~A. Monitor server akan cepat rusak
+    =B. Menjadi target utama serangan Brute Force dan eksploitasi kerentanan untuk mengambil alih kontrol server
+    ~C. Pengguna akan mengalami delay saat mengetik
+    ~D. Printer perusahaan akan mencetak dokumen secara otomatis
+    #### Feedback: RDP adalah salah satu vektor serangan paling umum bagi ransomware jika tidak dilindungi dengan VPN atau MFA.
+}
+
+// Soal 94: Bloom - Menerapkan (C3)
+::Q94:: Dalam pengumpulan bukti digital, mengapa hash (seperti SHA-256) harus dibuat segera setelah pengambilan gambar (imaging) bukti? {
+    ~A. Untuk memperkecil ukuran file bukti
+    ~B. Untuk mengubah nama file bukti secara otomatis
+    =C. Untuk membuktikan integritas bukti (bahwa bukti tidak berubah sejak diambil)
+    ~D. Untuk menyembunyikan identitas pemilik bukti
+    #### Feedback: Hash bertindak sebagai "sidik jari digital"; jika satu bit saja berubah, nilai hash akan berbeda, menandakan bukti telah terkontaminasi.
+}
+
+// Soal 95: Bloom - Menganalisis (C4)
+::Q95:: Seorang auditor menemukan bahwa organisasi tidak memiliki klasifikasi data (Data Classification). Apa dampak utamanya terhadap efektivitas kontrol keamanan? {
+    ~A. Karyawan akan malas bekerja
+    =B. Kontrol keamanan mungkin tidak memadai untuk data sensitif atau terlalu mahal untuk data yang tidak penting
+    ~C. Kapasitas server akan cepat penuh
+    ~D. Perusahaan tidak bisa membeli perangkat lunak baru
+    #### Feedback: Tanpa klasifikasi, organisasi tidak tahu mana aset yang harus dilindungi paling ketat, sehingga alokasi sumber daya keamanan menjadi tidak efisien.
+}
+
+// Soal 96: Bloom - Mengingat (C1)
+::Q96:: Metode penyerangan yang menargetkan individu tertentu dalam organisasi (seperti eksekutif senior) melalui email yang sangat meyakinkan disebut... {
+    ~A. Vishing
+    ~B. Smishing
+    =C. Spear Phishing atau Whaling
+    ~D. Spamming
+    #### Feedback: Spear phishing adalah serangan yang dipersonalisasi, sedangkan whaling secara spesifik menargetkan "ikan besar" (eksekutif).
+}
+
+// Soal 97: Bloom - Memahami (C2)
+::Q97:: Apa peran "Security Awareness Training" dalam model Defense in Depth? {
+    ~A. Sebagai pengganti firewall teknis
+    =B. Sebagai kontrol administratif yang memperkuat lapisan manusia (Human Firewall)
+    ~C. Untuk mengajarkan karyawan cara meretas sistem
+    ~D. Untuk menghukum karyawan yang melanggar aturan
+    #### Feedback: Manusia seringkali merupakan titik terlemah; pelatihan kesadaran bertujuan mengurangi risiko kesalahan manusia dan social engineering.
+}
+
+// Soal 98: Bloom - Menerapkan (C3)
+::Q98:: Untuk mendeteksi perubahan tidak sah pada file sistem operasi yang kritis, auditor harus merekomendasikan penggunaan... {
+    ~A. Antivirus harian
+    ~B. Firewall internal
+    =C. File Integrity Monitoring (FIM)
+    ~D. Defragmentasi disk secara rutin
+    #### Feedback: FIM memantau dan memberi peringatan jika ada modifikasi pada file, direktori, atau registri sistem yang sensitif.
+}
+
+// Soal 99: Bloom - Menganalisis (C4)
+::Q99:: Manakah dari berikut ini yang merupakan indikator bahwa organisasi telah mengadopsi prinsip "Least Privilege"? {
+    ~A. Semua karyawan memiliki akses administratif ke komputer mereka
+    =B. Pengguna hanya memiliki hak akses minimum yang diperlukan untuk menjalankan fungsi pekerjaan mereka
+    ~C. Password karyawan tidak pernah kadaluwarsa
+    ~D. Setiap orang menggunakan akun tamu (guest account) untuk bekerja
+    #### Feedback: Least privilege meminimalkan dampak jika sebuah akun dikompromi oleh penyerang.
+}
+
+// Soal 100: Bloom - Memahami (C2)
+::Q100:: Dalam audit keamanan fisik, mengapa "Tailgating" dianggap sebagai ancaman serius meskipun pintu sudah menggunakan kartu akses? {
+    ~A. Karena kartu akses bisa cepat rusak
+    =B. Karena penyerang bisa masuk ke area terbatas dengan mengikuti orang yang berwenang tanpa melakukan autentikasi sendiri
+    ~C. Karena tailgating menghabiskan banyak listrik pada pintu otomatis
+    ~D. Karena tailgating merusak engsel pintu
+    #### Feedback: Tailgating adalah kelemahan pada perilaku manusia yang dapat melewati kontrol akses fisik yang canggih sekalipun.
+}

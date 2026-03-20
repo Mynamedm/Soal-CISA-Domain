@@ -1,0 +1,807 @@
+// Soal 1 - 25: Domain 4 (IS Operations and Business Resilience)
+
+::Soal 1:: Saat mengaudit praktik Manajemen Aset TI, auditor menemukan bahwa Configuration Management Database (CMDB) diperbarui secara manual oleh staf hanya sebulan sekali. Dari perspektif operasi sistem, apa risiko analitis tertinggi dari penundaan pembaruan ini? {
+~A. Kapasitas penyimpanan CMDB akan lebih cepat penuh karena penumpukan data.
+=B. Manajer insiden dan masalah akan membuat keputusan berdasarkan data topologi jaringan yang usang, sehingga memperlambat pemulihan sistem jika terjadi gangguan.
+~C. Perangkat keras akan lebih cepat mengalami keusangan fisik (hardware obsolescence).
+~D. Biaya lisensi perangkat lunak akan meningkat secara otomatis.
+#### Analisis Taksonomi Bloom (Analisis): CMDB adalah jantung dari Manajemen Layanan TI (ITSM). Ia memetakan hubungan antar aset. Jika pembaruannya lambat, tim TI tidak memiliki visibilitas real-time terhadap infrastruktur, yang secara analitis akan menghambat Manajemen Insiden, Manajemen Perubahan, dan resolusi masalah harian.
+}
+
+::Soal 2:: Meja Bantuan (Helpdesk) menerima ratusan tiket pengaturan ulang kata sandi setiap minggu setelah migrasi sistem baru. Staf meja bantuan selalu berhasil mereset kata sandi dalam 5 menit, memenuhi Service Level Agreement (SLA). Namun, auditor tetap melaporkan ini sebagai kelemahan tata kelola. Proses analitis apa yang gagal diterapkan oleh organisasi? {
+~A. Manajemen Insiden (Incident Management)
+=B. Manajemen Masalah (Problem Management)
+~C. Manajemen Rilis (Release Management)
+~D. Manajemen Kapasitas (Capacity Management)
+#### Analisis Taksonomi Bloom (Analisis): Membedakan insiden dan masalah. Manajemen Insiden berhasil (memulihkan layanan dalam 5 menit). Namun, Manajemen Masalah gagal karena tidak ada analisis akar penyebab (Root Cause Analysis) untuk mencari tahu *mengapa* pengguna terus-menerus lupa kata sandi dan mencegahnya terjadi di masa depan (misal: dengan menerapkan Single Sign-On).
+}
+
+::Soal 3:: Auditor menemukan bahwa manajer TI sering melakukan perubahan konfigurasi darurat (Emergency Changes) pada firewall di malam hari tanpa persetujuan awal dari Change Advisory Board (CAB) untuk memblokir serangan siber yang sedang berlangsung. Kontrol analitis kompensasi apa yang mutlak harus ada untuk menjustifikasi praktik ini? {
+=A. Semua perubahan darurat harus didokumentasikan sepenuhnya, dicatat dalam tiket, dan ditinjau secara formal oleh CAB pada hari kerja berikutnya (Post-Implementation Review).
+~B. Manajer TI harus dipotong gajinya setiap kali melakukan perubahan darurat.
+~C. Perubahan darurat hanya boleh dilakukan menggunakan akses internet publik.
+~D. Firewall harus dikonfigurasi ulang secara otomatis ke pengaturan aslinya setiap pagi.
+#### Analisis Taksonomi Bloom (Analisis): Perubahan darurat adalah realitas operasional yang tidak bisa dihindari. Bypassing CAB preventif diperbolehkan *hanya jika* dikompensasi dengan kontrol detektif retroaktif yang sangat kuat untuk memastikan perubahan tersebut sah, tidak merusak sistem lain, dan didokumentasikan ke dalam CMDB.
+}
+
+::Soal 4:: Saat mengevaluasi Rencana Pemulihan Bencana (DRP), auditor melihat organisasi menggunakan strategi pencadangan (backup) Inkremental harian dan pencadangan Penuh (Full backup) sebulan sekali. Apa dampak operasional analitis dari strategi ini jika terjadi kegagalan server pada akhir bulan? {
+~A. Waktu pencadangan harian akan memakan waktu sangat lama dan menghabiskan bandwidth jaringan.
+~B. Data tidak dapat dipulihkan sama sekali karena pita magnetik otomatis kedaluwarsa.
+=C. Waktu pemulihan (Recovery Time) akan menjadi sangat lama karena administrator harus memulihkan Full backup bulan lalu ditambah puluhan backup inkremental harian secara berurutan.
+~D. Ruang penyimpanan yang dibutuhkan akan menjadi yang paling mahal dibandingkan metode lain.
+#### Analisis Taksonomi Bloom (Analisis): Strategi Inkremental sangat cepat saat *melakukan* pencadangan, tetapi sangat lambat saat *memulihkan* (restore). Jika server mati di hari ke-29, TI harus merestore Full Backup hari ke-1, lalu merestore Inkremental hari ke-2, ke-3, hingga ke-29 satu per satu, yang sangat mengancam target RTO.
+}
+
+::Soal 5:: Sebuah bank ritel menetapkan bahwa aplikasi perbankan inti mereka memiliki Recovery Time Objective (RTO) selama 2 jam. Berdasarkan metrik kekritisan ini, situs pemulihan bencana (DR Site) mana yang secara analitis paling relevan untuk disewa? {
+~A. Cold Site
+~B. Warm Site
+=C. Hot Site (dengan replikasi data real-time atau near real-time)
+~D. Reciprocal Agreement (Perjanjian Timbal Balik dengan pesaing)
+#### Analisis Taksonomi Bloom (Analisis): RTO 2 jam adalah jendela waktu yang sangat sempit. Cold site butuh berminggu-minggu untuk aktif. Warm site butuh berhari-hari. Hanya Hot Site (fasilitas yang sudah dilengkapi perangkat keras penuh, dikonfigurasi, dan datanya tersinkronisasi) yang mampu mengambil alih operasi dalam hitungan jam.
+}
+
+::Soal 6:: Dalam menyusun Rencana Kelangsungan Bisnis (BCP), langkah pertama yang diwajibkan oleh standar ISACA adalah melakukan Analisis Dampak Bisnis (Business Impact Analysis / BIA). Tujuan tata kelola analitis dari dokumen BIA ini adalah: {
+=A. Mengidentifikasi proses bisnis yang paling kritis, menilai dampak finansial/non-finansial dari interupsinya, dan menetapkan metrik pemulihan (RTO dan RPO) untuk setiap proses.
+~B. Merancang arsitektur perangkat keras firewall untuk pusat data cadangan.
+~C. Menghitung jumlah staf TI yang akan dipecat akibat otomatisasi bencana.
+~D. Mendaftar spesifikasi teknis dari generator diesel cadangan.
+#### Analisis Taksonomi Bloom (Analisis): BCP tidak bisa dibangun tanpa BIA. BIA memberikan dasar bisnis (bukan teknis) yang objektif. Tanpa BIA, TI tidak tahu aplikasi mana yang harus diselamatkan lebih dulu (prioritas) dan seberapa cepat aplikasi itu harus menyala untuk menyelamatkan perusahaan dari kebangkrutan.
+}
+
+::Soal 7:: Auditor SI sedang meninjau praktik Komputasi Pengguna Akhir (End-User Computing / EUC). Ditemukan bahwa departemen keuangan menggunakan makro spreadsheet Excel yang sangat kompleks untuk menghitung laporan pajak akhir tahun. Apa risiko analitis tertinggi dari operasi EUC ini? {
+~A. Spreadsheet Excel membutuhkan spesifikasi komputer pengguna yang sangat tinggi.
+=B. Kurangnya kontrol akses logis, manajemen versi, dan pengujian independen atas logika rumus dapat menyebabkan salah saji pelaporan keuangan material tanpa terdeteksi oleh TI.
+~C. Spreadsheet akan otomatis dikunci oleh sistem operasi Microsoft.
+~D. Laporan pajak hanya dapat dicetak dalam warna hitam putih.
+#### Analisis Taksonomi Bloom (Analisis): EUC adalah aplikasi yang dikembangkan oleh pengguna bisnis, bukan departemen TI. Karena berada di luar pengawasan siklus hidup pengembangan sistem (SDLC) TI, aplikasi ini sering kekurangan dokumentasi, kontrol akses yang lemah, dan berisiko tinggi mengandung kesalahan rumus yang fatal.
+}
+
+::Soal 8:: Dalam infrastruktur penyimpanan data, seorang insinyur sistem mengusulkan penggunaan RAID 0 untuk server pangkalan data transaksional utama demi meningkatkan kinerja baca/tulis. Analisis respon terbaik dari seorang auditor terhadap usulan arsitektur ini adalah: {
+~A. Menyetujuinya karena RAID 0 menghemat biaya pembelian hard disk.
+~B. Menyetujuinya karena RAID 0 secara otomatis melakukan enkripsi data pada tingkat perangkat keras.
+=C. Menolaknya dengan tegas, karena RAID 0 (Disk Striping) tidak memiliki toleransi kesalahan (fault tolerance); jika satu disk rusak, seluruh pangkalan data akan hilang permanen.
+~D. Menolaknya karena RAID 0 membuat server berjalan jauh lebih lambat.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis ketahanan perangkat keras. RAID 0 mendistribusikan data ke beberapa disk untuk kecepatan ekstrem, tetapi tidak melakukan replikasi/cermin data (no redundancy). Ini sangat fatal untuk ketersediaan (availability) data kritis, di mana RAID 1, 5, atau 10 jauh lebih diwajibkan.
+}
+
+::Soal 9:: Saat mengevaluasi prosedur pembuangan media (Media Disposal), auditor menemukan bahwa hard disk solid-state (SSD) yang berisi data klien sangat rahasia dibersihkan menggunakan metode Degaussing. Apa analisis kelayakan teknis dari kontrol ini? {
+~A. Kontrol ini sangat baik karena degaussing adalah standar militer untuk semua jenis media.
+=B. Kontrol ini tidak efektif; degaussing menggunakan medan magnet yang hanya menghancurkan data pada media magnetik (seperti pita atau HDD tradisional), sedangkan SSD menggunakan sirkuit flash yang kebal terhadap magnet.
+~C. Kontrol ini terlalu mahal dan harus diganti dengan pemformatan standar sistem operasi.
+~D. SSD tidak dapat dihancurkan dengan cara apapun, ia harus dikubur.
+#### Analisis Taksonomi Bloom (Analisis): Evaluasi teknis pemusnahan aset. Auditor harus menganalisis kesesuaian teknologi. Degausser merusak polaritas magnet. SSD menyimpan data secara elektrikal dalam sirkuit terpadu. Degaussing SSD tidak akan menghapus data sama sekali; data sangat rahasia di SSD wajib dihancurkan secara fisik (shredding/pulverizing) atau penghapusan kriptografis.
+}
+
+::Soal 10:: Selama pemadaman listrik di pusat data, generator diesel (Genset) gagal menyala secara otomatis. Penyelidikan mengungkapkan Uninterruptible Power Supply (UPS) bertahan selama 15 menit, namun baterainya terkuras habis sebelum staf bisa menyalakan Genset secara manual. Apa yang gagal dianalisis dalam program pemeliharaan? {
+~A. UPS memiliki kapasitas tegangan yang terlalu besar.
+~B. Kegagalan menggunakan komputasi awan.
+=C. Kegagalan melakukan pengujian fungsional berkala pada sakelar transfer otomatis (Automatic Transfer Switch / ATS) dan pemeliharaan pencegahan beban genset.
+~D. Sistem pendingin ruangan (HVAC) yang tidak kompatibel.
+#### Analisis Taksonomi Bloom (Analisis): UPS hanya bertindak sebagai jembatan sementara (menahan daya listrik) sampai daya jangka panjang (Genset) mengambil alih. Analisis rantai kelangsungan membuktikan bahwa tanpa sakelar transfer otomatis (ATS) yang diuji secara berkala, jembatan tersebut terputus dan sistem akan tetap mati.
+}
+
+::Soal 11:: Organisasi menggunakan jaringan area luas (WAN) untuk menghubungkan kantor pusat dengan fasilitas manufaktur. Auditor mencatat bahwa hanya ada satu sirkuit kabel telekomunikasi fisik yang masuk ke gedung pabrik. Solusi tata kelola ketahanan (resilience) analitis yang paling tepat adalah: {
+~A. Menurunkan kecepatan bandwidth agar kabel tidak cepat panas.
+~B. Mengganti kabel tembaga dengan kabel fiber optik pada jalur yang sama.
+=C. Menambahkan sirkuit telekomunikasi kedua dari penyedia (ISP) yang berbeda, yang masuk ke gedung melalui rute fisik yang sama sekali berbeda (Diverse Routing).
+~D. Menambahkan sistem firewall ganda di ujung kabel yang sama.
+#### Analisis Taksonomi Bloom (Analisis): Mengurangi Single Point of Failure (SPoF) jaringan. Jika hanya ada satu jalur masuk kabel (meskipun fiber optik berkecepatan tinggi), aktivitas galian tanah biasa di jalan depan gedung dapat memutus seluruh koneksi perusahaan. "Diverse routing" menjamin redundansi fisik.
+}
+
+::Soal 12:: Dalam manajemen operasi sistem basis data, konsep ACID menjamin pemrosesan transaksi yang andal. "A" dalam ACID merujuk pada Atomicity (Atomisitas). Apa makna analitis operasional dari atribut ini? {
+=A. Transaksi adalah unit kerja yang tak terpisahkan; seluruh rangkaian operasi dalam transaksi harus berhasil sepenuhnya, atau basis data secara otomatis mengembalikan (rollback) ke keadaan semula jika ada satu saja bagian yang gagal.
+~B. Data harus selalu dienkripsi menggunakan algoritma asimetris.
+~C. Basis data hanya dapat diakses oleh satu pengguna pada satu waktu.
+~D. Semua pembaruan basis data harus dicadangkan secara otomatis ke awan.
+#### Analisis Taksonomi Bloom (Analisis): Atomicity berarti "All or Nothing" (Semua atau Tidak Sama Sekali). Dalam transaksi transfer bank, jika sistem berhasil mendebit akun A namun mati listrik sebelum mengkredit akun B, transaksi tidak boleh dibiarkan menggantung. Atomicity menganalisis integritas ini dengan membatalkan debit akun A (rollback).
+}
+
+::Soal 13:: Departemen TI menetapkan jadwal pemrosesan Batch harian (Job Scheduling) untuk penggajian pada pukul 03.00 pagi. Namun, pekerjaan tersebut sering gagal selesai sebelum jam kerja dimulai pada pukul 08.00 pagi. Auditor mengidentifikasi isu Manajemen Kapasitas. Parameter operasional analitis apa yang sedang dilanggar? {
+~A. RPO (Recovery Point Objective)
+~B. MTBF (Mean Time Between Failures)
+=C. Batch Processing Window (Jendela Waktu Pemrosesan Batch)
+~D. SLA Jaringan Klien-Server
+#### Analisis Taksonomi Bloom (Analisis): Waktu yang tersedia untuk memproses pekerjaan massal tanpa mengganggu sistem produksi online harian disebut Batch Window. Jika pekerjaan melampaui jendela ini, kinerja sistem pengguna (respons time aplikasi online) di siang hari akan mengalami degradasi yang parah.
+}
+
+::Soal 14:: Auditor memeriksa log Manajemen Insiden Keamanan (Incident Response). Pada tahap "Penanggulangan" (Containment), prosedur manakah yang paling mencerminkan keberhasilan analitis fase ini selama serangan worm/malware yang menyebar secara internal? {
+~A. Memformat dan menghapus semua hard disk server segera setelah malware terdeteksi.
+=B. Mengisolasi atau memutuskan segmen jaringan yang terinfeksi dari jaringan yang sehat (mencabut kabel logis/fisik) untuk menghentikan pergerakan lateral malware tanpa merusak bukti.
+~C. Melaporkan insiden tersebut ke media massa dan kepolisian secara langsung.
+~D. Mengembalikan data cadangan ke server yang masih terinfeksi.
+#### Analisis Taksonomi Bloom (Analisis): Memecah fase respons insiden (Deteksi -> Penanggulangan -> Pemberantasan -> Pemulihan -> Pelajaran). Tujuan utama penanggulangan (Containment) adalah menghentikan pendarahan. Mengisolasi jaringan menghentikan penyebaran malware tanpa menghancurkan bukti forensik memori (yang terjadi jika server langsung dimatikan/dihapus).
+}
+
+::Soal 15:: Kontrol "Penyeteman Kapasitas" (Capacity Tuning) secara teratur dilakukan oleh administrator jaringan. Apa indikator analitis proaktif terbaik yang memicu administrator untuk mulai merencanakan pengadaan server baru sebelum pengguna menyadari aplikasi menjadi lambat? {
+~A. Jumlah tiket meja bantuan tentang sistem mati total.
+~B. Harga memori server di pasar sedang turun.
+=C. Pemantauan garis dasar (Baseline monitoring) menunjukkan tren pemanfaatan CPU dan Memori terus meningkat dan secara konsisten menyentuh ambang batas (threshold) 80% selama sebulan terakhir.
+~D. Administrator ingin menghabiskan anggaran TI tahunan.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen kapasitas bersifat proaktif, bukan reaktif. Auditor menganalisis efisiensi TI melalui metrik. Dengan menganalisis laporan tren utilisasi historis (baseline) terhadap ambang peringatan (threshold), TI dapat melakukan penskalaan (scaling up) infrastruktur *sebelum* hambatan (bottleneck) terjadi.
+}
+
+::Soal 16:: Manajemen operasional memutuskan untuk tidak menerapkan pemasangan tambalan (Patch Management) pada sistem operasi server basis data utama karena sistem tersebut sangat stabil dan beroperasi 24/7. Analisis risiko tertinggi dari keputusan penundaan operasional ini adalah: {
+=A. Server akan terpapar pada eksploitasi kerentanan keamanan yang sudah diketahui (known vulnerabilities), yang dapat memfasilitasi pelanggaran data secara fatal oleh penyerang.
+~B. Server otomatis akan beroperasi lebih lambat dari sebelumnya.
+~C. Server tidak akan kompatibel lagi dengan kabel jaringan cat-6.
+~D. Pengguna tidak akan bisa melakukan pengunduhan data secara paralel.
+#### Analisis Taksonomi Bloom (Analisis): Stabilitas operasional (Uptime) tidak boleh mengorbankan keamanan. Tambalan keamanan OS dirilis untuk menutup lubang yang secara publik telah dipublikasikan. Membiarkan sistem tidak ditambal sama dengan membiarkan pintu utama pusat data tidak terkunci.
+}
+
+::Soal 17:: Auditor mendapati bahwa fasilitas Pusat Data utama perusahaan diletakkan di ruang bawah tanah tanah (basement) gedung untuk menghindari pandangan publik. Berdasarkan analisis kontrol lingkungan dan operasi fisik, kelemahan inheren apa yang muncul dari arsitektur fasilitas ini? {
+~A. Server akan mengalami kepanasan (overheating) akibat kurangnya ventilasi buatan.
+~B. Peretas eksternal lebih mudah menemukan alamat IP jaringan.
+=C. Risiko kebanjiran (water leakage/flooding) dan kerusakan infrastruktur yang tinggi, baik akibat cuaca ekstrem maupun kebocoran pipa utilitas gedung di atasnya.
+~D. Sulit untuk memasang kamera CCTV di ruangan bawah tanah.
+#### Analisis Taksonomi Bloom (Analisis): Pusat data harus dibangun berdasarkan prinsip mitigasi bahaya lingkungan fisik. Ruang bawah tanah adalah titik pengumpulan air alami jika terjadi banjir hujan atau pecahnya pipa pemadam kebakaran, yang merupakan musuh utama kelistrikan dan rak perangkat keras komputasi.
+}
+
+::Soal 18:: Sebuah organisasi sedang menjalankan uji Rencana Kelangsungan Bisnis (BCP). Mereka memindahkan seluruh tim inti operasional ke situs pemulihan darurat dan menjalankan proses bisnis nyata dari fasilitas tersebut selama sehari penuh tanpa mematikan situs utama. Metode pengujian analitis apa yang sedang dijalankan? {
+~A. Tabletop Exercise / Structured Walkthrough
+~B. Checklist Review
+~C. Full Interruption Test (Pengujian Gangguan Penuh)
+=D. Parallel Test (Pengujian Paralel)
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis tingkatan kedewasaan uji BCP. Tabletop hanya latihan di atas meja/diskusi. Gangguan Penuh sangat berbahaya karena mematikan operasi utama. Tes Paralel adalah langkah paling aman namun komprehensif; situs cadangan memproses data harian secara nyata berdampingan dengan operasi situs utama yang berjalan normal.
+}
+
+::Soal 19:: SLA dari vendor layanan hosting awan menjamin "Ketersediaan Layanan sebesar 99.9% (Three Nines)". Secara analitis, seberapa besar toleransi waktu henti (downtime) sistem maksimum per tahun yang disepakati secara kontrak dalam tingkat ini? {
+~A. Sekitar 8 jam per tahun.
+=B. Sekitar 8,7 jam per tahun.
+~C. Sekitar 52 menit per tahun (Five Nines).
+~D. Sekitar 3 hari per tahun.
+#### Analisis Taksonomi Bloom (Analisis): Pengetahuan metrik standar. 99% ketersediaan = toleransi mati ~3.6 hari/tahun. 99.9% = ~8.7 jam/tahun. 99.99% = ~52 menit/tahun. 99.999% (High Availability sejati) = ~5 menit/tahun. Pemahaman matematis ini esensial bagi pengauditan klaim SLA vendor.
+}
+
+::Soal 20:: Ketika meninjau metrik meja bantuan (Helpdesk), auditor mencatat 'First Call Resolution (FCR) Rate' sangat rendah. Analisis efisiensi operasional apa yang dapat disimpulkan dari gejala ini? {
+=A. Banyak insiden tidak diselesaikan saat kontak awal, mengindikasikan bahwa personel dukungan lapis pertama (Tier-1) kurang mendapatkan pelatihan, dokumentasi dasar pengetahuan (Knowledge Base) buruk, atau eskalasi ke staf teknis lapis kedua terlalu sering terjadi.
+~B. Sistem jaringan beroperasi dengan kecepatan maksimal.
+~C. Pengguna akhir merasa sangat puas dengan layanan dukungan TI.
+~D. Manajemen tidak perlu merekrut staf TI tambahan.
+#### Analisis Taksonomi Bloom (Analisis): FCR mengukur seberapa sering masalah pengguna diselesaikan pada panggilan pertama tanpa perlu ditransfer. FCR yang rendah berarti staf garis depan tidak berdaya, meningkatkan biaya operasional dukungan TI secara masif karena masalah harus ditangani oleh insinyur senior yang bergaji lebih tinggi.
+}
+
+::Soal 21:: Dalam manajemen layanan tingkat perusahaan, alat pemantauan jaringan menggunakan protokol SNMP (Simple Network Management Protocol). Manfaat analitis utama dari pengumpulan *Trap* SNMP dari switch dan router jaringan adalah: {
+~A. SNMP dapat mengenkripsi seluruh file basis data di server.
+~B. SNMP memaksa pengguna mengganti kata sandi secara otomatis.
+=C. Mengotomatiskan peringatan proaktif (alerts) tentang kerusakan perangkat keras jaringan atau kelebihan beban tautan jaringan secara real-time ke dasbor operasi sebelum bisnis terhenti.
+~D. Menyelaraskan anggaran keuangan operasional bulanan secara otomatis.
+#### Analisis Taksonomi Bloom (Analisis): Pemantauan TI yang efisien bergantung pada perangkat pelaporan otonom. SNMP 'Traps' bertindak sebagai alarm; ketika antarmuka router jatuh, ia secara sekejap melempar pesan analitik log ke server manajemen pusat, memberikan visibilitas detektif detik itu juga.
+}
+
+::Soal 22:: Auditor memverifikasi bahwa kebijakan Retensi Data (Data Retention Policy) perusahaan mewajibkan penyimpanan log sistem operasi dan log basis data selama 7 tahun. Apa landasan analitis dan tujuan tata kelola utama dari durasi panjang ini? {
+~A. Untuk mencegah kekosongan ruang penyimpanan pada perangkat keras penyedia awan.
+~B. Memastikan organisasi tidak perlu berinvestasi pada teknologi basis data baru.
+=C. Mematuhi persyaratan mandat hukum/regulasi industri tertentu dan memastikan ketersediaan bukti untuk keperluan investigasi audit forensik atau litigasi jangka panjang.
+~D. Mempercepat waktu pencadangan harian departemen TI.
+#### Analisis Taksonomi Bloom (Analisis): Retensi jangka panjang data statis tidak berguna secara teknis untuk operasi harian. Motif murninya adalah hukum dan analitik forensik. Menyimpan jejak audit selama 7 tahun memastikan perusahaan dapat merespons perintah pengadilan (subpoena) atau investigasi penipuan historis.
+}
+
+::Soal 23:: Untuk mengurangi penundaan yang diakibatkan oleh lalu lintas pertukaran data antara aplikasi web pelanggan dan pangkalan data inti, arsitek sistem menerapkan *Edge Computing* atau jaringan pengiriman konten (CDN). Dampak operasional analitis dari implementasi ini terhadap ketersediaan dan kinerja adalah: {
+=A. Memindahkan beban komputasi dan memori (caching) lebih dekat ke lokasi fisik pengguna, sehingga secara drastis mengurangi latensi aplikasi dan menyeimbangkan beban dari server inti.
+~B. Menyebabkan server inti mengalami kepanasan perangkat keras berlebih.
+~C. Membutuhkan waktu pencadangan sistem (backup time) yang lebih lama di pusat data utama.
+~D. Menghilangkan kebutuhan autentikasi pengguna.
+#### Analisis Taksonomi Bloom (Analisis): Analisis topologi canggih. CDN / Edge caching mendistribusikan salinan konten statis ke server di seluruh dunia. Jika pengguna di Indonesia mengakses situs berbasis AS, mereka cukup memuat data dari node terdekat di Indonesia, menghemat waktu tempuh (latency) dan melindungi server pusat AS dari kepunahan akibat beban trafik.
+}
+
+::Soal 24:: Dalam mengklasifikasikan aset pemulihan bencana, sebuah aplikasi analitik internal yang digunakan oleh divisi pemasaran untuk memprediksi tren triwulanan dinilai mengalami kerusakan. Menurut hierarki analitik BIA, seberapa cepat aplikasi ini harus dipulihkan (RTO)? {
+~A. Segera dalam hitungan detik (Hot Standby).
+~B. Dalam waktu kurang dari 4 jam, karena divisi pemasaran memegang kunci pendapatan.
+=C. Waktu pemulihannya dapat ditunda selama berhari-hari atau berminggu-minggu, mengalokasikan sumber daya prioritas untuk memulihkan sistem yang berhadapan langsung dengan pemrosesan transaksi pelanggan atau keuangan inti terlebih dahulu.
+~D. Aplikasi tersebut tidak perlu dipulihkan sama sekali.
+#### Analisis Taksonomi Bloom (Analisis): Analisis pengelompokan BIA (Kritis, Vital, Sensitif, Non-kritis). Sistem prediksi tren bukanlah garis depan operasi perusahaan (non-vital). Jika sistem e-commerce (penerimaan uang) mati, itu yang harus diselamatkan. Sumber daya pemulihan selalu dialokasikan berdasarkan kekritisan uang/reputasi langsung.
+}
+
+::Soal 25:: Selama peninjauan operasional, didapati bahwa *Job Scheduling* untuk transfer dana elektronik dilakukan tanpa mekanisme peringatan jika terjadi kegagalan transmisi. Auditor menyarankan kontrol peringatan otomatis. Mengapa peringatan ini dinilai krusial secara tata kelola analitis? {
+=A. Tanpa peringatan detektif, kegagalan transmisi antar bank tidak akan disadari hingga besok harinya, mengakibatkan pinalti regulasi yang parah dan gangguan layanan keuangan pelanggan secara masif.
+~B. Peringatan otomatis akan memperbaiki kesalahan transmisi dengan sendirinya tanpa intervensi manusia.
+~C. Peringatan otomatis akan mengenkripsi transmisi yang tidak aman.
+~D. Sistem akan berjalan lebih lambat tanpa adanya peringatan otomatis.
+#### Analisis Taksonomi Bloom (Analisis): Kontrol operasi pemrosesan yang andal harus bersifat reaktif dan cepat. Ketiadaan deteksi otomatis dalam penjadwalan operasi asinkron/batch (seperti kliring bank) berarti TI menavigasi dalam keadaan buta (blind spot) sampai pelanggan mengeluh, yang mana sudah terlalu terlambat secara mitigasi.
+}
+
+// Soal 26 - 50: Domain 4 (IS Operations and Business Resilience)
+
+::Soal 26:: Saat mengaudit proses Manajemen Perubahan (Change Management), auditor menemukan bahwa pengembang (developer) memiliki akses langsung untuk memindahkan kode mereka sendiri ke lingkungan produksi (live environment). Apa kontrol analitis terbaik untuk memitigasi risiko integritas sistem ini? {
+~A. Meminta pengembang untuk menandatangani formulir pembebasan tanggung jawab sebelum memindahkan kode.
+=B. Menerapkan pemisahan tugas (Segregation of Duties) yang ketat di mana hanya staf Manajemen Rilis (Release Management) atau operasi yang berwenang untuk memigrasikan kode ke produksi.
+~C. Memasang perangkat lunak antivirus tambahan di server produksi.
+~D. Mengharuskan pengujian penetrasi (penetration testing) dilakukan setiap hari.
+#### Analisis Taksonomi Bloom (Analisis): Auditor harus menganalisis pemisahan lingkungan. Memberikan akses tulis produksi kepada pengembang menghancurkan kontrol pemisahan tugas (SoD). Pengembang dapat dengan mudah menyelundupkan kode yang tidak diuji atau berbahaya (backdoor). Hanya entitas independen (Release Manager) yang boleh meluncurkan kode setelah disetujui CAB.
+}
+
+::Soal 27:: Sebuah organisasi menggunakan sistem pemadam kebakaran berbahan dasar air (water sprinklers) tipe basah di dalam ruang server utamanya. Berdasarkan analisis kontrol lingkungan pusat data, apa rekomendasi auditor SI yang paling tepat? {
+~A. Mendukung penggunaan air karena ini adalah metode pemadaman api yang paling ramah lingkungan.
+~B. Menyarankan agar sistem air diuji penyemprotannya setiap 6 bulan sekali.
+=C. Merekomendasikan penggantian dengan sistem pencegah kebakaran gas bersih (seperti FM-200 atau Novec 1230) karena air dapat merusak perangkat keras komputasi secara permanen dan memicu korsleting listrik mematikan.
+~D. Menyarankan staf TI untuk selalu menutupi server dengan plastik.
+#### Analisis Taksonomi Bloom (Analisis): Air adalah musuh utama perangkat elektronik. Analisis kelayakan fasilitas mewajibkan pusat data menggunakan agen gas pencegah kebakaran (clean agent suppression systems) yang menyedot panas atau memutus rantai reaksi kimia oksigen tanpa meninggalkan residu atau merusak sirkuit server.
+}
+
+::Soal 28:: Dalam analisis arsitektur basis data, tugas seorang Administrator Basis Data (Database Administrator / DBA) harus dibatasi secara ketat. Tindakan mana di bawah ini yang, jika dilakukan oleh DBA, merupakan pelanggaran analitis terhadap pemisahan tugas (SoD)? {
+~A. Memantau kinerja dan waktu kueri basis data.
+~B. Melakukan pencadangan (backup) dan pemulihan (restore) basis data.
+=C. Menambah, menghapus, atau mengubah data transaksi bisnis nyata di dalam tabel basis data produksi.
+~D. Mengalokasikan ruang penyimpanan fisik tambahan untuk pangkalan data.
+#### Analisis Taksonomi Bloom (Analisis): Peran DBA murni bersifat dukungan infrastruktur teknis (menjaga agar mesin basis data tetap menyala dan efisien). Jika DBA memanipulasi isi data transaksi (seperti mengubah saldo rekening nasabah), mereka mengambil alih fungsi pengguna akhir, yang membuka celah penipuan (fraud) tanpa batas.
+}
+
+::Soal 29:: Sebuah perusahaan memiliki situs pemulihan bencana sekunder (DR site). Saat melakukan pengujian Rencana Kelangsungan Bisnis (BCP), mereka menggunakan metode *Simulation Test*. Apa karakteristik analitis dari pengujian ini dibandingkan *Parallel Test*? {
+=A. Uji simulasi melibatkan skenario permainan peran (role-playing) tim manajemen krisis tanpa memproses data transaksi harian yang sebenarnya, sedangkan uji paralel memproses data aktual bersamaan dengan situs utama.
+~B. Uji simulasi mengharuskan sistem utama dimatikan secara paksa.
+~C. Uji simulasi selalu melibatkan auditor eksternal dan pihak kepolisian.
+~D. Uji simulasi membutuhkan pemindahan seluruh perangkat keras ke situs DR.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis tingkat pengujian BCP. Simulasi (Simulation/Walkthrough) adalah uji prosedural di mana tim mempraktikkan langkah pemulihan secara hipotetis. Ini lebih murah dan tidak berisiko dibandingkan uji paralel (memproses data nyata) atau uji gangguan penuh (mematikan operasi utama).
+}
+
+::Soal 30:: Untuk meminimalkan risiko ketersediaan server web e-commerce, perusahaan mengimplementasikan dua server identik yang mendistribusikan lalu lintas secara merata, dan jika satu gagal, yang lain secara otomatis menyerap semua sisa beban lalu lintas. Topologi operasional ini secara analitis dikenal sebagai: {
+~A. Cold Standby
+~B. Clustering Aktif-Pasif (Active-Passive)
+=C. Clustering Aktif-Aktif (Active-Active / Load Balancing)
+~D. Virtual Private Network (VPN)
+#### Analisis Taksonomi Bloom (Analisis): Active-Active (Load Balancing) mendistribusikan beban kerja secara simultan ke beberapa node yang hidup. Jika satu node mati, yang lain langsung menyerap lalu lintas tanpa jeda waktu henti (zero downtime). Ini memberikan keandalan ketersediaan tertinggi dibandingkan Active-Passive.
+}
+
+::Soal 31:: Selama peninjauan operasional, manajer TI mengklaim bahwa pencadangan (backup) diferensial harian lebih efisien daripada pencadangan inkremental harian. Berdasarkan analisis operasi pemulihan, pernyataan ini: {
+~A. Salah, karena pencadangan diferensial tidak dapat digunakan untuk memulihkan sistem operasi.
+=B. Benar dari segi *kecepatan pemulihan* (Restore time), karena pemulihan hanya membutuhkan file pencadangan penuh (Full backup) terakhir dan satu file diferensial terakhir, berbeda dengan inkremental yang membutuhkan semua file rekaman berurutan.
+~C. Benar, karena pencadangan diferensial menggunakan lebih sedikit ruang penyimpanan disk setiap harinya.
+~D. Salah, karena pencadangan diferensial menghapus data lama secara permanen.
+#### Analisis Taksonomi Bloom (Analisis): Membedakan strategi cadangan. Inkremental cepat dicadangkan tapi sangat lambat saat dipulihkan (butuh pita Full + semua pita inkremental harian). Diferensial lambat dicadangkan tapi sangat cepat saat dipulihkan (hanya butuh pita Full + 1 pita diferensial terakhir).
+}
+
+::Soal 32:: Sebuah perusahaan e-commerce memiliki RPO (Recovery Point Objective) sebesar 1 jam. Saat mengaudit infrastruktur jaringan penyedia layanan awan mereka, auditor menemukan bahwa replikasi data asinkron mengalami jeda (lag) selama 3 jam akibat latensi bandwidth lintas benua. Apa kesimpulan analitisnya? {
+=A. Perusahaan gagal memenuhi RPO karena jika terjadi bencana saat ini, data transaksi selama 3 jam terakhir akan hilang permanen, melampaui toleransi 1 jam.
+~B. Perusahaan beroperasi dalam batas RPO yang aman karena 3 jam lebih besar dari 1 jam.
+~C. Replikasi asinkron selalu lebih baik dan dijamin tidak memiliki jeda.
+~D. RPO tidak dipengaruhi oleh kecepatan bandwidth atau latensi jaringan.
+#### Analisis Taksonomi Bloom (Analisis): RPO mengukur titik di masa lalu di mana data dapat dipulihkan (toleransi hilangnya data). Jika data memakan waktu 3 jam untuk menyalin ke situs DR, maka RPO aktual adalah 3 jam. Ini secara analitis melanggar ambang batas bisnis yang mengharuskan maksimal data hilang hanya 1 jam.
+}
+
+::Soal 33:: Dalam audit Manajemen Aset Perangkat Lunak (Software Asset Management / SAM), auditor menemukan instalasi Microsoft Office yang jauh melebihi jumlah lisensi yang dibeli (over-deployment). Organisasi berargumen bahwa komputer tersebut jarang digunakan. Apa analisis risiko utama dari temuan ini? {
+~A. Perangkat keras akan lebih sering rusak akibat beban kerja berlebih.
+~B. Organisasi akan otomatis didiskon oleh vendor di masa depan.
+=C. Risiko sanksi finansial (denda) yang masif dan kerusakan reputasi akibat pelanggaran hak cipta perangkat lunak jika terjadi audit kepatuhan oleh vendor (True-up audit).
+~D. Server pusat akan kehabisan alamat IP.
+#### Analisis Taksonomi Bloom (Analisis): Kepatuhan lisensi bersifat mutlak tanpa mempedulikan frekuensi penggunaan perangkat lunak. Instalasi tanpa izin (software piracy/under-licensing) membawa eksposur hukum dan denda kepatuhan bernilai raksasa yang secara finansial sangat merugikan perusahaan.
+}
+
+::Soal 34:: Untuk menjamin toleransi kesalahan (fault tolerance) pada penyimpanan data, sebuah perusahaan menggunakan arsitektur RAID 5. Secara analitis, bagaimana arsitektur ini mencegah kehilangan data jika satu disk mengalami kerusakan fisik? {
+~A. Menyalin data 100% secara identik ke disk kedua secara real-time (Mirroring).
+=B. Menggunakan blok paritas terdistribusi (Distributed Parity) di seluruh drive, sehingga data pada disk yang rusak dapat dihitung ulang dan direkonstruksi secara matematis dari sisa disk yang ada.
+~C. Mengirimkan data yang hilang langsung dari komputasi awan.
+~D. Menyatukan semua disk menjadi satu drive besar tanpa redundansi (Striping).
+#### Analisis Taksonomi Bloom (Analisis): Analisis ketahanan perangkat keras. RAID 1 menggunakan pencerminan (Mirroring). RAID 5 membagi data dan menulis informasi matematika tambahan (Paritas) di seluruh kumpulan disk. Jika satu disk mati, algoritma menggunakan paritas tersebut untuk merekonstruksi data yang hilang tanpa menjatuhkan server.
+}
+
+::Soal 35:: Pusat data perusahaan dilengkapi dengan Uninterruptible Power Supply (UPS) baterai dan Generator Diesel. Apa fungsi tata kelola analitis yang membedakan peran kedua sistem pasokan daya cadangan ini selama pemadaman listrik kota? {
+~A. UPS digunakan untuk mendinginkan server, sedangkan generator memberikan daya listrik.
+~B. Keduanya memiliki fungsi yang identik dan bekerja secara bersamaan selama berminggu-minggu.
+=C. UPS menyerap lonjakan tegangan dan memberikan daya instan jangka pendek agar server tidak *restart*, sementara generator berfungsi sebagai sumber daya utama jangka panjang setelah mesin memanas dan mengambil alih beban.
+~D. Generator harus dinyalakan secara manual terlebih dahulu sebelum UPS mulai bekerja.
+#### Analisis Taksonomi Bloom (Analisis): UPS adalah jembatan sementara dan pengkondisi daya. Generator adalah penopang beban jangka panjang. Analisis kelangsungan operasi membuktikan generator membutuhkan waktu (10-30 detik) untuk menyala otomatis, jeda waktu fatal yang secara mutlak harus diisi oleh baterai UPS.
+}
+
+::Soal 36:: Perbedaan tata kelola analitis yang mendasar antara Service Level Agreement (SLA) dan Operational Level Agreement (OLA) di dalam kerangka kerja manajemen layanan TI (ITSM) adalah: {
+=A. SLA adalah komitmen tingkat layanan eksternal antara departemen TI dengan pelanggan bisnis, sedangkan OLA adalah perjanjian dukungan internal antar-tim teknis di dalam departemen TI itu sendiri.
+~B. SLA hanya mencakup layanan perangkat keras, sedangkan OLA untuk layanan perangkat lunak murni.
+~C. SLA selalu memuat penalti finansial, sementara OLA selalu melibatkan vendor dari luar perusahaan.
+~D. Tidak ada perbedaan analitis; keduanya hanyalah istilah pemasaran.
+#### Analisis Taksonomi Bloom (Analisis): Memecah struktur dukungan layanan. Agar Meja Bantuan (TI) dapat memenuhi SLA 2 jam kepada Pengguna Bisnis, Meja Bantuan harus membuat OLA internal dengan Tim Jaringan (TI juga) yang mensyaratkan tim jaringan merespons eskalasi dalam 1 jam.
+}
+
+::Soal 37:: Ketika mengkaji hasil pekerjaan pemrosesan Batch harian, auditor menemukan puluhan laporan "Exception/Error" yang diabaikan oleh staf TI setiap malam. Staf TI berdalih bahwa transaksi yang gagal tersebut hanya bernilai beberapa sen. Apa kelemahan kontrol analitis terbesar di sini? {
+~A. Staf TI harus menghapus laporan pengecualian agar tidak memenuhi kapasitas disk server.
+=B. Kegagalan untuk menyelidiki dan memasukkan kembali (resubmit) pengecualian berarti data keuangan sistem tidak lengkap dan memberikan celah emas bagi peretas orang dalam untuk melakukan penipuan "slicing / salami attack".
+~C. Laporan pengecualian seharusnya tidak pernah dicetak di atas kertas.
+~D. Hanya auditor eksternal yang berhak memperbaiki transaksi pengecualian.
+#### Analisis Taksonomi Bloom (Analisis): Mengabaikan alarm bernilai kecil sangat berbahaya. Ini adalah metode klasik penipuan "salami" (memotong uang pecahan sen dari ribuan rekening). Jika operasi mengabaikan prosedur rekonsiliasi pengecualian harian, penipuan ini akan lolos tanpa deteksi.
+}
+
+::Soal 38:: Dalam proses Manajemen Masalah (Problem Management), alat analitis mana yang paling sesuai digunakan oleh tim operasi TI untuk menemukan akar penyebab sistemik mengapa server email selalu mogok setiap kali laporan akhir bulan dijalankan? {
+~A. Diagram Gantt (Gantt Chart)
+=B. Analisis Akar Masalah (Root Cause Analysis / RCA) seperti metode "5 Whys" atau Diagram Tulang Ikan (Ishikawa).
+~C. Perjanjian Tingkat Layanan (SLA)
+~D. Pengujian Penetrasi Kotak Hitam (Black-Box Penetration Testing)
+#### Analisis Taksonomi Bloom (Analisis): Manajemen Masalah berfokus pada pencegahan kambuhnya insiden. RCA adalah proses analitis mendalam yang wajib digunakan untuk melacak gejala hingga menemukan sumber penyakit (misalnya, menelusuri batas memori server saat pekerjaan batch berat berjalan serentak).
+}
+
+::Soal 39:: Sebuah bank mempertimbangkan untuk menggunakan Perjanjian Timbal Balik (Reciprocal Agreement) dengan bank pesaing sebagai situs pemulihan bencana darurat demi menghemat biaya secara ekstrem. Mengapa praktik ini secara analitis dinilai sangat berisiko tinggi oleh auditor SI? {
+~A. Karena bank pesaing akan selalu memberikan layanan jaringan yang lebih baik.
+=B. Sangat sulit menjamin kompatibilitas perangkat keras yang persis sama seiring berjalannya waktu, terdapat risiko keamanan kerahasiaan data kompetitif, dan fasilitas pesaing mungkin tidak memiliki sisa kapasitas beban kerja untuk menampung dua operasi bank sekaligus.
+~C. Perjanjian timbal balik selalu memakan biaya tahunan lebih tinggi daripada membangun situs panas (hot site) sendiri.
+~D. Hal ini melanggar pedoman manajemen rilis metodologi Agile secara langsung.
+#### Analisis Taksonomi Bloom (Analisis): Secara teoretis murah, secara praktis berbahaya. Organisasi dan pesaing akan memperbarui sistem dengan kecepatan berbeda, merusak kompatibilitas perangkat lunak. Terlebih lagi, tidak mungkin satu fasilitas yang selamat sanggup memproses beban transaksi dua bank berukuran sama secara bersamaan.
+}
+
+::Soal 40:: Untuk membuang media penyimpanan yang berisi data intelijen "Sangat Rahasia", organisasi mengirimkan *hard-disk* (HDD) usang ke pabrik daur ulang setelah staf memformatnya secara logis (Quick Format). Analisis risiko tata kelola penghancuran data yang dilakukan organisasi ini adalah: {
+=A. Sangat rentan; pemformatan logis standar (high-level format) hanya menghapus penunjuk indeks direktori, sementara data mentah aslinya masih utuh di piringan magnetik dan dapat dengan mudah dipulihkan menggunakan alat forensik perangkat lunak gratis.
+~B. Sangat kuat, karena memformat drive menghapus setiap bit data menjadi nol (zero-fill).
+~C. Sangat kuat, selama drive tersebut dikirim menggunakan kurir berlisensi.
+~D. Lemah, karena hard-disk seharusnya disumbangkan ke sekolah negeri untuk amal.
+#### Analisis Taksonomi Bloom (Analisis): Format OS (Quick Format) layaknya mencabut daftar isi dari buku; isi halamannya masih ada. Sanitasi media yang andal untuk data rahasia harus melibatkan penghapusan kriptografis (cryptographic erase), penimpaan multi-lintasan (multipass wipe), atau penghancuran fisik/degaussing.
+}
+
+::Soal 41:: Selama proses pemantauan pemanfaatan kapasitas TI (Capacity Monitoring), alat statistik mengidentifikasi leher botol (bottleneck) yang parah pada unit pemrosesan sentral (CPU) sebuah server utama. Tindakan tata kelola analitis apa yang paling tepat dilakukan manajer TI *sebelum* memutuskan untuk membeli server fisik baru? {
+~A. Langsung memesan sasis server baru yang paling mahal dari vendor agar masalah tidak terulang.
+~B. Meminta seluruh pengguna ritel untuk berhenti mengakses sistem secara bersamaan di siang hari.
+=C. Melakukan penalaan kinerja (performance tuning) dan menganalisis apakah kode kueri basis data dapat dioptimalkan, atau beban pekerjaan *batch* dipindahkan ke luar jam sibuk sebelum menyetujui biaya modal tambahan.
+~D. Mematikan fitur firewall dan log keamanan secara permanen untuk menghemat tenaga CPU.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen kapasitas membutuhkan evaluasi mendalam sebelum ekspansi (scaling up). Staf operasi yang andal akan menganalisis inefisiensi perangkat lunak terlebih dahulu (seperti kueri SQL yang buruk) atau meratakan beban jadwal (load balancing) sebelum membuang uang untuk membeli perangkat keras keras (CAPEX).
+}
+
+::Soal 42:: Organisasi TI menggunakan skema rotasi cadangan pita yang dikenal sebagai *Grandfather-Father-Son* (GFS). Tujuan analitis utama dari metode pengarsipan historis bertingkat ini adalah: {
+~A. Memastikan pita cadangan tidak pernah kadaluarsa dan bisa digunakan selama ratusan tahun.
+=B. Menyediakan riwayat pencadangan komprehensif (harian, mingguan, bulanan) yang memberikan fleksibilitas titik pemulihan, sambil menyeimbangkan biaya jumlah pembelian pita baru secara optimal.
+~C. Menghapus data ayah dan anak secara otomatis setiap minggunya untuk mempercepat server.
+~D. Memastikan tugas pencadangan hanya dilakukan oleh tiga staf berbeda untuk mematuhi pemisahan tugas.
+#### Analisis Taksonomi Bloom (Analisis): GFS adalah konsep manajemen arsip biaya efektif. Son (Harian) ditimpa setiap minggu. Father (Mingguan) ditimpa setiap bulan. Grandfather (Bulanan) disimpan permanen di luar lokasi. Ini memberi perlindungan data jangka panjang tanpa harus menghabiskan uang untuk pita baru setiap hari.
+}
+
+::Soal 43:: Dalam desain ketahanan arsitektur jaringan Local Area Network (LAN), auditor sangat merekomendasikan aktivasi *Spanning Tree Protocol* (STP) pada seluruh sakelar (switch) jaringan perusahaan. Masalah operasional analitis apa yang dicegah oleh protokol ini? {
+~A. Serangan *phishing* yang masuk melalui lampiran email eksternal.
+=B. Terjadinya putaran jaringan (network loops / broadcast storms) yang dapat melumpuhkan seluruh lalu lintas data ketika administrator menghubungkan beberapa jalur kabel redundan secara bersamaan.
+~C. Keterlambatan pembayaran otomatis tagihan utilitas penyedia internet.
+~D. Kebocoran kata sandi administrator sistem ke forum publik.
+#### Analisis Taksonomi Bloom (Analisis): Ketahanan jaringan (Resilience) mengharuskan adanya kabel ganda/redundan antar switch. Namun, kabel loop secara fisik akan menciptakan paket data yang berputar tanpa henti (broadcast storm) yang membunuh performa LAN. STP secara analitis menonaktifkan satu jalur secara logis untuk mencegah hal tersebut.
+}
+
+::Soal 44:: Ketika menguji fasilitas *Warm Site* organisasi, komite audit menemukan bahwa situs tersebut memiliki komputer, pendingin udara, dan rak server yang hidup, tetapi tidak ada sistem operasi atau perangkat lunak aplikasi transaksi yang terinstal, serta tidak ada cadangan data yang siap. Evaluasi analitis atas temuan pengujian ini adalah: {
+=A. Keadaan ini sesuai definisi; *Warm Site* memang dirancang tanpa konfigurasi akhir dan tidak ada sinkronisasi data seketika, yang berarti organisasi harus menginvestasikan waktu beberapa hari memuat data sebelum operasi dipulihkan.
+~B. Situs tersebut sebenarnya adalah *Hot Site* yang tertunda pembayarannya.
+~C. Perusahaan telah melanggar kerangka kerja keamanan siber nasional secara langsung.
+~D. Organisasi tersebut harus segera menuntut vendor fasilitas cadangan karena penipuan.
+#### Analisis Taksonomi Bloom (Analisis): Membedakan tingkat fasilitas DR. *Hot site* siap 100% dalam hitungan jam. *Cold site* hanya ruang kosong. *Warm site* adalah jalan tengah komersial; ia punya meja dan perangkat keras, namun staf TI wajib membawa media cadangan dari brankas, memasang OS, dan merestore data saat bencana terjadi.
+}
+
+::Soal 45:: Staf administrator sistem sering kali bergantung pada skrip *shell* otomatisasi harian yang mereka kembangkan secara mandiri (tanpa dokumentasi resmi atau kontrol versi) untuk memelihara kestabilan server inti. Risiko tata kelola analitis paling kritis dari hal ini adalah: {
+~A. Skrip *shell* berjalan jauh lebih lambat daripada antarmuka grafis Windows.
+=B. Terciptanya ketergantungan orang kunci (Key-person dependency); jika pembuat skrip tersebut mengundurkan diri tiba-tiba, tidak ada staf lain yang tahu cara memelihara, memperbarui, atau memecahkan masalah rutinitas krusial tersebut.
+~C. Skrip tersebut pasti akan membakar perangkat keras *motherboard*.
+~D. Vendor perangkat lunak akan secara otomatis mencabut semua lisensi sistem operasi.
+#### Analisis Taksonomi Bloom (Analisis): Mengidentifikasi risiko dokumentasi operasional. Operasi TI tidak boleh bergantung pada 'pengetahuan kesukuan/individu' (tribal knowledge). Otomatisasi lokal tanpa dokumentasi SOP resmi menciptakan risiko keberlangsungan operasional yang tinggi.
+}
+
+::Soal 46:: Sebuah rumah sakit merancang arsitektur server medis mereka dengan standar Ketersediaan Tinggi (High Availability). Untuk meminimalkan *Mean Time to Repair* (MTTR) hingga detik terkecil, spesifikasi analitis perangkat keras apa yang paling wajib dipesan untuk sasis server? {
+~A. Kartu antarmuka jaringan (NIC) tunggal berkapasitas sangat tinggi.
+~B. Modul Enkripsi Perangkat Keras AES-256 pada soket prosesor.
+=C. Komponen perangkat keras *Hot-swappable* (dapat ditukar panas) seperti catu daya ganda (dual PSU) dan drive RAID, yang memungkinkan komponen rusak dicabut dan diganti secara fisik saat server masih beroperasi normal.
+~D. Memori RAM yang mampu menyimpan sidik jari administrator.
+#### Analisis Taksonomi Bloom (Analisis): Toleransi kesalahan perangkat keras fisik. Jika catu daya standar terbakar, sasis server harus dimatikan total, membunuh aplikasi sementara teknisi membongkarnya (menyebabkan downtime). *Hot-swappable components* menganalisis ketersediaan mutlak; komponen dicabut hidup-hidup tanpa memutuskan layanan pengguna.
+}
+
+::Soal 47:: Auditor menemukan bahwa setiap pembaruan definisi *antivirus* (signature patch) harian dari vendor keamanan langsung didistribusikan secara massal ke seluruh server aplikasi rumah sakit tanpa melewati uji regresi internal di area *sandbox*. Analisis dampak operasional terburuk dari kelalaian ini adalah: {
+~A. Antivirus akan secara otomatis kadaluarsa secara hukum setiap akhir bulan.
+=B. Pembaruan otomatis dari vendor yang mengandung bug (cacat kode) dapat memicu *False Positive*, yang menghapus atau mengkarantina file sistem operasi penting dan melumpuhkan seluruh server produksi secara serentak.
+~C. Hard-disk server akan kepenuhan kapasitas pada sore hari itu juga.
+~D. Peretas eksternal tidak dapat lagi memantau jaringan rumah sakit.
+#### Analisis Taksonomi Bloom (Analisis): Tambalan (patch) pihak ketiga—bahkan dari vendor antivirus tepercaya—harus disaring. Kasus nyata membuktikan bahwa file *signature* cacat dapat mengenali kernel OS miliknya sendiri sebagai virus dan membunuhnya (seperti insiden Blue Screen of Death massal dunia).
+}
+
+::Soal 48:: Untuk mereplikasi (mencadangkan) data pelanggan secara terus-menerus ke situs Pemulihan Bencana melalui jaringan internet nirkabel publik, kontrol analitis tata kelola arsitektur apa yang menjadi mandat kepatuhan mutlak? {
+=A. Mengenkapsulasi dan mengenkripsi data yang mengalir menggunakan terowongan *Virtual Private Network* (VPN) seperti protokol IPSec, untuk melindungi integritas dan kerahasiaan data (Data-in-Transit) dari penyadapan.
+~B. Memastikan bahwa warna kabel fisik yang menghubungkan router sesuai dengan standar keamanan.
+~C. Menambahkan alamat IP palsu secara bergantian setiap jam pada header paket data.
+~D. Menggunakan kurir fisik untuk mengirimkan flashdisk secara paralel setiap 5 menit.
+#### Analisis Taksonomi Bloom (Analisis): Mengirim salinan pangkalan data melalui internet terbuka identik dengan menyiarkan rahasia dagang melalui radio publik (packet sniffing). VPN IPSec menganalisis lapisan jaringan dan menciptakan selubung kriptografis kokoh yang tidak dapat dibongkar oleh peretas di tengah jalan (Man-in-the-Middle).
+}
+
+::Soal 49:: Di bagian lampiran awal dari manual Rencana Kelangsungan Bisnis (BCP), terdapat diagram instruksional bernama *Call Tree* (Pohon Panggilan). Fungsi tata kelola analitis dari diagram operasional ini saat krisis melanda adalah: {
+~A. Untuk memanggil layanan kepolisian dan ambulans secara otomatis menggunakan sakelar pintar.
+~B. Merekam percakapan emosional staf operasional selama krisis sebagai bukti hukum.
+=C. Menetapkan struktur hirarki komunikasi darurat untuk memastikan bahwa komite krisis, eksekutif, dan personel teknis kunci dihubungi dengan sangat cepat dan berantai, mencegah kebingungan mobilisasi awal.
+~D. Menyimpan daftar nomor telepon pemasok alat tulis kantor bulanan.
+#### Analisis Taksonomi Bloom (Analisis): Pada 30 menit pertama bencana, kelumpuhan arah adalah risiko tertinggi. *Call Tree* adalah kontrol administratif yang secara analitis mendelegasikan beban komunikasi (misal: Komandan BCP menelepon 3 manajer departemen, tiap manajer menelepon 3 supervisor, dst.) agar respons mitigasi terkumpul cepat tanpa kekacauan tunggal.
+}
+
+::Soal 50:: Auditor fasilitas SI mengevaluasi metrik HVAC (Pemanas, Ventilasi, dan Pendingin Udara) di pusat data utama. Ia menemukan bahwa pengukur tingkat kelembapan dibiarkan rusak sehingga udara ruangan menjadi sangat kering (<20% RH). Apa analisis risiko infrastruktur fisik yang mematikan ini? {
+~A. Ruangan kering akan memicu terjadinya genangan air dan korosi instan pada sirkuit tembaga.
+=B. Udara yang sangat kering meningkatkan risiko penumpukan debu dan pelepasan Listrik Statis (Electrostatic Discharge / ESD) yang ekstrem, di mana sentuhan manusia kecil saja dapat langsung menggoreng sirkuit mikroprosesor server yang bernilai miliaran rupiah.
+~C. Cairan kimia pendingin di dalam kompresor server akan membeku menjadi es.
+~D. Pertumbuhan lumut dan jamur pada kabel serat optik bawah lantai.
+#### Analisis Taksonomi Bloom (Analisis): Mengatur *Relative Humidity* (Kelembapan Relatif) ruang server adalah ilmu pasti (40-60%). Udara lembap menyebabkan air kondensasi/korosi. Udara kering (seperti musim dingin/AC terlalu ekstrem) adalah isolator buruk yang memfasilitasi gesekan elektron. ESD sekecil 30 volt yang bahkan tidak dirasakan jari manusia sudah cukup membunuh silikon CPU secara permanen.
+}
+
+// Soal 51 - 75: Domain 4 (IS Operations and Business Resilience)
+
+::Soal 51:: Dalam prosedur Manajemen Insiden (Incident Management), seorang analis Meja Bantuan (Helpdesk) menerima peringatan tentang infeksi malware di sebuah stasiun kerja. Berdasarkan praktik respons insiden terbaik, setelah mengidentifikasi kebenaran insiden tersebut, langkah operasional pertama yang harus segera dilakukan adalah: {
+~A. Menghapus (Eradicate) malware tersebut menggunakan perangkat lunak antivirus pihak ketiga.
+~B. Memulihkan (Recover) stasiun kerja menggunakan citra cadangan (backup image) dari hari sebelumnya.
+=C. Mengisolasi atau menahan (Containment) stasiun kerja tersebut dari jaringan perusahaan untuk mencegah penyebaran lateral malware ke server lain.
+~D. Melakukan analisis forensik mendalam (Forensic Analysis) pada memori RAM stasiun kerja.
+#### Analisis Taksonomi Bloom (Analisis): Memecah fase respons insiden (Identifikasi, Penahanan, Pemberantasan, Pemulihan). Prioritas mutlak setelah insiden dikonfirmasi adalah "Penahanan" (Containment) untuk menghentikan pendarahan dan melindungi aset jaringan lainnya. Pemberantasan atau pemulihan yang dilakukan terlalu dini dapat merusak bukti atau gagal menghentikan penyebaran.
+}
+
+::Soal 52:: Auditor SI mengevaluasi pelaksanaan *Tabletop Exercise* untuk Rencana Kelangsungan Bisnis (BCP) perusahaan. Apa batasan analitis utama dari jenis pengujian ini dibandingkan dengan *Parallel Test*? {
+~A. Tabletop Exercise mengharuskan perusahaan mematikan seluruh operasi utama selama berjam-jam.
+=B. Tabletop Exercise hanya memvalidasi pemahaman prosedural dan alur komunikasi personel di atas kertas, tanpa menguji apakah perangkat keras fisik dan cadangan data benar-benar dapat dihidupkan secara teknis.
+~C. Tabletop Exercise melibatkan partisipasi pelanggan eksternal secara langsung.
+~D. Tabletop Exercise selalu menghabiskan biaya yang lebih tinggi daripada pengujian lainnya.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis tingkat jaminan (assurance) BCP. Latihan di atas meja (Tabletop) sangat baik untuk pelatihan dan koordinasi tim (siapa menelepon siapa), tetapi tidak memberikan jaminan teknis bahwa server cadangan di situs pemulihan benar-benar berfungsi jika dinyalakan.
+}
+
+::Soal 53:: Sebuah organisasi ritel global menggunakan beberapa penyedia komputasi awan publik (Multi-Cloud). Dari perspektif operasi ketahanan jaringan, mengapa arsitektur multi-cloud dianalisis sebagai kontrol ketersediaan yang sangat kuat? {
+~A. Karena arsitektur ini secara otomatis mengenkripsi semua data pelanggan.
+~B. Karena penyedia multi-cloud menggunakan perangkat keras yang tidak pernah rusak.
+=C. Mengurangi risiko *Vendor Lock-in* dan memberikan toleransi kesalahan geografis tingkat tinggi; jika satu penyedia awan mengalami pemadaman massal, beban kerja dapat dialihkan ke penyedia awan lainnya.
+~D. Menurunkan jumlah staf TI internal yang dibutuhkan hingga 100%.
+#### Analisis Taksonomi Bloom (Analisis): Mengandalkan satu penyedia awan besar (meskipun memiliki SLA 99,99%) tetap menciptakan *Single Point of Failure* tingkat vendor. Arsitektur multi-cloud (menyebarkan operasi melintasi AWS, Azure, Google Cloud) secara analitis memisahkan risiko infrastruktur secara mutlak.
+}
+
+::Soal 54:: Ketika mengkaji log pergantian giliran kerja (Shift Handover Logs) di pusat data yang beroperasi 24/7, auditor menemukan bahwa catatan sering kali tidak lengkap. Risiko operasional analitis terbesar dari kelalaian ini adalah: {
+=A. Kehilangan kesinambungan informasi; masalah atau tugas pemeliharaan kritis yang tertunda dari giliran kerja sebelumnya tidak akan ditindaklanjuti, menyebabkan gangguan sistem pada giliran kerja berikutnya.
+~B. Biaya lembur staf pusat data akan meningkat secara otomatis.
+~C. Sistem pendingin (HVAC) ruangan tidak akan berfungsi tanpa input manual.
+~D. Perangkat keras server akan kedaluwarsa lebih cepat.
+#### Analisis Taksonomi Bloom (Analisis): Pusat data adalah lingkungan berkelanjutan. Log serah terima adalah kontrol komunikasi administratif yang vital. Tanpanya, staf yang baru masuk (shift pagi) akan buta terhadap insiden tertunda, pembaruan konfigurasi semalam, atau alarm sementara yang ditangani oleh staf shift malam.
+}
+
+::Soal 55:: Manajemen memutuskan untuk mengirimkan pita pencadangan data *Grandfather* bulanan ke fasilitas penyimpanan di luar lokasi (Offsite Storage) menggunakan jasa kurir komersial. Untuk melindungi kerahasiaan data asuransi selama transit, kontrol analitis apa yang wajib diverifikasi oleh auditor? {
+~A. Pita harus dibungkus dengan plastik anti-statis.
+~B. Pita harus disamarkan dengan label palsu.
+=C. Data pada pita harus dienkripsi menggunakan algoritma yang kuat sebelum dikeluarkan dari pusat data, dan kunci dekripsi tidak boleh disimpan atau dikirim bersama pita tersebut.
+~D. Kurir harus dikawal oleh mobil polisi.
+#### Analisis Taksonomi Bloom (Analisis): Risiko intersepsi aset fisik. Media cadangan sering hilang atau dicuri saat transit. Kontrol fisik (kotak terkunci, kurir khusus) bisa gagal. Satu-satunya kontrol kompensasi yang dijamin secara analitis melindungi data jika media fisik jatuh ke tangan yang salah adalah Enkripsi (Data-at-Rest encryption).
+}
+
+::Soal 56:: Sistem basis data perusahaan menggunakan arsitektur pemrosesan transaksi yang mematuhi prinsip *Durability* (Daya Tahan) dalam model ACID. Apa implikasi analitis operasional dari prinsip ini jika server mendadak mati listrik tepat setelah pelanggan menerima notifikasi "Transaksi Berhasil"? {
+~A. Sistem akan membatalkan transaksi tersebut saat menyala kembali.
+=B. Transaksi yang telah disahkan (committed) akan tetap tersimpan secara permanen dan dijamin tidak hilang meskipun sistem mengalami kegagalan fisik (crash) sedetik kemudian.
+~C. Basis data akan mengunci akun pengguna untuk mencegah penipuan.
+~D. Sistem akan mengirim ulang notifikasi kepada pelanggan keesokan harinya.
+#### Analisis Taksonomi Bloom (Analisis): Memecah sifat ACID basis data. *Durability* menjamin bahwa setelah instruksi COMMIT dieksekusi, perubahannya ditulis secara permanen ke media non-volatile (hard disk/log). Analisis membuktikan bahwa sistem dapat pulih dari pemadaman seketika tanpa melupakan transaksi yang sudah sukses dicatat.
+}
+
+::Soal 57:: Auditor TI menginvestigasi tingginya frekuensi kegagalan pekerjaan *Batch* harian di sistem mainframe. Operator TI menyatakan kegagalan terjadi karena kurangnya dokumentasi *Run Book*. Apa fungsi tata kelola analitis dari *Run Book* dalam operasi TI? {
+~A. Menyediakan panduan tentang cara meretas kata sandi pengguna.
+~B. Mencatat daftar hadir staf TI setiap hari.
+=C. Menyediakan instruksi langkah demi langkah yang terstandardisasi, parameter, dan prosedur penanganan kesalahan (error handling) bagi operator untuk menjalankan proses sistem rutin secara akurat.
+~D. Menentukan anggaran pengadaan perangkat keras baru.
+#### Analisis Taksonomi Bloom (Analisis): *Run Book* (atau *Run Manual*) adalah tulang punggung operasi berkelanjutan. Ia menganalisis dan mendokumentasikan langkah spesifik yang harus diambil mesin/manusia untuk memproses batch, serta tindakan pemecahan masalah dasar jika pekerjaan berhenti di tengah jalan.
+}
+
+::Soal 58:: Sebuah perusahaan e-commerce mengalami lonjakan transaksi selama festival diskon akhir tahun. Manajer operasi TI secara otomatis memutar (spin-up) puluhan server virtual baru di lingkungan awan selama 3 hari, lalu menghapusnya saat festival berakhir. Karakteristik komputasi awan analitis apa yang diandalkan di sini? {
+~A. Penyewaan multi-penyewa (Multi-tenancy).
+=B. Elastisitas cepat (Rapid Elasticity) dan penskalaan otomatis (Auto-scaling).
+~C. Pemulihan bencana berbasis geografis.
+~D. Kriptografi kuantum tingkat lanjut.
+#### Analisis Taksonomi Bloom (Analisis): Kapasitas tradisional bersifat statis (membeli server fisik). Elastisitas awan memungkinkan sumber daya komputasi secara analitis mengembang dan menyusut sesuai fluktuasi beban kerja waktu nyata (on-demand), mengubah biaya model tetap menjadi biaya model variabel yang efisien.
+}
+
+::Soal 59:: Dalam Rencana Kelangsungan Bisnis, tim mengidentifikasi skenario pandemi di mana gedung kantor tidak dapat diakses, tetapi infrastruktur pusat data jarak jauh tetap hidup. Dari perspektif operasi dan ketahanan, kontrol kapasitas analitis apa yang paling kritis untuk diuji? {
+~A. Ketersediaan makanan dan minuman di kafetaria kantor.
+~B. Tingkat bahan bakar generator diesel di gedung kantor yang ditutup.
+=C. Kapasitas bandwidth VPN perusahaan dan lisensi akses jarak jauh (Remote Access) untuk menangani lonjakan beban 100% karyawan yang bekerja dari rumah secara bersamaan.
+~D. Kapasitas parkir di situs pemulihan bencana.
+#### Analisis Taksonomi Bloom (Analisis): Pandemi/Karantina wilayah memiliki profil bencana unik; infrastruktur tidak rusak, tetapi manusia diisolasi. Tantangan operasional utamanya bukanlah memulihkan data, melainkan mengukur secara analitis apakah jalur akses jaringan (Gateway/VPN) sanggup menangani lonjakan lalu lintas jarak jauh yang masif tanpa runtuh.
+}
+
+::Soal 60:: Dalam upaya menyederhanakan pelacakan perangkat keras, organisasi menggunakan teknologi *Radio Frequency Identification* (RFID) pada semua server di pusat data. Bagaimana kontrol ini secara analitis memperkuat Manajemen Aset TI? {
+=A. Mengotomatiskan identifikasi, pelacakan lokasi fisik aset, dan pencocokan inventaris secara real-time (Inventory Reconciliation) tanpa perlu inspeksi visual atau pemindaian barcode manual, sehingga mencegah perangkat keras diam-diam dipindahkan/dicuri.
+~B. RFID secara otomatis memperbarui sistem operasi server.
+~C. Tag RFID berfungsi sebagai perangkat penyimpanan cadangan (backup storage) sekunder.
+~D. Mengurangi kebutuhan pendingin udara (AC) di pusat data.
+#### Analisis Taksonomi Bloom (Analisis): Pelacakan aset fisik (Physical Asset Management) sangat rentan kesalahan jika manual. RFID memancarkan lokasi. Auditor menganalisis ini sebagai kontrol detektif otonom yang sangat andal untuk mengidentifikasi perangkat yang hilang (rogue devices) atau pergerakan aset yang tidak sah keluar dari perimeter pusat data.
+}
+
+::Soal 61:: Saat menganalisis praktik manajemen kapasitas basis data, auditor menemukan konsep *Dark Data*. Apa definisi analitis dari jenis data ini dan mengapa ia menimbulkan risiko operasional? {
+~A. Data rahasia yang disimpan di web gelap (dark web).
+~B. Data yang sengaja disembunyikan oleh peretas menggunakan teknik steganografi.
+=C. Data operasional yang dikumpulkan, diproses, dan disimpan selama aktivitas bisnis rutin, tetapi tidak digunakan untuk tujuan analitis/bisnis apa pun; ini memakan ruang penyimpanan yang mahal dan menciptakan kewajiban privasi hukum jika terjadi pelanggaran data.
+~D. Data yang disimpan pada pita magnetik hitam.
+#### Analisis Taksonomi Bloom (Analisis): *Dark data* adalah "penimbunan digital". Organisasi sering menahan log atau email usang selamanya (tanpa kebijakan pemusnahan). Ini dianalisis sebagai kewajiban ganda: biaya infrastruktur penyimpanan (Storage Capacity) membengkak, dan jika diretas, data tersebut memicu denda kepatuhan privasi yang seharusnya bisa dihindari.
+}
+
+::Soal 62:: Untuk memastikan deteksi proaktif terhadap aktivitas tidak wajar dalam jaringan, departemen TI menggunakan sistem Pengelolaan Informasi dan Acara Keamanan (Security Information and Event Management / SIEM). Fungsi tata kelola analitis utama dari SIEM adalah: {
+~A. Mencegah malware masuk ke jaringan dengan menghapus lampiran email.
+=B. Mengumpulkan (agregasi), menormalkan, dan menganalisis triliunan baris log dari seluruh perangkat (firewall, server, router) di satu tempat secara terpusat untuk mengkorelasikan pola serangan yang tidak terlihat jika log dilihat secara terpisah.
+~C. Mengenkripsi kata sandi pengguna akhir.
+~D. Secara otomatis melakukan penambalan (patching) pada perangkat keras.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen Log operasional sangat mustahil dilakukan manusia. Router X melaporkan anomali, Firewall Y melaporkan kegagalan login. Jika dilihat mandiri, itu kejadian biasa. SIEM secara analitis mengkorelasikan log lintas sistem untuk menyimpulkan: "Ini adalah pola serangan injeksi yang terkoordinasi", memberi peringatan dini.
+}
+
+::Soal 63:: Pada saat pengkajian pasca-insiden (Post-Incident Review) setelah serangan *ransomware*, tim menemukan bahwa sistem gagal dipulihkan secara instan karena staf TI salah mengoperasikan konsol perangkat lunak cadangan baru. Analisis perbaikan berkelanjutan mana yang paling tepat direkomendasikan auditor? {
+~A. Memecat seluruh staf TI dan mempekerjakan tim baru.
+~B. Menulis ulang kode sumber perangkat lunak cadangan.
+=C. Memperbarui dokumen Rencana Kelangsungan Bisnis dan menyelenggarakan program pelatihan serta simulasi kesiapan operasional secara berkala bagi staf yang bertanggung jawab.
+~D. Menyimpan uang tebusan dalam bentuk Bitcoin untuk serangan berikutnya.
+#### Analisis Taksonomi Bloom (Analisis): Insiden di mana teknologi berfungsi tetapi manusianya gagal (salah pengoperasian) membuktikan bahwa sistem sebaik apa pun tidak berguna tanpa personel yang terampil. Rekomendasi analitis utama adalah penekanan pada pelatihan dan latihan berkala (drills) agar staf fasih menavigasi krisis di bawah tekanan.
+}
+
+::Soal 64:: Manajer pusat data menggunakan metrik *Mean Time Between Failures* (MTBF) dari spesifikasi pabrikan perangkat keras. Untuk analisis kapasitas dan keandalan, nilai MTBF yang tinggi secara langsung mengindikasikan bahwa: {
+=A. Perangkat keras tersebut sangat andal dan memiliki probabilitas kerusakan yang rendah dari waktu ke waktu (jarang rusak).
+~B. Perangkat keras tersebut sangat mudah dan cepat untuk diperbaiki saat rusak.
+~C. Perangkat keras tersebut mengkonsumsi daya listrik yang sangat tinggi.
+~D. Perangkat keras tersebut tidak memerlukan pembaruan perangkat lunak.
+#### Analisis Taksonomi Bloom (Analisis): Membedakan metrik. MTTR (Mean Time To Repair) berfokus pada kecepatan perbaikan. MTBF (Mean Time Between Failures) mengukur *rentang usia* dan keandalan operasional sebelum alat tersebut mati secara alami. Semakin tinggi MTBF, semakin jarang mesin itu rusak (High Reliability).
+}
+
+::Soal 65:: Di dalam perjanjian pemeliharaan dengan vendor perangkat lunak, organisasi mewajibkan *Service Desk* (Meja Bantuan) vendor untuk beroperasi dengan tingkat penyelesaian Panggilan Pertama (First Call Resolution - FCR) sebesar 80%. Analisis tujuan efisiensi bisnis dari metrik ini adalah: {
+~A. Memastikan panggilan telepon tidak direkam.
+~B. Memastikan bahwa vendor memiliki jumlah staf yang sedikit.
+=C. Mengurangi biaya eskalasi dan meminimalkan waktu henti (downtime) pengguna dengan menyelesaikan masalah fungsional dasar segera pada saat kontak pertama, tanpa perlu dialihkan ke teknisi tingkat lanjut.
+~D. Mencegah pengguna menelepon vendor lebih dari satu kali seumur hidup.
+#### Analisis Taksonomi Bloom (Analisis): FCR tinggi adalah indikator operasional yang sangat positif. Ini membuktikan Lapis Pertama (Tier 1) memiliki akses ke Pangkalan Pengetahuan (Knowledge Base) yang baik, sehingga masalah teknis ringan tidak mengganggu pakar teknis yang mahal (Tier 2/3), memberikan kepuasan instan kepada pengguna akhir bisnis.
+}
+
+::Soal 66:: Auditor menemukan bahwa prosedur penonaktifan (Offboarding) karyawan di sebuah perusahaan multinasional tidak mensyaratkan pencabutan hak akses di sistem warisan (Legacy Systems) karena sistem tersebut jarang digunakan. Apa kerentanan keamanan analitis dari kebijakan parsial ini? {
+=A. Akun yatim (Orphan Accounts) akan tertinggal di sistem warisan, yang dapat dieksploitasi oleh peretas atau mantan karyawan untuk menyusup ke jaringan dan mendapatkan pijakan persisten (persistent foothold).
+~B. Sistem warisan akan secara otomatis menghapus seluruh datanya jika tidak diakses dalam 30 hari.
+~C. Hak akses pada sistem warisan tidak dapat disalahgunakan karena tidak terhubung ke internet.
+~D. Proses *offboarding* akan berjalan lebih cepat dan menghemat anggaran SDM.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen Identitas dan Akses (IAM) harus komprehensif. "Sistem yang jarang digunakan" adalah target empuk peretas (soft targets). Akun aktif dari karyawan yang sudah keluar (Orphan Accounts) merupakan pintu belakang masuk jaringan karena tidak ada manusia sah yang mengawasi anomali login pada akun tersebut.
+}
+
+::Soal 67:: Sebuah aplikasi inti keuangan memanfaatkan teknologi virtualisasi (Virtual Machines / VM). Administrator sering mengambil *Snapshot* VM sebelum melakukan penambalan (patching) sistem operasi. Sebagai kontrol ketahanan operasi, apa batasan analitis utama dari *Snapshot* dibandingkan dengan *Backup* reguler? {
+~A. Snapshot membutuhkan waktu lebih lama untuk dipulihkan daripada cadangan pita.
+=B. Snapshot bukanlah salinan data independen; jika *Logical Unit Number* (LUN) atau penyimpanan perangkat keras utama rusak secara fisik, snapshot di dalamnya juga akan ikut hancur dan tidak dapat memulihkan server.
+~C. Snapshot tidak dapat menangkap memori RAM sistem.
+~D. Snapshot secara otomatis menghapus file log basis data.
+#### Analisis Taksonomi Bloom (Analisis): *Snapshot* mengabadikan kondisi sistem pada detik tertentu dengan menautkan perubahan data ke file asli. Ini sempurna untuk pembatalan instan (rollback) pasca-tambalan gagal. Namun, auditor menganalisis bahwa itu *bukan Backup*. Jika hard-disk utama meledak, snapshot tidak berguna. Backup sejati harus disalin secara terpisah (Off-site/Off-disk).
+}
+
+::Soal 68:: Manajemen TI mempertimbangkan adopsi Perlindungan Data Berkelanjutan (Continuous Data Protection / CDP) untuk sistem pemrosesan pesanan yang sangat kritis. Karakteristik pemulihan analitis apa yang membedakan CDP dari replikasi data asinkron konvensional? {
+~A. CDP lebih murah dan tidak membutuhkan bandwidth jaringan.
+~B. CDP hanya bekerja pada dokumen Microsoft Word.
+=C. CDP menangkap setiap perubahan blok data secara real-time dan menyimpan log perubahan yang tak terhingga, memungkinkan administrator untuk memundurkan sistem (rewind) ke detik fraksional spesifik kapan pun sebelum kesalahan data/korupsi terjadi (RPO hampir nol).
+~D. CDP secara otomatis mencegah bencana fisik terjadi di pusat data.
+#### Analisis Taksonomi Bloom (Analisis): Replikasi mencerminkan data ke DR site; tapi jika ada korupsi basis data, korupsi itu langsung direplikasi juga (merusak DR site). CDP menyimpan versi waktu dari setiap detik perubahan (seperti tombol Undo yang tak terhingga). Ini menganalisis perlindungan maksimum terhadap korupsi data logis dengan RPO 0.
+}
+
+::Soal 69:: Dalam analisis Rencana Pemulihan Bencana, sebuah organisasi bergantung pada Perjanjian SLA vendor yang berbunyi *"Best Effort Recovery"* (Pemulihan dengan Upaya Terbaik) untuk layanan pihak ketiga mereka. Apa evaluasi analitis dari klausul ini terkait kelangsungan bisnis? {
+=A. Klausul ini sangat berbahaya karena tidak memberikan jaminan kerangka waktu pemulihan sama sekali; vendor tidak memiliki kewajiban metrik RTO yang pasti, sehingga kelangsungan hidup bisnis berada dalam risiko ketidakpastian total.
+~B. Klausul ini menjamin pemulihan di bawah 10 menit dengan biaya terendah.
+~C. Klausul ini sangat baik karena vendor akan bekerja lembur tanpa henti.
+~D. Klausul ini mewajibkan vendor membayar denda penalti penuh.
+#### Analisis Taksonomi Bloom (Analisis): Bahasa kontrak adalah tata kelola. "Best Effort" (Upaya Terbaik) adalah istilah lepas tanggung jawab secara hukum. Vendor akan mencoba, tetapi jika gagal atau butuh waktu sebulan, pelanggan tidak bisa menuntut. BCP yang kuat menuntut SLA dengan angka jam absolut (misal: RTO 4 Jam Terjamin).
+}
+
+::Soal 70:: Ketika melakukan pemeliharaan pada ruang server, teknisi fasilitas secara tidak sengaja memotong kabel pendingin sentral, menyebabkan suhu ruangan melambung melebihi 35 derajat Celcius (95 Fahrenheit). Kontrol deteksi operasional mana yang akan paling cepat menyelamatkan perangkat keras dari kerusakan termal? {
+~A. Peringatan sistem pemadam kebakaran.
+~B. Pemantauan ketersediaan ping (Ping Availability Monitoring) pada router luar.
+=C. Sensor pemantauan suhu lingkungan (Environmental Monitoring Sensors) yang terintegrasi dengan perangkat lunak manajemen infrastruktur yang secara otonom memicu penutupan sistem (Graceful Shutdown) sebelum titik kritis tercapai.
+~D. Peninjauan log akses fisik pintu ruang server.
+#### Analisis Taksonomi Bloom (Analisis): Kontrol termal preventif. Jika pendingin (AC) mati, suhu pusat data akan mencapai titik leleh silikon dalam hitungan menit (Thermal Runaway). Jika sensor suhu tidak terhubung pada fungsi *auto-shutdown* otomatis, perangkat keras akan meleleh sebelum staf manusia sempat berlari ke ruangan tersebut untuk mematikannya.
+}
+
+::Soal 71:: Auditor meninjau program Manajemen Siklus Hidup Aset Perangkat Keras. Perusahaan membuang puluhan PC lama setiap tahun dengan menyumbangkannya. Langkah validasi keamanan analitis terakhir yang harus didokumentasikan dalam proses ini adalah: {
+~A. Instalasi versi terbaru Microsoft Windows pada PC yang disumbangkan.
+~B. Penilaian sisa nilai moneter (Depresiasi) aset.
+=C. Sertifikasi Sanitasi Data (Data Sanitization Certificate) atau Berita Acara Penghancuran Media yang ditandatangani, memastikan tidak ada data perusahaan tertinggal di hard disk sebelum meninggalkan kepemilikan.
+~D. Membersihkan PC dengan cairan anti-bakteri.
+#### Analisis Taksonomi Bloom (Analisis): Ancaman pembuangan aset (Disposal). "Dumpster diving" atau pembelian perangkat keras bekas adalah vektor serangan umum untuk mencuri data rahasia korporat lama. Tata kelola mewajibkan bukti rantai penjagaan (Chain of Custody) bahwa aset telah dihapus datanya secara forensik sebelum dibuang atau didonasikan.
+}
+
+::Soal 72:: Dalam arsitektur perutean jaringan untuk kantor pusat, insinyur mengimplementasikan *Border Gateway Protocol* (BGP) yang terhubung ke dua penyedia layanan internet (ISP) yang berbeda. Tujuan operasional analitis dari desain protokol BGP ganda ini adalah: {
+=A. Menyediakan kemampuan perutean dinamis (Dynamic Routing) untuk mentoleransi kegagalan ISP; jika satu ISP terputus, lalu lintas jaringan secara otonom dialihkan ke ISP kedua tanpa gangguan koneksi perusahaan.
+~B. Meningkatkan resolusi layar pada komputer klien.
+~C. Memisahkan email masuk dari email keluar.
+~D. Menurunkan kecepatan unduh agar biaya internet bulanan lebih murah.
+#### Analisis Taksonomi Bloom (Analisis): Ketahanan infrastruktur jaringan. Koneksi tunggal adalah SPoF (Single Point of Failure). Memiliki dua kabel ISP tidak cukup jika staf harus memindahkannya manual saat putus. BGP menganalisis protokol lapisan 3 yang cerdas mengalihkan rute secara otomatis dalam milidetik jika jalur utama (salah satu ISP) putus.
+}
+
+::Soal 73:: Saat mengevaluasi prosedur Manajemen Perubahan (Change Management), auditor menemukan kategori *Standard Change* (Perubahan Standar). Berdasarkan kerangka ITIL, apa analisis pembenaran yang mengizinkan *Standard Change* ini dijalankan tanpa memerlukan persetujuan ulang dari Dewan Penasihat Perubahan (CAB) setiap saat? {
+~A. Perubahan ini dilakukan oleh manajer tingkat atas yang memiliki kekebalan administratif.
+=B. Perubahan standar adalah perubahan harian yang berisiko sangat rendah, sudah dipahami dengan baik, memiliki prosedur yang terdokumentasi dan teruji (seperti pengaturan ulang kata sandi atau penyediaan desktop standar), sehingga sudah disetujui sebelumnya (pre-approved) untuk efisiensi operasi.
+~C. Perubahan standar hanya terjadi setahun sekali.
+~D. Perubahan standar tidak mengubah apa pun di dalam jaringan.
+#### Analisis Taksonomi Bloom (Analisis): Klasifikasi Perubahan TI. Tidak semua perubahan harus melalui birokrasi CAB yang rumit (ini akan melumpuhkan kelincahan bisnis). Perubahan berisiko rendah dan berulang didefinisikan secara analitis sebagai "Standard" (Pre-approved), mempercepat operasi harian meja bantuan tanpa mengorbankan kontrol tata kelola.
+}
+
+::Soal 74:: Sebuah bank menggunakan Pusat Data *Hot Site* jarak jauh. Jika fasilitas ini berada 500 kilometer (300 mil) dari situs utama, kompromi sinkronisasi analitis utama yang memengaruhi kelangsungan bisnis (RPO) adalah: {
+~A. Biaya sewa ruang fisik akan jauh lebih murah daripada di pusat kota.
+~B. Tidak ada kompromi; jarak ini memungkinkan replikasi data secepat cahaya tanpa jeda.
+=C. Batasan hukum fisika (Latensi Jaringan); replikasi sinkron tidak mungkin dilakukan pada jarak yang sangat jauh tanpa memperlambat sistem utama secara drastis, sehingga bank terpaksa menggunakan replikasi asinkron yang menerima sedikit potensi kehilangan data (RPO > 0).
+~D. Pemerintah melarang pembangunan pusat data di jarak sedekat itu.
+#### Analisis Taksonomi Bloom (Analisis): Perdagangan (Trade-off) Geografis BCP. Semakin jauh situs DR, semakin aman dari bencana regional (gempa bumi). Namun, secara analitis, jarak yang sangat jauh menyebabkan penundaan mikrodetik (latency) pada serat optik. Replikasi seketika (Synchronous) tidak efisien di luar jarak ~100 km, memaksa penggunaan Asynchronous yang berisiko data lag.
+}
+
+::Soal 75:: Pada akhir insiden pelanggaran keamanan, manajer TI mengadakan rapat *Lessons Learned* (Pelajaran yang Dipetik). Auditor SI sangat mendukung praktik ini karena hasil tata kelola analitis terpenting dari fase pasca-insiden ini adalah: {
+~A. Mencari kambing hitam (scapegoat) untuk memecat staf keamanan yang berjaga.
+=B. Mentransformasikan kelemahan prosedural dan teknis yang ditemukan selama serangan menjadi pembaruan kebijakan (policy updates) dan peningkatan kontrol preventif, menutup siklus perbaikan berkelanjutan (Continuous Improvement).
+~C. Membagikan rincian kerentanan jaringan perusahaan di media sosial.
+~D. Merayakan keberhasilan pemulihan dengan mengabaikan kerentanan yang belum ditambal.
+#### Analisis Taksonomi Bloom (Analisis): Fokus respons insiden tidak berakhir saat sistem menyala kembali. Evaluasi akar masalah pasca-insiden mencegah sejarah berulang. Rapat *Lessons Learned* menganalisis celah operasi: "Bagaimana peretas masuk? Bagaimana kita bisa mencegahnya esok hari?", memperkuat ketahanan pertahanan di masa depan.
+}
+
+// Soal 76 - 100: Domain 4 (IS Operations and Business Resilience)
+
+::Soal 76:: Zahwa sedang mengevaluasi Rencana Kelangsungan Bisnis (BCP) untuk sistem pelaporan keuangan perusahaan. Manajemen menetapkan Recovery Point Objective (RPO) selama 4 jam dan Recovery Time Objective (RTO) selama 12 jam. Berdasarkan parameter ini, arsitektur pencadangan analitis mana yang paling memenuhi syarat dengan biaya paling optimal? {
+~A. Pencadangan pita magnetik mingguan yang disimpan di brankas luar kota.
+=B. Replikasi data asinkron (asynchronous) ke situs pemulihan setiap 2 jam, dengan komitmen waktu aktivasi server cadangan dalam waktu 8 jam.
+~C. Klasterisasi server Aktif-Aktif (Active-Active) dengan sinkronisasi waktu nyata (real-time) bernilai jutaan dolar.
+~D. Pencadangan ke hard disk portabel yang dibawa pulang oleh manajer TI setiap akhir pekan.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis keselarasan arsitektur dengan BCP. RPO 4 jam berarti sistem tidak boleh kehilangan data lebih dari 4 jam (sinkronisasi setiap 2 jam sangat memenuhi ini). RTO 12 jam berarti sistem bisa mati setengah hari; jadi investasi solusi mahal "Active-Active" (RTO 0 detik) adalah pemborosan anggaran yang berlebihan (over-engineering). Opsi B memberikan keseimbangan SLA dan biaya yang tepat.
+}
+
+::Soal 77:: Andini mengawasi meja bantuan (Helpdesk) untuk sebuah aplikasi edukasi interaktif anak berkebutuhan khusus. Ia memperhatikan bahwa banyak tiket insiden terkait "video tidak dapat dimuat" langsung dieskalasi ke pemrogram tingkat 3 (Tier-3) tanpa penyelesaian di tingkat pertama (Tier-1). Apa kelemahan tata kelola operasi analitis yang menyebabkan inefisiensi ini? {
+~A. Pemrogram tingkat 3 tidak memiliki alat pengembangan yang memadai.
+~B. Aplikasi edukasi tersebut membutuhkan terlalu banyak bandwidth internet.
+=C. Kurangnya dokumentasi Pangkalan Pengetahuan (Knowledge Base / Known Error Database) dan skrip resolusi (troubleshooting scripts) untuk staf meja bantuan Lapis 1, memaksa eskalasi yang tidak perlu.
+~D. Pengguna akhir menolak berbicara dengan staf Lapis 1.
+#### Analisis Taksonomi Bloom (Analisis): Analisis efisiensi layanan TI (ITIL). Insiden berulang harusnya dapat diselesaikan pada panggilan pertama (First Call Resolution). Jika staf Lapis 1 selalu mengeskalasi masalah, itu membuktikan ketiadaan repositori pengetahuan operasional, yang berakibat pada pembengkakan biaya dukungan teknis karena insinyur mahal (Tier-3) menangani masalah dasar.
+}
+
+::Soal 78:: Untuk memastikan kelancaran koneksi jaringan ke pangkalan data, manajer operasi TI menerapkan kebijakan Quality of Service (QoS) pada perangkat antarmuka router. Fungsi analitis utama dari QoS dalam manajemen kapasitas jaringan adalah: {
+=A. Memprioritaskan lalu lintas data aplikasi bisnis yang kritis (seperti transaksi pangkalan data atau VoIP) di atas lalu lintas non-kritis (seperti penelusuran web biasa) saat ketersediaan bandwidth sedang penuh.
+~B. Meningkatkan resolusi grafis dari monitor pengguna secara otomatis.
+~C. Mencegah malware masuk ke jaringan dengan memblokir semua alamat IP asing.
+~D. Menambahkan kapasitas bandwidth fisik secara ajaib pada kabel serat optik yang ada.
+#### Analisis Taksonomi Bloom (Analisis): QoS tidak menambah total bandwidth (lebar pita) fisik, melainkan melakukan manajemen antrean (traffic shaping). Ia menganalisis dan memastikan bahwa saat terjadi kemacetan jaringan, paket data sistem yang sangat rentan terhadap latensi selalu diberi jalur prioritas untuk lewat lebih dulu.
+}
+
+::Soal 79:: Saat mengaudit prosedur pemusnahan aset TI, auditor menemukan tumpukan *Solid State Drive* (SSD) bekas pakai yang diletakkan di ruang penyimpanan terbuka menunggu dikirim ke pihak ketiga untuk dihancurkan. Analisis risiko kepatuhan terbesar dari operasi penanganan aset ini adalah: {
+~A. SSD akan berkarat jika dibiarkan terlalu lama di ruang terbuka.
+~B. Pihak ketiga akan menagih biaya penghancuran yang lebih tinggi.
+=C. Ketiadaan kontrol fisik preventif (seperti brankas terkunci) selama masa tunggu menciptakan risiko tinggi pencurian perangkat keras yang mengarah pada kebocoran data rahasia perusahaan (Data Breach).
+~D. SSD akan menghapus datanya sendiri jika tidak dialiri listrik.
+#### Analisis Taksonomi Bloom (Analisis): Rantai penjagaan (Chain of Custody) aset fisik yang mengandung informasi tidak boleh terputus hingga aset tersebut benar-benar menjadi debu. Membiarkan media berharga berserakan tanpa pengamanan fisik sebelum dimusnahkan merupakan kelalaian kontrol fisik yang membuka gerbang pencurian data (dumpster diving).
+}
+
+::Soal 80:: Dalam Rencana Kelangsungan Bisnis, perusahaan berlangganan *Cold Site* sebagai fasilitas pemulihan. Evaluasi analitis kritis yang harus ditekankan auditor kepada manajemen eksekutif mengenai fasilitas ini adalah: {
+~A. Fasilitas ini siap mengambil alih operasi dalam waktu kurang dari satu jam.
+=B. Pemulihan akan memakan waktu berminggu-minggu, karena situs hanya menyediakan ruang kosong ber-AC; staf TI harus membeli perangkat keras baru, memasang kabel, dan merestore data dari awal setelah bencana terjadi.
+~C. Situs ini selalu memiliki salinan data transaksi real-time perusahaan.
+~D. Situs ini hanya boleh digunakan saat musim dingin.
+#### Analisis Taksonomi Bloom (Analisis): *Cold site* adalah tingkat jaminan ketersediaan terendah. Auditor wajib menganalisis ekspektasi manajemen; jika manajemen mengira operasi akan pulih esok hari, mereka salah besar. Ketiadaan perangkat keras siap pakai (hardware provisioning) membuat fasilitas ini memiliki RTO (waktu pemulihan) terlama di antara semua strategi DRP.
+}
+
+::Soal 81:: Kristof bertanggung jawab atas pemeliharaan Uninterruptible Power Supply (UPS) di pusat data. Ia melakukan uji pelepasan daya baterai (battery discharge test) setiap enam bulan. Apa justifikasi tata kelola analitis dari pemeliharaan preventif berkala ini? {
+=A. Baterai mengalami degradasi kimiawi seiring waktu; pengujian ini satu-satunya cara mengonfirmasi apakah kapasitas UPS masih sanggup menahan beban listrik nyata sesuai durasi waktu yang dijanjikan dalam spesifikasinya.
+~B. Pengujian me-reset kata sandi administrator pada antarmuka UPS.
+~C. Untuk mencegah UPS menyerap terlalu banyak daya dari generator diesel.
+~D. Pengujian diwajibkan untuk mengosongkan log audit di dalam perangkat keras.
+#### Analisis Taksonomi Bloom (Analisis): Pemeliharaan preventif. Baterai UPS yang tampak menyala dengan lampu indikator hijau belum tentu memiliki daya simpan yang kuat saat listrik benar-benar mati (umur sel baterai menurun). Uji beban memastikan jembatan daya sementara ini tidak akan runtuh mendadak.
+}
+
+::Soal 82:: Dalam skenario pelaporan insiden keamanan (Incident Response), sebuah stasiun kerja terdeteksi mengunduh ribuan file dari server rahasia dan mengirimkannya keluar secara diam-diam. Langkah *Penanggulangan* (Containment) analitis paling tepat yang harus dieksekusi adalah: {
+~A. Segera mematikan (power-off) stasiun kerja dengan mencabut kabel daya.
+~B. Mengirim peringatan ke seluruh karyawan melalui email.
+=C. Mencabut kabel jaringan stasiun kerja (atau menonaktifkan port di switch) secara fisik/logis agar tetap menyala untuk keperluan forensik memori, sambil menghentikan pencurian data.
+~D. Menghapus folder temp di dalam sistem operasi.
+#### Analisis Taksonomi Bloom (Analisis): Merespons serangan aktif. Jika mesin dimatikan, artefak kunci di memori volatil (RAM) seperti kunci enkripsi penyerang atau koneksi aktif akan hilang. Memutuskan jaringan (quarantine) menghentikan pencurian data seketika namun menjaga keutuhan tempat kejadian perkara untuk dianalisis (Forensic Evidence Preservation).
+}
+
+::Soal 83:: Sebuah perusahaan mengadopsi model *Bring Your Own Device* (BYOD) untuk perangkat seluler. Sebagai bagian dari operasi TI, administrator menginstal solusi Mobile Device Management (MDM). Apa kontrol kompensasi analitis terpenting yang disediakan MDM untuk memitigasi risiko kehilangan ponsel karyawan? {
+~A. MDM secara otomatis memblokir kamera ponsel.
+=B. Fitur isolasi ruang kerja (Containerization) dan kemampuan penghapusan data korporat dari jarak jauh (Remote Wipe) tanpa harus menghapus data pribadi karyawan.
+~C. MDM mencegah karyawan mengunduh aplikasi media sosial apa pun.
+~D. MDM mengubah layar ponsel menjadi hitam putih.
+#### Analisis Taksonomi Bloom (Analisis): Risiko utama BYOD adalah pencampuran data pribadi dan perusahaan pada aset yang mudah hilang. MDM mengatasi hal ini melalui *Containerization* (membuat brankas virtual terenkripsi khusus aplikasi kerja) dan memberdayakan TI dengan kontrol preventif untuk menghapus brankas tersebut dari jarak jauh jika ponsel dicuri (Remote Wipe).
+}
+
+::Soal 84:: Dalam menganalisis dokumen Analisis Dampak Bisnis (BIA), auditor menemukan bahwa sistem penggajian diklasifikasikan dengan prioritas pemulihan "Kritis" dengan RTO 2 jam, sedangkan sistem pemrosesan transaksi pelanggan diklasifikasikan "Penting" dengan RTO 24 jam. Evaluasi analitis atas klasifikasi ini adalah: {
+~A. Sangat tepat, karena karyawan harus digaji tepat waktu agar mau bekerja.
+=B. Terjadi ketidakselarasan serius (misalignment); sistem pemrosesan transaksi berhadapan langsung dengan pendapatan inti dan kelangsungan hidup perusahaan, seharusnya memiliki RTO jauh lebih cepat daripada fungsi internal seperti penggajian.
+~C. Klasifikasi ini diwajibkan oleh standar akuntansi internasional.
+~D. RTO penggajian harus diubah menjadi 5 menit.
+#### Analisis Taksonomi Bloom (Analisis): BIA menentukan urutan siapa diselamatkan terlebih dahulu berdasarkan dampak pada "misi inti" organisasi. Jika e-commerce mati, perusahaan tidak menghasilkan uang. Penggajian, meski penting, bisa ditunda (karyawan bisa dibayar manual minggu depan). Skala prioritas BIA ini dinilai cacat.
+}
+
+::Soal 85:: Siklus hidup Manajemen Tambalan (Patch Management Lifecycle) mengharuskan inventarisasi perangkat lunak yang ketat. Mengapa "Pemindaian Kerentanan Terjadwal" (Scheduled Vulnerability Scanning) dianalisis sebagai kontrol yang tak terpisahkan dari proses manajemen tambalan? {
+=A. Menindaklanjuti dan memverifikasi secara independen apakah semua tambalan keamanan yang diklaim telah dipasang oleh staf operasi benar-benar diimplementasikan dengan sukses dan tidak ada kerentanan yang terlewat.
+~B. Menghapus tambalan lama yang memakan ruang hard-disk.
+~C. Menghitung jumlah jam lembur yang digunakan untuk menambal sistem.
+~D. Mendeteksi apakah perangkat keras server terlalu panas setelah diperbarui.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen tambalan adalah kontrol preventif (memasang perbaikan). Pemindai kerentanan adalah kontrol detektif objektif (mencari celah). Memindai jaringan memastikan tidak ada perangkat yang tertinggal/terlupa dari jadwal patching, menciptakan lingkaran umpan balik asurans yang valid.
+}
+
+::Soal 86:: Prima mendesain redundansi jaringan untuk sistem kasir terintegrasi toko gorden. Ia menggunakan *Border Gateway Protocol* (BGP) dengan sambungan dua penyedia internet (ISP) berbeda. Jika ISP utama mengalami gangguan fisik, bagaimana analisis respons lalu lintas data secara operasional? {
+~A. Kasir harus mematikan ulang (restart) komputer mereka agar beralih ke ISP kedua.
+~B. Rute BGP akan mengirim email kepada pelanggan toko tentang gangguan tersebut.
+=C. BGP akan secara otonom menyadari kegagalan rute dan mengalihkan semua lalu lintas transaksi secara dinamis melalui ISP kedua dalam hitungan milidetik tanpa intervensi manual staf TI.
+~D. Kecepatan internet akan meningkat dua kali lipat.
+#### Analisis Taksonomi Bloom (Analisis): Toleransi kesalahan otomatis. *Dynamic routing* seperti BGP menganalisis jalur yang tersedia ke dunia luar secara terus-menerus. Kemampuannya mendeteksi jalur mati dan membelokkan paket data ke jalur cadangan (failover) adalah puncak dari ketahanan arsitektur jaringan Ketersediaan Tinggi (High Availability).
+}
+
+::Soal 87:: Administrator penyimpanan pusat data memutuskan untuk bermigrasi dari arsitektur *Direct Attached Storage* (DAS) ke *Storage Area Network* (SAN). Apa keuntungan analitis tata kelola utama dari arsitektur penyimpanan SAN untuk kelangsungan operasi tingkat korporat? {
+~A. Menjadikan kabel USB lebih relevan untuk penyimpanan.
+=B. Mengkonsolidasikan blok data ke dalam jaringan independen terpusat berkecepatan tinggi, memungkinkan beberapa server berbagi kumpulan penyimpanan yang sama, serta memfasilitasi pencadangan sentral dan replikasi blok tanpa membebani lalu lintas jaringan LAN utama.
+~C. Menghilangkan kebutuhan sama sekali terhadap cadangan data.
+~D. Meningkatkan isolasi logis basis data secara otomatis.
+#### Analisis Taksonomi Bloom (Analisis): DAS lambat dan terikat pada satu server fisik (tidak fleksibel). SAN menganalisis kebutuhan penyimpanan berskala raksasa dengan menciptakan jaringan *fiber channel* khusus hanya untuk data. Jika satu server utama mati, server lain bisa langsung mengakses LUN (Logical Unit Number) data yang sama di SAN untuk melanjutkan operasi.
+}
+
+::Soal 88:: Dalam audit infrastruktur *End-User Computing* (EUC), auditor mendapati pengguna bebas memasang makro perangkat lunak pihak ketiga di komputer mereka. Apa prinsip keamanan arsitektural analitis yang segera terancam oleh praktik operasi bebas ini? {
+~A. Enkripsi Transport Layer Security (TLS).
+~B. Penyaringan alamat MAC pada router.
+=C. Penegakan Daftar Putih Aplikasi (Application Whitelisting) dan pelindungan titik akhir (Endpoint Security) terhadap ancaman eksekusi malware yang tidak dikenali.
+~D. Kontrol ketersediaan sistem HVAC.
+#### Analisis Taksonomi Bloom (Analisis): Jika perangkat pengguna (EUC) memiliki hak administratif penuh untuk menjalankan skrip/makro sembarangan, kebijakan "Default Deny" atau Whitelisting menjadi hancur. Ini sangat analitis membuka gerbang utama infeksi *Ransomware* yang biasanya ditunggangi melalui dokumen makro buatan pengguna akhir.
+}
+
+::Soal 89:: Perusahaan perangkat lunak menerbitkan *Service Level Agreement* (SLA) untuk pelanggan yang menjanjikan pengembalian uang 10% jika layanan mati lebih dari 1 jam sebulan. Fungsi tata kelola analitis dari denda penalti (Penalty Clause) ini di mata organisasi operasi layanan adalah: {
+=A. Bertindak sebagai pendorong insentif finansial yang kuat bagi vendor untuk secara ketat memelihara infrastruktur redundan (ketersediaan) mereka guna menghindari kerugian moneter, memperkuat jaminan layanan bagi pelanggan.
+~B. Memastikan perangkat keras diganti dengan yang baru setiap tahun.
+~C. Mengubah model IaaS menjadi model SaaS.
+~D. Memberikan keuntungan tak terduga (windfall) bagi pelanggan.
+#### Analisis Taksonomi Bloom (Analisis): Janji operasional (SLA) tanpa konsekuensi adalah dokumen tak bernilai. Sanksi penalti menganalisis transfer risiko finansial; ia memaksa vendor melakukan segala daya komersial dan teknis (berinvestasi pada server cadangan/staf andal) untuk memastikan sistem mereka selalu hidup.
+}
+
+::Soal 90:: Tim Basis Data mengadopsi prosedur pelepasan perangkat lunak baru menggunakan kontrol *Canary Release* (Pelepasan Burung Kenari). Apa keunggulan mitigasi risiko analitis dari taktik rilis operasional ini? {
+~A. Perangkat lunak akan dilepaskan secara bersamaan ke semua komputer secara global.
+~B. Menggunakan perangkat lunak anti-malware berlogo burung untuk pemindaian.
+=C. Memperkenalkan versi rilis terbaru hanya ke sebagian kecil pengguna (misalnya 5%) untuk menganalisis stabilitas dan mendeteksi anomali di lingkungan produksi langsung sebelum menggulirkannya secara penuh ke seluruh populasi pengguna.
+~D. Mencegah peretas eksternal mencuri kata sandi rilis.
+#### Analisis Taksonomi Bloom (Analisis): Mirip dengan burung kenari di tambang batu bara (untuk mendeteksi gas beracun). *Canary release* adalah manajemen risiko operasional; jika versi kode yang baru memiliki bug yang fatal, dampaknya (blast radius) sangat terkendali, hanya merugikan sebagian kecil pengguna perintis tanpa meruntuhkan seluruh perusahaan.
+}
+
+::Soal 91:: Miftahul mengaudit prosedur pengiriman pita cadangan mingguan (Off-site Backups) dari pusat data ke brankas pihak ketiga. Ia menuntut manajemen menyimpan "Daftar Inventaris Transit" secara mendetail dan diperbarui seketika. Mengapa kontrol analitis administratif ini mutlak diperlukan? {
+~A. Agar kurir tidak meminta biaya pengiriman lebih.
+=B. Untuk mempertahankan Rantai Penjagaan (Chain of Custody); jika pihak ketiga mengklaim kehilangan pita, inventaris membuktikan bahwa pita tersebut benar-benar telah diserahkan, mengidentifikasi secara pasti di mana kebocoran atau kehilangan aset terjadi.
+~C. Untuk menjamin pita tidak berjamur saat dalam perjalanan.
+~D. Agar pita tidak digunakan berulang kali.
+#### Analisis Taksonomi Bloom (Analisis): Transit media fisik adalah titik paling rentan pencurian. Tanda terima yang ketat (Chain of Custody) di setiap titik serah terima menganalisis akuntabilitas absolut. Jika aset hilang tanpa jejak inventaris, organisasi tidak memiliki dasar hukum untuk menuntut vendor atau melacak pelakunya.
+}
+
+::Soal 92:: Sebuah organisasi melakukan pengujian *Full Interruption Test* (Uji Gangguan Penuh) setiap bulan untuk Rencana Pemulihan Bencananya. Auditor TI secara analitis sangat memperingatkan manajemen tentang frekuensi pengujian yang agresif ini karena: {
+=A. Mematikan sistem produksi nyata dapat menimbulkan gangguan bisnis (business disruption) parah, dan risiko kegagalan pemulihan selama pengujian secara ironis dapat menciptakan bencana finansial itu sendiri yang seharusnya dicegah oleh DRP.
+~B. Uji gangguan penuh sangat tidak akurat dibandingkan simulasi meja (Tabletop).
+~C. Manajemen akan kehabisan anggaran dokumentasi kertas.
+~D. Karyawan akan menjadi terlalu mahir menangani bencana.
+#### Analisis Taksonomi Bloom (Analisis): Mematikan situs produksi untuk menguji situs sekunder adalah bentuk latihan DRP paling valid, tetapi juga yang paling berbahaya. Jika situs cadangan gagal menyala, bisnis mati sepenuhnya secara sukarela. Menganalisis risikonya, uji ekstrem ini jarang dilakukan (misal 1-2 tahun sekali), bukan setiap bulan.
+}
+
+::Soal 93:: Pada fase penyelesaian insiden infeksi sistem operasi, tim keamanan melakukan *Eradication* (Pemberantasan) dengan menghapus malware. Apa evaluasi analitis utama yang harus diselesaikan pada fase ini agar insiden tidak langsung terulang kembali keesokan harinya? {
+~A. Mengadakan pesta perayaan di departemen TI.
+~B. Menghapus log firewall untuk menghemat memori.
+=C. Mengidentifikasi, menambal (patching), dan menutup seluruh vektor kerentanan sistem yang digunakan oleh penyerang awal sebagai pintu masuk eksploitasi sebelum mengembalikan layanan ke status produksi.
+~D. Memindahkan server yang terinfeksi ke ruang konferensi fisik.
+#### Analisis Taksonomi Bloom (Analisis): Membersihkan virus (Eradication) hanyalah setengah jalan. Jika pintu belakang logis (seperti port terbuka atau perangkat lunak tak bertambal) yang memungkinkan virus masuk pertama kali tidak diidentifikasi dan ditambal, sistem akan diretas ulang dalam hitungan menit setelah dihidupkan kembali ke jaringan publik.
+}
+
+::Soal 94:: Staf operasi sering kali gagal menjalankan pekerjaan *Batch* laporan harian tepat waktu karena "Batch Window" bertabrakan dengan waktu puncak penggunaan pengguna bisnis online di pagi hari. Rekomendasi perbaikan operasional analitis terbaik untuk ini adalah: {
+~A. Menghentikan pengguna bisnis menggunakan aplikasi di pagi hari.
+=B. Mengevaluasi penjadwalan beban kerja (Workload Scheduling) dan menggeser eksekusi pekerjaan *Batch* intensif I/O ke waktu malam hari atau akhir pekan saat pemanfaatan sumber daya server pada titik terendahnya.
+~C. Menghapus data laporan setiap minggu.
+~D. Meminta semua pengguna mengunduh basis data ke laptop masing-masing.
+#### Analisis Taksonomi Bloom (Analisis): *Batch Window* adalah periode di mana proses mesin tidak bersaing dengan proses manusia (online transactions). Menganalisis benturan kapasitas: tugas berat yang berjalan di latar belakang harus digeser secara kronologis ke jam 'low-traffic' (off-peak) untuk menjaga kestabilan waktu respons sistem produksi.
+}
+
+::Soal 95:: Di sebuah pusat data dengan deretan rak server yang sangat padat, pendingin ruangan sentral bekerja maksimal namun alarm kepanasan perangkat keras sering berbunyi. Auditor fasilitas merekomendasikan tata letak infrastruktur *Hot Aisle / Cold Aisle*. Fungsi tata kelola pendinginan analitis dari konfigurasi ini adalah: {
+~A. Memisahkan komputer mahal dengan komputer murah.
+~B. Membuat suhu udara menjadi sama di setiap sudut ruangan.
+=C. Menyusun rak secara berhadapan/membelakangi untuk mencegah pencampuran aliran udara dingin yang masuk dengan udara pembuangan panas dari sasis server, meningkatkan efisiensi pendinginan termal secara dramatis.
+~D. Mengganti semua pendingin AC dengan pendingin air cair di dalam server.
+#### Analisis Taksonomi Bloom (Analisis): Tata letak lingkungan fisik sangat vital. Jika rak semua menghadap arah yang sama, server di baris kedua akan menyedot udara buangan panas dari server di depannya. Arsitektur "Lorong Panas / Lorong Dingin" menganalisis dinamika fluida (Termodinamika) untuk mencegah daur ulang hawa panas, menstabilkan umur perangkat keras.
+}
+
+::Soal 96:: Ketika meninjau log Manajemen Masalah (Problem Management), auditor mendapati bahwa sistem pelacakan memiliki basis data *Known Error Database* (KEDB). Apa keuntungan analitis tertinggi dari pemeliharaan KEDB yang sehat bagi Pusat Operasi TI? {
+~A. Menghapus kebutuhan akan staf Lapis 1.
+=B. Mengarsipkan *Workarounds* (solusi sementara) dari masalah historis yang belum ada tambalan permanennya, memungkinkan meja bantuan memulihkan insiden serupa dengan instan di masa depan tanpa harus memulai analisis diagnostik dari nol.
+~C. Memastikan vendor dibayar tepat waktu.
+~D. Menghapus log otomatis setelah 24 jam.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen Pengetahuan (ITIL). Tidak semua bug punya obat instan (fix). Jika solusi permanen belum ada, staf pakar membuat "Workaround" (solusi akal-akalan aman). Menyimpan ini ke KEDB menganalisis perbaikan MTTR (Mean Time to Resolve) karena staf junior cukup membaca KEDB dan menerapkan langkah itu jika insiden berulang.
+}
+
+::Soal 97:: Sebuah perusahaan rintisan menyimpan basis data pelanggan utamanya di penyedia komputasi awan *Infrastructure as a Service* (IaaS). Berdasarkan analisis matriks tanggung jawab bersama (Shared Responsibility Model), entitas mana yang diwajibkan secara hukum untuk mengaktifkan pembaruan (patch) keamanan pada Sistem Operasi (OS) mesin virtual tersebut? {
+=A. Perusahaan rintisan (Pelanggan Awan), karena IaaS hanya mengelola perangkat keras dasar fisik dan Hypervisor; pengelolaan OS sepenuhnya ada pada kendali penyewa.
+~B. Penyedia Komputasi Awan (Vendor Awan).
+~C. Badan Regulasi Telekomunikasi Pemerintah.
+~D. Tidak perlu ditambal karena OS di komputasi awan secara inheren kebal peretasan.
+#### Analisis Taksonomi Bloom (Analisis): Miskonsepsi terbesar di komputasi awan adalah mengira vendor awan mengurus segalanya. Di model IaaS (seperti AWS EC2), vendor hanya menyediakan logam dasar (bare metal). Keamanan aplikasi dan tambalan sistem operasi Windows/Linux virtual di dalamnya secara eksklusif dan analitis merupakan kewajiban pengguna awan.
+}
+
+::Soal 98:: Auditor menilai efektivitas Rencana Pemulihan Bencana (DRP) yang diklaim sangat mutakhir oleh manajemen. Namun, setelah diteliti, dokumen DRP tersebut didapati belum direvisi selama lebih dari 3 tahun meskipun perusahaan telah melakukan migrasi ke sistem ERP baru. Kesimpulan audit analitis terpenting dari temuan ini adalah: {
+~A. DRP akan bekerja lebih baik karena prosedurnya stabil dan dihafal karyawan.
+~B. Kinerja sistem ERP akan menurun di bawah 80%.
+=C. DRP dinilai sama sekali tidak efektif dan kadaluarsa (obsolete); langkah-langkah pemulihan tidak lagi mencerminkan arsitektur teknologi produksi riil saat ini, menjamin kegagalan operasi penyelamatan saat bencana nyata melanda.
+~D. Rencana tersebut hanya perlu diunggah ke internet.
+#### Analisis Taksonomi Bloom (Analisis): DRP adalah dokumen hidup (living document). Ia harus dianalisis ulang setiap kali ada perubahan infrastruktur signifikan di organisasi (Change Management Trigger). DRP yang memuat instruksi pemulihan sistem usang yang tak lagi dipakai sama berbahayanya dengan tidak memiliki rencana darurat sama sekali.
+}
+
+::Soal 99:: Dalam operasional pusat data tingkat perusahaan (Enterprise Data Center), teknik yang dikenal sebagai *Server Virtualization* sering diterapkan. Apa manfaat operasional dan ketahanan analitis terbesar dari teknik ini? {
+~A. Melipatgandakan anggaran pembelian perangkat keras fisik (CAPEX).
+=B. Mengkonsolidasikan beban kerja ke server fisik yang lebih sedikit untuk mengoptimalkan penggunaan daya (Green IT), sekaligus memungkinkan perpindahan instan antar perangkat keras jika terjadi kegagalan sistem (*Live Migration*).
+~C. Menghapus kebutuhan akan manajemen memori (RAM).
+~D. Membuat sistem tidak bisa terinfeksi oleh virus perusak data.
+#### Analisis Taksonomi Bloom (Analisis): Virtualisasi memisahkan mesin logika (OS/Aplikasi) dari perangkat keras logam. Secara operasional, ia menganalisis efisiensi biaya (banyak VM di 1 server). Secara ketahanan, VM hanyalah file paket logis, artinya administrator dapat "memindahkan/Live Migrate" server yang berjalan dari mesin rusak ke mesin sehat dalam hitungan detik (High Availability).
+}
+
+::Soal 100:: Berdasarkan standar audit keamanan operasional SI, evaluasi analitis utama dari siklus *End-User Computing* (EUC) memandatkan bahwa alat pelaporan makro yang dikembangkan sendiri oleh manajer keuangan yang memiliki dampak material tinggi terhadap pembukuan perusahaan harus selalu: {
+~A. Bebas dari kendali departemen TI dan boleh diakses secara anonim oleh siapa saja.
+~B. Digunakan tanpa perlu dibuat cadangannya (backup) karena ukurannya kecil.
+=C. Tunduk pada kontrol tata kelola yang sama ketatnya dengan aplikasi TI standar, mencakup pengujian perhitungan independen, perlindungan modifikasi rumus, pengendalian akses masuk, dan pengelolaan versi (Version Control).
+~D. Didistribusikan secara publik di situs web pemasaran eksternal organisasi.
+#### Analisis Taksonomi Bloom (Analisis): Konklusi tata kelola EUC. Aplikasi *Spreadsheet* atau makro Access seringkali merupakan titik buta (blind spot) departemen TI. Jika alat ini digunakan untuk menghitung pajak miliaran rupiah, auditor wajib menganalisis kontrol jaminan mutunya (Validasi rumus, Password protection, Backups) agar setara dengan keamanan pangkalan data korporat (Mencegah Salah Saji Finansial).
+}

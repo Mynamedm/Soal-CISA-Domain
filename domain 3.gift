@@ -1,0 +1,807 @@
+// Soal 1 - 25: Domain 3 (IS Acquisition, Development, & Implementation)
+
+::Soal 1:: Saat merancang sistem kasir monitor ganda dan gerbang keamanan untuk sebuah toko gorden, pengembang menggabungkan modul pemrosesan pembayaran dan pemicu alarm fisik ke dalam satu kode monolitik. Dari perspektif analisis kontrol desain, apa risiko operasional paling kritis dari pendekatan ini? {
+~A. Sistem monitor ganda akan mengalami keterlambatan sinkronisasi data antarmuka pengguna.
+=B. Kekurangan modularitas berarti kesalahan pengkodean pada satu fungsi dapat menyebar dan menyebabkan kegagalan sistem keamanan secara keseluruhan.
+~C. Gerbang keamanan akan terbuka secara otomatis jika persediaan inventaris toko habis.
+~D. Biaya listrik untuk menjalankan sistem monolitik jauh lebih tinggi daripada sistem modular.
+#### Analisis Taksonomi Bloom (Analisis): Auditor perlu memecah elemen desain arsitektur perangkat lunak. Menggabungkan logika bisnis yang sama sekali tidak terkait (pembayaran dan kontrol keamanan fisik) melanggar prinsip rekayasa 'high cohesion and low coupling'. Kegagalan satu komponen dapat menjatuhkan seluruh sistem yang saling bergantung.
+}
+
+::Soal 2:: Dalam proyek pengembangan aplikasi edukasi interaktif untuk anak berkebutuhan khusus, manajer proyek menggunakan metodologi Agile. Namun, pengujian iteratif hanya melibatkan pengembang perangkat lunak tanpa mengundang pendidik atau terapis. Apa dampak analitis terbesar terhadap siklus hidup pengembangan sistem (SDLC) ini? {
+~A. Dokumentasi kode sumber akan menjadi terlalu kompleks untuk dipelihara di masa depan.
+~B. Anggaran proyek akan membengkak melampaui batas yang disetujui komite.
+=C. Sistem berisiko sangat tinggi ditolak pada fase peluncuran karena gagal memenuhi kesesuaian fungsional dari pengguna akhir.
+~D. Sistem tidak akan dapat beroperasi pada arsitektur komputasi awan.
+#### Analisis Taksonomi Bloom (Analisis): Metodologi Agile sangat bergantung pada umpan balik berkelanjutan dengan pemilik produk/pengguna. Tanpa keterlibatan pakar domain (terapis/pendidik), kandidat harus menganalisis bahwa risiko ketidaksesuaian tujuan bisnis sangat tinggi.
+}
+
+::Soal 3:: Sebuah tim sedang melakukan digitalisasi data demografi penduduk Desa Way Nipah dari catatan kertas ke dalam pangkalan data terpusat. Selama fase konversi data (data conversion), kontrol detektif apa yang paling penting untuk dianalisis guna menjamin kelengkapan migrasi? {
+=A. Membandingkan total kontrol batch (batch totals) dan penghitungan catatan (record count) dari fail fisik dengan data yang berhasil dimuat ke dalam sistem.
+~B. Menerapkan algoritma enkripsi asimetris pada seluruh baris pangkalan data yang baru.
+~C. Memastikan semua petugas data menandatangani perjanjian kerahasiaan sebelum proses dimulai.
+~D. Mengubah jadwal migrasi ke tengah malam untuk mengurangi beban server operasional.
+#### Analisis Taksonomi Bloom (Analisis): Konversi data rentan terhadap kehilangan catatan. Membandingkan data secara kuantitatif (total batch/hash totals) sebelum dan sesudah migrasi adalah kontrol detektif yang paling tepat untuk memverifikasi kelengkapan perpindahan data.
+}
+
+::Soal 4:: Andini dan Miftahul sedang menyusun Studi Kelayakan (Feasibility Study) untuk mengakuisisi perangkat lunak vendor pihak ketiga. Mereka menemukan bahwa Return on Investment (ROI) sangat tinggi, tetapi menolak memasukkan klausul Perjanjian Escrow (Software Escrow). Apa risiko analitis kelangsungan bisnis yang sedang diabaikan? {
+~A. Vendor akan secara sepihak menaikkan harga lisensi di tahun-tahun berikutnya tanpa pemberitahuan.
+~B. Karyawan internal dapat mencuri dan menjual kode sumber tersebut ke perusahaan pesaing.
+~C. Perangkat lunak tersebut tidak akan kompatibel dengan perangkat keras basis data yang ada.
+=D. Jika vendor bangkrut, organisasi akan kehilangan akses hukum dan teknis ke kode sumber yang dibutuhkan untuk memelihara kelangsungan sistem.
+#### Analisis Taksonomi Bloom (Analisis): Auditor menganalisis mitigasi risiko vendor lock-in/failure. Perjanjian Escrow memastikan kelangsungan operasional dengan menempatkan kode sumber di pihak ketiga yang netral sebagai asuransi jika vendor asli lenyap secara komersial.
+}
+
+::Soal 5:: Kristof dan Prima ditugaskan untuk menjalankan Pengujian Penerimaan Pengguna (User Acceptance Testing - UAT). Karena tenggat waktu yang ketat, pengembang perangkat lunak memutuskan untuk mengambil alih dan menjalankan uji coba tersebut menggunakan skrip pengujian otomatis mereka sendiri. Mengapa ini merupakan temuan kelemahan kontrol yang material? {
+~A. Skrip pengujian otomatis selalu gagal menangkap kesalahan antarmuka grafis.
+=B. Terjadi hilangnya objektivitas dan pelanggaran pemisahan tugas; UAT harus dieksekusi oleh pengguna akhir operasional, bukan oleh pengembang.
+~C. Skrip otomatis akan mengubah logika pelaporan bisnis secara permanen.
+~D. Modul tersebut harus selalu diuji menggunakan teknik kotak putih (white-box testing).
+#### Analisis Taksonomi Bloom (Analisis): Mengurai proses UAT. Tujuan utama UAT adalah verifikasi proses bisnis oleh pengguna. Jika pengembang menguji kode yang mereka buat sendiri, independensi validasi dari kacamata pengguna sesungguhnya akan hilang.
+}
+
+::Soal 6:: Manajemen memutuskan untuk menerapkan perangkat lunak ERP baru secara serentak di 50 cabang menggunakan pendekatan 'Direct Cutover' (Big Bang). Berdasarkan analisis profil risiko, kondisi apa yang paling membenarkan pendekatan berisiko tinggi ini? {
+=A. Sistem lama telah runtuh secara permanen atau ada regulasi mendesak yang sama sekali tidak didukung oleh sistem lama.
+~B. Terdapat kelebihan anggaran proyek yang dapat menanggung potensi perbaikan kegagalan.
+~C. Karyawan memiliki resistensi yang sangat tinggi terhadap perubahan sistem.
+~D. Sistem baru memiliki antarmuka pengguna yang sangat kompleks dan lambat.
+#### Analisis Taksonomi Bloom (Analisis): Direct Cutover menghancurkan jaring pengaman (fallback). Secara analitis, langkah drastis ini hanya dibenarkan jika sistem lama sudah tidak dapat diselamatkan sama sekali atau dipaksa oleh tenggat waktu kepatuhan hukum yang absolut.
+}
+
+::Soal 7:: Dalam mengevaluasi ukuran dan perkiraan upaya (effort estimation) untuk membangun sebuah sistem informasi, metode analisis manakah yang berfokus pada penghitungan kompleksitas input pengguna, output, antarmuka, dan permintaan logika? {
+~A. Program Evaluation and Review Technique (PERT)
+~B. Gantt Chart
+=C. Function Point Analysis (FPA)
+~D. Earned Value Analysis (EVA)
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis alat estimasi. FPA adalah ukuran sintetis dari seberapa banyak fungsi perangkat lunak yang dikirimkan ke pengguna. Ini mengukur ukuran logis proyek (jumlah formulir, laporan) alih-alih sekadar menghitung baris kode (Lines of Code).
+}
+
+::Soal 8:: Saat merancang struktur basis data relasional (Relational Database) untuk aplikasi penggajian, penganalisis memastikan bahwa setiap kali catatan karyawan dihapus dari tabel 'Master Karyawan', semua catatan rincian pajaknya di tabel lain tidak boleh terputus atau tertinggal. Konsep analitis tata kelola data apa yang sedang diterapkan? {
+~A. Integritas Entitas (Entity Integrity) melalui Kunci Utama (Primary Key).
+=B. Integritas Rujukan (Referential Integrity) melalui penegakan Kunci Asing (Foreign Key).
+~C. Enkapsulasi Objek (Object Encapsulation).
+~D. Penyembunyian Data (Data Masking).
+#### Analisis Taksonomi Bloom (Analisis): Memecah mekanisme kontrol basis data. Integritas rujukan memastikan validitas hubungan antar-tabel. Ini mencegah pembuatan "orphan records" (data yatim), memastikan referensi data transaksi selalu terhubung secara logis ke entitas utamanya.
+}
+
+::Soal 9:: Setelah enam bulan aplikasi keuangan diluncurkan, auditor ditugaskan untuk melakukan Tinjauan Pasca-Implementasi (Post-Implementation Review - PIR). Objektif analitis utama peninjauan pada fase ini adalah untuk: {
+~A. Mengidentifikasi dan menghukum pengembang yang menyebabkan kesalahan sistem saat peluncuran.
+~B. Merancang ulang diagram hubungan entitas (ERD) basis data.
+~C. Menyusun ujian tekanan (stress testing) tambahan pada perangkat keras jaringan.
+=D. Menilai apakah sistem telah mencapai manfaat bisnis (ROI) yang dijanjikan dan memastikan kontrol keamanan beroperasi secara efektif di lingkungan produksi.
+#### Analisis Taksonomi Bloom (Analisis): PIR bukan untuk mencari kesalahan teknis harian. Ini adalah alat tata kelola tata kelola proyek yang mengevaluasi kembali 'Business Case' asli untuk membuktikan investasi TI telah merealisasikan tujuan strategis bisnis.
+}
+
+::Soal 10:: Terdapat keluhan bahwa sistem yang baru saja diperbarui sering kali memunculkan kesalahan pada modul lama yang sebelumnya berfungsi dengan baik. Auditor perlu menyelidiki kelemahan pada fase pengujian. Ujian apa yang paling mungkin telah diabaikan oleh tim QA? {
+~A. Ujian Unit (Unit Testing).
+~B. Ujian Penetrasi (Penetration Testing).
+=C. Ujian Regresi (Regression Testing).
+~D. Ujian Beban (Load Testing).
+#### Analisis Taksonomi Bloom (Analisis): Ujian regresi dirancang khusus untuk memverifikasi bahwa amandemen, penambahan, atau perbaikan baru pada sistem tidak secara tidak sengaja merusak atau mengubah komponen yang sudah ada dan stabil sebelumnya.
+}
+
+::Soal 11:: Dalam Analisis Jaringan Proyek, diagram PERT (Program Evaluation and Review Technique) lebih disukai oleh manajer proyek TI yang kompleks dibandingkan dengan Gantt Chart. Apa keunggulan analitis kritis dari PERT? {
+~A. PERT sangat mudah dipahami oleh pengguna non-teknis.
+=B. PERT secara eksplisit memetakan ketergantungan logis (logical dependencies) antar tugas dan dengan jelas menyoroti 'Jalur Kritis' (Critical Path).
+~C. PERT secara otomatis menghitung anggaran keuangan harian.
+~D. PERT menghilangkan kebutuhan untuk rapat tinjauan proyek.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis alat pengawasan. Sementara Gantt sangat baik untuk garis waktu kalender (grafik batang), diagram PERT/CPM (jaringan simpul) adalah satu-satunya metode matematis yang menganalisis ketergantungan pendahulu-penerus untuk menghitung waktu penyelesaian minimum.
+}
+
+::Soal 12:: Tim pengujian peluncuran menggunakan 'Sanitized Data' (data produksi yang disamarkan informasi pribadinya) untuk menguji aplikasi di lingkungan UAT. Mengapa prosedur ini secara analitis dianggap sebagai praktik tata kelola terbaik? {
+=A. Mencerminkan struktur dan volume data produksi secara akurat untuk menemukan bug logika, sembari mencegah pelanggaran kepatuhan privasi (seperti kebocoran PII).
+~B. Mempercepat kecepatan komputasi server selama fase pengujian.
+~C. Data tersanitasi akan menghasilkan kode sumber aplikasi secara otomatis.
+~D. Meniadakan kebutuhan pengguna bisnis untuk memvalidasi output laporan.
+#### Analisis Taksonomi Bloom (Analisis): Menggunakan data produksi asli melanggar undang-undang privasi. Data buatan (dummy) murni sering kali tidak menangkap anomali dunia nyata. Anomimisasi (Masking/Sanitization) memberikan keseimbangan optimal antara akurasi pengujian dan pelindungan data.
+}
+
+::Soal 13:: Laporan status proyek menunjukkan indeks SPI (Schedule Performance Index) berada di angka 0.85, sementara CPI (Cost Performance Index) di angka 1.15. Berdasarkan analisis metrik Earned Value Analysis (EVA), bagaimana performa proyek saat ini? {
+~A. Proyek mendahului jadwal dan melebihi anggaran.
+~B. Proyek tepat waktu tetapi sangat kekurangan dana.
+~C. Proyek harus dihentikan segera karena kedua indikator gagal.
+=D. Proyek mengalami keterlambatan jadwal (behind schedule), namun berjalan dengan penghematan anggaran (under budget).
+#### Analisis Taksonomi Bloom (Analisis): Menafsirkan indikator kinerja. Jika nilai < 1.0, kinerjanya buruk. Jika > 1.0, kinerjanya baik. SPI 0.85 = buruk/lambat. CPI 1.15 = baik/hemat biaya.
+}
+
+::Soal 14:: Dalam praktik pengkodean yang aman (secure coding), pengembang web membatasi kolom input teks agar hanya menerima huruf dan angka dengan panjang maksimal 20 karakter. Langkah ini secara mendasar dianalisis sebagai kontrol preventif terhadap ancaman: {
+~A. Serangan DDoS (Distributed Denial of Service).
+=B. Injeksi SQL (SQL Injection) dan Buffer Overflow.
+~C. Serangan rekayasa sosial seperti Phishing.
+~D. Kegagalan enkripsi data saat istirahat (Data at Rest).
+#### Analisis Taksonomi Bloom (Analisis): Serangan injeksi (menyisipkan perintah basis data berbahaya via antarmuka web) atau buffer overflow dapat dimitigasi paling efektif di lapisan aplikasi melalui validasi dan sanitasi input ketat (membatasi panjang dan tipe karakter).
+}
+
+::Soal 15:: Untuk mempercepat fase pengumpulan kebutuhan (Requirements Gathering), organisasi mengadakan lokakarya JAD (Joint Application Development). Apa sasaran tata kelola analitis utama dari metode ini? {
+~A. Membagi tugas pemrograman kepada pengembang lepas di luar negeri.
+~B. Menyetujui anggaran perangkat keras departemen TI secara final.
+=C. Mengurangi miskomunikasi dan mempercepat konsensus fungsional dengan mempertemukan pengembang, pakar bisnis, dan pemangku kepentingan secara serentak dalam ruang terfasilitasi.
+~D. Menjalankan pengujian penetrasi independen di lingkungan kotak pasir.
+#### Analisis Taksonomi Bloom (Analisis): JAD mengatasi isolasi siklus tradisional. Alih-alih analis mewawancarai departemen satu per satu, JAD mengunci semua pihak relevan di satu ruangan untuk menganalisis dan memutuskan persyaratan sistem secara kolektif, memangkas waktu revisi di kemudian hari.
+}
+
+::Soal 16:: Organisasi mengadopsi Metodologi Rapid Application Development (RAD). Karakteristik manakah yang menimbulkan risiko analitis tertinggi terhadap reliabilitas sistem di masa depan jika kontrol dilewatkan? {
+=A. Penekanan ekstrem pada kecepatan prototipe berisiko menelantarkan dokumentasi teknis sistem dan mengorbankan integritas arsitektur dasar.
+~B. Keterlibatan pengguna akhir ditiadakan secara keseluruhan.
+~C. RAD mencegah penggunaan bahasa pemrograman berorientasi objek.
+~D. RAD mewajibkan pengujian pihak ketiga dari badan pemerintah.
+#### Analisis Taksonomi Bloom (Analisis): RAD mempercepat "time-to-market". Risiko inherennya adalah ketika pengembang terus menambal prototipe, kode menjadi berantakan (spaghetti code) dan dokumentasi diabaikan, menciptakan utang teknis (technical debt) yang menyulitkan pemeliharaan masa depan.
+}
+
+::Soal 17:: Perusahaan mengakuisisi perangkat lunak akuntansi berbasis Cloud dengan model SaaS (Software as a Service). Berdasarkan arsitektur tanggung jawab bersama (Shared Responsibility Model), aspek mana yang menjadi beban kontrol mutlak perusahaan klien? {
+~A. Menambal (patching) sistem operasi server awan.
+~B. Mengganti hard-drive fisik yang rusak di pusat data penyedia.
+~C. Memastikan pembaruan versi perangkat lunak akuntansi dilakukan bulanan.
+=D. Tata kelola identitas logis, pengelolaan hak akses (IAM) staf internal, dan klasifikasi sensitivitas data keuangan tersebut.
+#### Analisis Taksonomi Bloom (Analisis): Dalam SaaS, tumpukan infrastruktur hingga aplikasi dikelola vendor. Pengguna awan tetap memegang kontrol atas siapa yang diizinkan masuk ke penyewa (tenant) mereka dan bagaimana data mereka diberi label (Information Security/Data Governance).
+}
+
+::Soal 18:: Saat mengeksekusi implementasi sistem paralel (Parallel Run), sistem baru dan sistem warisan memproses transaksi harian secara bersamaan. Evaluasi analitis terpenting untuk memvalidasi kesiapan sistem baru adalah: {
+~A. Memastikan karyawan tidak mengeluh tentang antarmuka baru.
+=B. Melakukan rekonsiliasi keluaran (reconciliation of outputs) harian untuk mendeteksi deviasi logika pemrosesan antara kedua sistem.
+~C. Mencabut daya listrik pada server sistem lama secara acak untuk menguji toleransi kesalahan.
+~D. Memastikan sistem baru beroperasi dua kali lebih cepat dari sistem lama.
+#### Analisis Taksonomi Bloom (Analisis): Tujuan komputasi paralel adalah validasi akurasi logika pemrosesan secara langsung. Jika keluaran sistem A berbeda dengan sistem B dengan input yang sama, artinya ada kesalahan rumus perhitungan pada sistem yang baru.
+}
+
+::Soal 19:: Selama akuisisi perangkat lunak COTS (Commercial Off-The-Shelf), manajemen berdebat antara mengandalkan SLA (Service Level Agreement) atau laporan SOC 2. Sebagai auditor analitis, apa perbedaan esensial dari kedua instrumen kepatuhan tersebut? {
+~A. SLA diterbitkan oleh pemerintah, SOC 2 diterbitkan oleh vendor.
+~B. SLA menjamin ketersediaan fisik, sedangkan SOC 2 hanya menjamin harga perangkat lunak.
+=C. SLA adalah janji kontraktual (harapan kinerja) dari vendor, sementara laporan SOC 2 adalah bukti audit independen bahwa kontrol vendor benar-benar berfungsi di dunia nyata.
+~D. Tidak ada perbedaan, SLA dan SOC 2 dapat saling dipertukarkan.
+#### Analisis Taksonomi Bloom (Analisis): Janji operasional (SLA) tidak membuktikan kepatuhan teknis. Auditor harus mengevaluasi bukti aktual pengujian kontrol historis yang tertuang dalam laporan atestasi SOC 2.
+}
+
+::Soal 20:: Auditor menemukan bahwa pengembang sistem aplikasi perbankan memegang kredensial akses 'Administrator' langsung ke server produksi agar mereka bisa menambal celah keamanan tanpa birokrasi. Mengapa ini mengancam keandalan pelaporan keuangan? {
+=A. Pelanggaran keras Pemisahan Tugas (SoD); pengembang dapat diam-diam mengubah kode transaksi produksi untuk memanipulasi saldo tanpa jejak audit pengawasan.
+~B. Pengembang akan menuntut biaya kompensasi ekstra.
+~C. Server produksi akan kelebihan beban komputasi harian.
+~D. Menurunkan nilai investasi perangkat keras basis data.
+#### Analisis Taksonomi Bloom (Analisis): Lingkungan Dev (pembangunan) dan Prod (produksi) harus diisolasi secara fisik dan logis. Pengembang hanya boleh mengunggah kode melalui petugas rilis (Release Manager) independen untuk mencegah penyelundupan program jahat atau perubahan data transaksional yang tidak sah.
+}
+
+::Soal 21:: Dokumen Request for Proposal (RFP) dikirimkan ke berbagai vendor TI luar untuk pengadaan sistem logistik sentral. Dari sudut pandang metodologi akuisisi, parameter kelayakan apa yang paling krusial ada di dalam RFP tersebut? {
+~A. Strategi pemasaran vendor untuk lima tahun ke depan.
+=B. Spesifikasi kebutuhan fungsional dan teknis yang jelas yang sudah disetujui secara internal oleh pemilik bisnis perusahaan.
+~C. Detail daftar gaji programmer pihak ketiga.
+~D. Klausul penalti keterlambatan perakitan fisik semata.
+#### Analisis Taksonomi Bloom (Analisis): RFP adalah dasar evaluasi akuisisi (scorecard). Jika perusahaan belum mendefinisikan persyaratan bisnisnya sendiri dengan spesifik, mereka tidak memiliki landasan analitis yang objektif untuk menilai sistem mana yang benar-benar memenuhi tujuannya.
+}
+
+::Soal 22:: Tim jaminan kualitas (QA) sedang meninjau keamanan aplikasi baru menggunakan teknik pengujian Kotak Putih (White-Box Testing). Analisis struktural spesifik apa yang membedakan teknik ini dengan kotak hitam? {
+~A. Kotak Putih dilakukan oleh pengguna bisnis yang sama sekali tidak mengerti komputer.
+~B. Kotak Putih menguji sistem hanya pada malam hari.
+~C. Penguji meretas aplikasi melalui antarmuka pengguna grafis tanpa pengetahuan teknis belakang layar.
+=D. Penguji memiliki akses penuh terhadap desain struktur internal dan kode sumber aplikasi untuk menganalisis jalur logika dan kerentanan algoritma.
+#### Analisis Taksonomi Bloom (Analisis): Membedakan metodologi pengujian. Black-box menguji dari luar (fokus pada fungsi/input-output tanpa melihat kode). White-box (atau glass-box) mengaudit arsitektur dari dalam (fokus pada kelemahan kode sumber dan penelusuran alur kontrol).
+}
+
+::Soal 23:: Sistem pemrosesan batch perbankan menghasilkan 'Laporan Pengecualian' (Exception Report) untuk setiap transaksi nasabah yang ditolak harian. Evaluasi audit apa yang paling penting untuk memastikan kontrol ini beroperasi sempurna? {
+~A. Laporan harus segera dihapus setelah dibaca pimpinan.
+~B. Laporan harus diformat dalam grafik 3 dimensi.
+=C. Memverifikasi bahwa terdapat prosedur operasional lanjutan untuk menyelidiki akar penyebab kesalahan, memperbaikinya, dan memasukkan ulang transaksi secara sah.
+~D. Memastikan tidak ada transaksi pengecualian sama sekali selama sebulan.
+#### Analisis Taksonomi Bloom (Analisis): Laporan pengecualian adalah kontrol detektif. Ia tidak bernilai jika tidak dibarengi dengan prosedur kontrol korektif yang menyeluruh (investigasi, penyesuaian, dan resubmission).
+}
+
+::Soal 24:: Sebuah perusahaan ritel mengalami lumpuh operasional selama 8 jam ketika pembaruan (patch) aplikasi manajemen kasir gagal berfungsi pada hari peluncuran. Menurut standar manajemen perubahan, kriteria analitis desain rilis apa yang jelas telah dilewati? {
+=A. Kegagalan menyusun dan menguji Rencana Pengembalian (Rollback / Back-out Plan) sebelum pembaruan diterapkan.
+~B. Kurangnya pelatihan kasir ritel tentang cara mereset komputer fisik.
+~C. Kegagalan menggunakan komputasi awan.
+~D. Tim pemrograman kurang dari standar minimal 10 orang.
+#### Analisis Taksonomi Bloom (Analisis): Ketiadaan jaring pengaman. Dalam Manajemen Rilis dan Perubahan (Change Management), tidak ada perubahan yang boleh disetujui untuk dipindahkan ke sistem produksi tanpa adanya 'Rollback Plan' yang teruji—kemampuan mengembalikan sistem ke keadaan stabil terakhir jika pembaruan gagal.
+}
+
+::Soal 25:: Sebuah rumah sakit mengakuisisi perangkat rekam medis pihak ketiga. Dokumen analisis dampak bisnis menyatakan bahwa sistem tersebut tidak boleh tidak tersedia lebih dari 15 menit, atau nyawa pasien terancam. Dalam rancangan infrastruktur akuisisi, metrik waktu ini dikategorikan dan diakomodasi sebagai: {
+~A. Return on Investment (ROI)
+=B. Recovery Time Objective (RTO)
+~C. Mean Time Between Failures (MTBF)
+~D. Recovery Point Objective (RPO)
+#### Analisis Taksonomi Bloom (Analisis): Analisis kesinambungan. RTO adalah toleransi lama waktu sistem diizinkan lumpuh (15 menit). Persyaratan akuisisi yang ekstrem ini memaksa pembeli untuk menyewa arsitektur server berlebih (High Availability/Failover) untuk memenuhi target ketersediaan perangkat keras.
+}
+
+// Soal 26 - 50: Domain 3 (IS Acquisition, Development, & Implementation)
+
+::Soal 26:: Manajemen TI merencanakan untuk melakukan Tinjauan Pasca-Implementasi (Post-Implementation Review / PIR) untuk sistem ERP baru. Secara analitis, kapan waktu yang paling tepat untuk menjadwalkan PIR ini agar hasilnya objektif dan bernilai? {
+~A. Segera pada hari pertama sistem melakukan 'go-live'.
+=B. Sekitar 3 hingga 6 bulan setelah peluncuran, setelah sistem stabil dan pengguna terbiasa dengan operasional normal.
+~C. Tepat sebelum fase Pengujian Penerimaan Pengguna (UAT) dimulai.
+~D. Hanya ketika anggaran proyek telah habis sepenuhnya.
+#### Analisis Taksonomi Bloom (Analisis): Melakukan PIR terlalu dini (saat go-live) akan menghasilkan data yang bias karena pengguna masih beradaptasi dan masalah awal (teething problems) belum terselesaikan. PIR harus dilakukan setelah sistem mencapai tingkat stabilitas operasional (biasanya 3-6 bulan) untuk menganalisis manfaat nyata ROI dan efisiensi yang dijanjikan.
+}
+
+::Soal 27:: Saat mengaudit proses rekayasa perangkat lunak suatu organisasi menggunakan model Capability Maturity Model Integration (CMMI), auditor mengklasifikasikan proses organisasi tersebut berada di Tingkat 3 (Defined). Apa karakteristik operasional yang membenarkan analisis ini? {
+~A. Proses sangat bergantung pada heroisme individu dan tidak dapat diprediksi.
+~B. Proses hanya diulang berdasarkan pengalaman proyek sebelumnya tanpa standar baku.
+=C. Proses telah distandarisasi, didokumentasikan, dan diintegrasikan ke dalam operasi standar di seluruh organisasi.
+~D. Organisasi berfokus secara eksklusif pada pengoptimalan dan perbaikan berkelanjutan.
+#### Analisis Taksonomi Bloom (Analisis): Memecah tahapan kedewasaan (maturity). Level 1 bersifat reaktif. Level 2 (Managed) berulang tapi masih di tingkat proyek. Level 3 (Defined) berarti standar telah dibuat secara institusional untuk seluruh organisasi. Level 4 dan 5 berfokus pada pengukuran kuantitatif dan optimasi berkelanjutan.
+}
+
+::Soal 28:: Sebuah tim pengembangan menggunakan metodologi Prototyping untuk membangun aplikasi interaktif dengan cepat. Dari perspektif jaminan kualitas sistem informasi, apa risiko analitis terbesar yang sering muncul dari pendekatan ini? {
+~A. Pengguna akhir tidak dilibatkan sama sekali selama proses pembuatan prototipe.
+=B. Karena tekanan waktu, prototipe awal yang kurang optimal (kode berantakan/kurang aman) sering kali langsung diadopsi menjadi sistem produksi tanpa desain arsitektur yang kuat.
+~C. Pembuatan prototipe membutuhkan terlalu banyak dokumentasi tertulis di awal proyek.
+~D. Perangkat lunak tidak akan kompatibel dengan sistem operasi jaringan apa pun.
+#### Analisis Taksonomi Bloom (Analisis): Prototipe dirancang sebagai model buang (throwaway) untuk memvalidasi kebutuhan visual. Namun, dalam praktiknya, manajemen sering salah mengira bahwa "tampilan yang sudah jadi" berarti kodenya siap untuk produksi, sehingga meluncurkan sistem rapuh yang kekurangan fitur keamanan dan penanganan kesalahan (error handling).
+}
+
+::Soal 29:: Auditor meninjau kontrol aplikasi pada antarmuka input sistem perbankan. Auditor menemukan bahwa sistem secara otomatis memverifikasi kebenaran nomor rekening yang diketik oleh teller menggunakan algoritma matematika khusus sebelum transaksi dilanjutkan. Ini adalah contoh dari evaluasi kontrol: {
+~A. Uji kelengkapan (Completeness check)
+~B. Uji batas (Limit check)
+=C. Digit pemeriksa (Check digit)
+~D. Uji kewajaran (Reasonableness check)
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis kontrol input data. 'Check digit' adalah karakter tambahan yang ditambahkan ke nomor referensi (seperti rekening bank atau barcode) dan dihitung menggunakan algoritma. Ini secara analitis sangat efektif untuk menangkap kesalahan manusia seperti transposisi angka (mengetik 12 menjadi 21) saat entri data.
+}
+
+::Soal 30:: Organisasi multinasional merencanakan untuk mengganti sistem manajemen inventaris warisan mereka dengan perangkat lunak komersial baru. Mengingat keragaman geografis dan skala bisnis, manajemen TI memilih pendekatan implementasi Bertahap (Phased). Apa keunggulan analitis yang membedakannya dari pendekatan Paralel? {
+~A. Pendekatan bertahap sama sekali tidak memiliki risiko kegagalan.
+=B. Pendekatan bertahap membatasi paparan risiko hanya pada satu lokasi/modul pada satu waktu, tanpa menggandakan beban kerja dan biaya seperti pada pendekatan paralel.
+~C. Pendekatan bertahap mengharuskan sistem lama dimatikan serentak di seluruh dunia.
+~D. Pendekatan bertahap menjamin bahwa sistem baru akan selalu lebih cepat dari sistem lama.
+#### Analisis Taksonomi Bloom (Analisis): Pendekatan paralel menggandakan biaya dan beban staf karena input dua kali. Pendekatan bertahap (phased/pilot) menganalisis penyebaran risiko dengan meluncurkan modul atau menguji satu wilayah dahulu. Jika gagal, hanya lokasi tersebut yang terpengaruh, sementara wilayah lain tetap aman menggunakan sistem lama.
+}
+
+::Soal 31:: Selama fase desain sistem, pengguna meminta 15 fitur tambahan baru yang tidak ada dalam dokumen Persyaratan Bisnis awal. Manajer proyek menyetujui semua permintaan ini secara lisan tanpa menyesuaikan tenggat waktu atau anggaran. Konsep risiko analitis apa yang sedang terjadi? {
+=A. Scope Creep (Perluasan Ruang Lingkup yang tidak terkendali).
+~B. Pengujian Kotak Hitam (Black-box testing).
+~C. Dekomposisi Fungsional (Functional Decomposition).
+~D. Penyelarasan Strategis (Strategic Alignment).
+#### Analisis Taksonomi Bloom (Analisis): 'Scope Creep' terjadi ketika fitur atau fungsionalitas ditambahkan ke dalam proyek tanpa melalui dewan kontrol perubahan (Change Control Board) yang menganalisis dampaknya terhadap anggaran dan jadwal. Ini adalah penyebab utama kegagalan dan pembengkakan biaya proyek SI.
+}
+
+::Soal 32:: Saat melakukan audit pada siklus pengembangan perangkat lunak, auditor mencatat bahwa tim QA melakukan Pengujian Integrasi (Integration Testing) secara ketat. Tujuan analitis mendasar dari fase pengujian ini adalah: {
+~A. Memastikan setiap baris kode yang ditulis oleh programmer individu bebas dari kesalahan sintaksis.
+=B. Mengevaluasi koneksi, antarmuka, dan komunikasi data yang logis antara dua atau lebih modul perangkat lunak yang disatukan.
+~C. Membuktikan bahwa pengguna akhir dapat menjalankan proses bisnis harian mereka.
+~D. Menentukan daya tahan perangkat keras di bawah beban maksimal.
+#### Analisis Taksonomi Bloom (Analisis): Memecah struktur pengujian. Unit testing fokus pada satu modul independen (internal). UAT fokus pada proses bisnis pengguna. Integration testing menganalisis jembatan/antarmuka (interface) antar-modul untuk memastikan aliran dan format data antar subsistem berfungsi sinkron.
+}
+
+::Soal 33:: Auditor menemukan bahwa manajer basis data memigrasikan sejumlah besar data yang berisi duplikasi rekam medis pelanggan lama secara langsung ke sistem CRM (Customer Relationship Management) yang baru. Dari perspektif tata kelola migrasi data, kontrol apa yang paling jelas diabaikan? {
+=A. Pembersihan Data (Data Cleansing/Scrubbing) sebelum migrasi.
+~B. Kontrol Total Batch (Batch Total Controls).
+~C. Kamus Data (Data Dictionary) pasca-migrasi.
+~D. Uji Stres (Stress Testing) jaringan awan.
+#### Analisis Taksonomi Bloom (Analisis): Jika data kotor (duplikat, tidak lengkap, tidak akurat) dimasukkan ke sistem baru, output sistem baru tidak dapat diandalkan (Garbage In, Garbage Out). Analisis kualitas mendikte bahwa data warisan wajib dibersihkan, dideduplikasi, dan dinormalisasi *sebelum* tahap pemuatan (loading) migrasi.
+}
+
+::Soal 34:: Dalam rekayasa perangkat lunak, paradigma berorientasi objek (Object-Oriented Programming/OOP) sering digunakan karena kemampuan pemeliharaannya. Konsep analitis yang memastikan data dan instruksi untuk memanipulasi data tersebut diikat bersama dengan aman, menyembunyikan detail internal dari objek luar, dikenal sebagai: {
+~A. Polimorfisme (Polymorphism)
+=B. Enkapsulasi (Encapsulation / Information Hiding)
+~C. Pewarisan (Inheritance)
+~D. Injeksi Ketergantungan (Dependency Injection)
+#### Analisis Taksonomi Bloom (Analisis): Enkapsulasi adalah mekanisme pengamanan internal dalam OOP. Dengan menyembunyikan status (variabel) di dalam objek dan mengharuskan interaksi dilakukan hanya melalui metode publik yang ditentukan, ia menganalisis batasan dan mencegah korupsi data oleh modul lain.
+}
+
+::Soal 35:: Tim TI telah melaksanakan program *Business Process Reengineering* (BPR) berbarengan dengan peluncuran sistem baru. Apa perbedaan mendasar antara analisis sistem tradisional dengan BPR? {
+~A. BPR hanya mengganti perangkat keras lama menjadi yang baru, membiarkan alur kerja pengguna tetap sama.
+~B. BPR mengurangi anggaran TI untuk tahun tersebut.
+=C. Analisis tradisional sering kali mengotomatisasi proses lama yang tidak efisien, sedangkan BPR secara radikal mendesain ulang alur kerja proses bisnis dari nol sebelum mengotomasikannya.
+~D. BPR tidak membutuhkan partisipasi dari level manajemen eksekutif.
+#### Analisis Taksonomi Bloom (Analisis): BPR menantang asumsi dasar operasional ("mengapa kita melakukan ini?"). Alih-alih mengkodekan proses bisnis warisan yang buruk menjadi kode komputer (paving the cow path), BPR menganalisis cara terbaik/paling efisien untuk mencapai tujuan bisnis terlebih dahulu, lalu baru membangun sistem TI di atas rancangan proses baru yang dioptimalkan tersebut.
+}
+
+::Soal 36:: Manajer proyek perangkat lunak memutuskan untuk menghilangkan fasa tinjauan desain (Design Review) dan peninjauan kode (Code Walkthrough) demi mempercepat jadwal rilis produk. Evaluasi analitis yang dapat disimpulkan auditor terkait tingkat kesalahan perangkat lunak (defect rate) pada fase selanjutnya adalah: {
+=A. Biaya dan upaya koreksi kesalahan akan meningkat secara eksponensial saat kesalahan tersebut baru ditemukan pada fase pengujian produksi atau pasca-implementasi.
+~B. Tidak akan ada pengaruh, karena perangkat lunak otomatis mendeteksi masalahnya sendiri.
+~C. Biaya keseluruhan proyek akan lebih murah karena mengurangi waktu konsultan eksternal.
+~D. Manajemen tidak perlu melakukan pelaporan pada komite pengarah TI.
+#### Analisis Taksonomi Bloom (Analisis): Hukum SDLC menyatakan bahwa kesalahan desain yang diperbaiki di tahap persyaratan/desain membutuhkan biaya 1x. Kesalahan yang sama, jika terlewat dan baru ditemukan di tahap operasional (setelah dikodekan dan diuji parsial), menelan biaya koreksi hingga 100x lipat (karena mengharuskan pengerjaan ulang semua tahap).
+}
+
+::Soal 37:: Ketika melakukan tinjauan pada akuisisi lisensi peranti lunak komersial, auditor menemukan organisasi kekurangan alat otomatis untuk memantau pemasangan perangkat lunak (Software Asset Management) di komputer staf. Apa risiko analitis operasional dan hukum tertinggi dari kelemahan ini? {
+~A. Perangkat keras staf akan beroperasi lebih lambat dari biasanya.
+~B. Organisasi akan selalu mendapatkan lisensi gratis tambahan dari vendor.
+=C. Organisasi dapat menghadapi denda finansial yang besar dan tuntutan hukum pelanggaran hak cipta akibat penggunaan lisensi di luar batas kuota yang dibeli (under-licensing).
+~D. Pengguna akan secara otomatis ditolak masuk ke dalam jaringan.
+#### Analisis Taksonomi Bloom (Analisis): Tanpa manajemen aset peranti lunak (SAM), organisasi kehilangan visibilitas kontrol atas kepatuhan kontrak lisensi. Instalasi ilegal/tak berlisensi oleh staf akan memaparkan organisasi pada audit perangkat lunak pihak ketiga dari vendor yang berisiko denda kepatuhan bernilai raksasa.
+}
+
+::Soal 38:: Dalam mengembangkan sistem e-commerce, tim menggunakan Diagram Kasus Penggunaan (Use Case Diagram). Sebagai instrumen komunikasi, apa tujuan tata kelola utama dari pemetaan analitis kasus penggunaan tersebut? {
+~A. Untuk mendokumentasikan spesifikasi konfigurasi pengaturan firewall (firewall rule sets).
+=B. Untuk menggambarkan secara visual bagaimana berbagai aktor (pengguna atau sistem luar) berinteraksi secara fungsional dengan aplikasi untuk mencapai tujuan bisnis tertentu.
+~C. Untuk mencatat jumlah bug yang dilaporkan pada versi perangkat lunak sebelumnya.
+~D. Untuk menentukan anggaran gaji spesifik dari setiap anggota tim proyek.
+#### Analisis Taksonomi Bloom (Analisis): Use Case Diagram adalah jantung dari analisis persyaratan berbasis UML (Unified Modeling Language). Ini membantu auditor/bisnis memastikan bahwa fungsionalitas perangkat lunak (sistem) benar-benar sejalan dengan perilaku aktor operasional yang diharapkan tanpa terjebak dalam teknis pengkodean.
+}
+
+::Soal 39:: Selama fase desain infrastruktur, tim memisahkan antarmuka presentasi (Web), logika pemrosesan bisnis (Aplikasi), dan penyimpanan data (Basis Data) ke dalam tiga lapisan server yang terisolasi secara fisik dan logis. Struktur ini secara analitis dikenal sebagai: {
+=A. Arsitektur Tiga Tingkat (Three-Tier / N-Tier Architecture)
+~B. Sistem Monolitik (Monolithic System)
+~C. Pemrosesan Batch Paralel (Parallel Batch Processing)
+~D. Arsitektur Mainframe Terpusat (Centralized Mainframe)
+#### Analisis Taksonomi Bloom (Analisis): Arsitektur N-Tier mendelegasikan fungsi operasional ke server/lapisan yang berdiri sendiri. Manfaat analitisnya sangat besar untuk skalabilitas dan keamanan (misalnya, jika server web diretas, basis data tetap terlindung di jaringan belakang yang berbeda lapis).
+}
+
+::Soal 40:: Sebuah organisasi mendeteksi bahwa staf departemen pemasarannya secara diam-diam berlangganan perangkat lunak analitik berbasis awan menggunakan kartu kredit departemen tanpa sepengetahuan atau tinjauan keamanan dari departemen TI pusat. Dalam konteks akuisisi sistem informasi, masalah ini merujuk kepada konsep analitis: {
+~A. Komputasi Hijau (Green Computing)
+~B. Sistem Manajemen Basis Data (DBMS)
+=C. Shadow IT (TI Bayangan)
+~D. Pengujian Kotak Putih (White-Box Testing)
+#### Analisis Taksonomi Bloom (Analisis): 'Shadow IT' terjadi ketika fungsi bisnis mengakuisisi teknologi secara mandiri (bypassing tata kelola TI). Risiko analitis utamanya adalah TI tidak dapat melindungi atau mengaudit data yang berada dalam sistem yang keberadaannya tidak mereka ketahui (potensi kebocoran kerahasiaan & silo data).
+}
+
+::Soal 41:: Selama implementasi perangkat lunak akuntansi yang sangat disesuaikan (customized), auditor mengidentifikasi bahwa dokumentasi sistem akhir tidak diperbarui untuk mencerminkan penyesuaian fungsional terbaru. Jika dievaluasi secara analitis, fase siklus hidup mana yang akan paling menderita akibat kelalaian ini? {
+~A. Fase Inisiasi Proyek (Project Initiation)
+~B. Fase Desain Konseptual (Conceptual Design)
+~C. Fase Akuisisi Perangkat Keras (Hardware Acquisition)
+=D. Fase Operasi dan Pemeliharaan (Operations and Maintenance / O&M)
+#### Analisis Taksonomi Bloom (Analisis): Kurangnya dokumentasi as-built (kondisi aktual sistem setelah direvisi berulang kali) tidak berdampak ke masa lalu, tetapi akan secara parah menghambat penganalisis dan pemelihara sistem di masa depan (Fase Pemeliharaan) ketika mereka perlu memahami atau memecahkan kesalahan pada kode kustom.
+}
+
+::Soal 42:: Manajer portofolio TI sedang mengevaluasi kembali sejumlah proyek SI yang sedang berjalan di perusahaan. Berbeda dengan Manajemen Proyek (Project Management), apa tujuan analitis paling tinggi dari 'IT Portfolio Management'? {
+~A. Memastikan satu proyek selesai tepat waktu dan sesuai anggaran harian.
+=B. Mengoptimalkan campuran investasi organisasi di berbagai inisiatif TI untuk memastikan selaras secara kolektif dengan tujuan strategis korporat dan menyeimbangkan profil risiko/keuntungan.
+~C. Merancang struktur logis basis data secara independen.
+~D. Memastikan tidak ada perangkat keras di pusat data yang kadaluwarsa.
+#### Analisis Taksonomi Bloom (Analisis): Proyek berfokus pada eksekusi taktis ("melakukan sesuatu dengan benar"). Portofolio berfokus pada pemilihan strategis ("melakukan hal yang benar"). Analisis portofolio berurusan dengan pandangan helikopter atas sekumpulan investasi untuk ROI dan keselarasan strategis makro.
+}
+
+::Soal 43:: Untuk mencegah pengguna memasukkan huruf "O" secara tidak sengaja di field yang mensyaratkan Angka Nol "0", tim pengembang memasukkan kontrol verifikasi otomatis di antarmuka entri layar. Secara analitis, kontrol kualitas data apa yang sedang dipraktikkan? {
+=A. Uji Validitas (Validity Check / Format Check)
+~B. Uji Transposisi (Transposition Check)
+~C. Rekonsiliasi Kelompok (Batch Reconciliation)
+~D. Total Hash (Hash Totals)
+#### Analisis Taksonomi Bloom (Analisis): Kontrol input validitas memverifikasi tipe karakter data yang diharapkan (numerik, alfabetis) pada field tertentu untuk mencegah polusi data. Jika sistem mengharapkan angka dan menerima huruf, transaksi ditolak seketika sebelum diproses.
+}
+
+::Soal 44:: Sebuah lembaga keuangan memutuskan untuk mengakuisisi infrastruktur komputasi dari penyedia layanan awan luar, di mana vendor awan hanya menyediakan perangkat keras virtual (server, storage, networking), sementara lembaga keuangan mempertahankan tanggung jawab penuh untuk memasang, mengonfigurasi, dan mengamankan OS serta aplikasi mereka sendiri. Model layanan ini adalah: {
+~A. Software as a Service (SaaS)
+~B. Platform as a Service (PaaS)
+=C. Infrastructure as a Service (IaaS)
+~D. Desktop as a Service (DaaS)
+#### Analisis Taksonomi Bloom (Analisis): Memecah model layanan awan. Pada IaaS, pengguna menyewa "pusat data virtual" kosong. Analisis kontrol membuktikan bahwa pada model IaaS, pengguna akhir (lembaga keuangan) tetap memikul beban tanggung jawab keamanan tertinggi mulai dari lapisan OS ke atas dibandingkan model layanan awan lainnya.
+}
+
+::Soal 45:: Sebelum fase implementasi, sistem baru harus diuji untuk memastikan bahwa ia tidak akan terhenti mendadak jika banyak pengguna mengaksesnya secara bersamaan melebihi kapasitas standar yang diharapkan. Prosedur kualitas apa yang memastikan daya tahan ini? {
+~A. Ujian Kotak Putih (White-Box Testing)
+=B. Ujian Beban dan Stres (Load and Stress Testing)
+~C. Peninjauan Rekan (Peer Review)
+~D. Ujian Penerimaan Pengguna (User Acceptance Testing)
+#### Analisis Taksonomi Bloom (Analisis): Uji Beban mengamati performa sistem pada batas puncaknya yang dirancang. Uji Stres (Stress Testing) membebani sistem jauh di luar titik maksimal secara analitis untuk melihat bagaimana sistem tersebut hancur (apakah runtuh dengan elegan atau lumpuh total) dan berapa batas mutlak keandalannya.
+}
+
+::Soal 46:: Saat penganalisis memetakan basis data relasional (RDBMS), mereka menerapkan langkah-langkah dekomposisi untuk menghilangkan redundansi (duplikasi kolom) dan mencegah anomali manipulasi data (insertion, update, deletion anomalies). Proses analitis tata kelola data ini secara formal dinamakan: {
+~A. Pembentukan Tabel Indeks (Table Indexing)
+~B. Replikasi Basis Data (Database Replication)
+=C. Normalisasi (Normalization)
+~D. Injeksi Kode (Code Injection)
+#### Analisis Taksonomi Bloom (Analisis): Normalisasi adalah rekayasa penyempurnaan desain RDBMS bertahap (1NF, 2NF, 3NF, dst). Tujuan utamanya adalah memastikan bahwa satu fakta hanya disimpan di satu tempat, mengurangi jejak penyimpanan dan melindungi pangkalan data dari masalah inkonsistensi saat pembaruan data terjadi.
+}
+
+::Soal 47:: Dalam mengawasi proyek pengembangan TI, auditor membedakan antara aktivitas Jaminan Kualitas (Quality Assurance / QA) dan Pengendalian Kualitas (Quality Control / QC). Analisis perbedaan konseptual dari kedua fungsi ini adalah: {
+~A. QA adalah tanggung jawab pengguna akhir, QC adalah tanggung jawab manajer eksekutif.
+=B. QA berfokus pada evaluasi dan perbaikan 'Proses' pencegahan cacat selama SDLC berjalan, sedangkan QC berfokus pada deteksi dan perbaikan 'Produk' (pengujian kode/sistem) setelah dibangun.
+~C. QA hanya meninjau anggaran finansial, sedangkan QC meninjau kecepatan jaringan komputer.
+~D. Keduanya merupakan istilah yang saling dipertukarkan tanpa ada perbedaan praktis.
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis perbedaan lapisan pengawasan mutu. QA bersifat preventif dan berorientasi pada kematangan proses organisasi (memastikan metodologi diikuti dengan benar). QC bersifat detektif reaktif dan berorientasi pada barang jadi (menguji produk perisian untuk menemukan bug sebelum rilis).
+}
+
+::Soal 48:: Apa teknik analisis investasi yang secara spesifik menghitung seberapa cepat biaya modal awal proyek pengadaan peranti lunak akan tertutupi oleh penghematan atau pendapatan bersih kas yang dihasilkan (tanpa memperhitungkan nilai waktu uang)? {
+~A. Internal Rate of Return (IRR)
+=B. Payback Period
+~C. Net Present Value (NPV)
+~D. Kriteria Pengembalian Fungsional (Functional Return Criteria)
+#### Analisis Taksonomi Bloom (Analisis): Payback Period menghitung berapa bulan/tahun yang dibutuhkan agar arus kas dari sistem SI yang dibeli menyamai biaya pengeluarannya. Ini merupakan perhitungan kasar dari tingkat likuiditas investasi dan profil risiko awal proyek SI komersial.
+}
+
+::Soal 49:: Tim SI memutuskan menggunakan teknik kompilasi dinamis (Dynamic Linking/Shared Libraries) dibandingkan memori statis untuk modul peranti lunaknya. Keuntungan memori analitis utama bagi klien/pengguna adalah: {
+~A. Kode tidak dapat dilindungi oleh hak cipta secara hukum.
+~B. Aplikasi tidak akan memerlukan koneksi internet untuk validasi basis data.
+=C. Beberapa program dapat berbagi memori fungsi/modul yang sama (seperti .DLL) pada sistem operasi, sehingga menghemat konsumsi RAM perangkat klien keras secara signifikan.
+~D. Kode aplikasi tidak perlu diuji untuk kerentanan keamanan siber.
+#### Analisis Taksonomi Bloom (Analisis): Analisis manajemen arsitektur sumber daya. Pengikatan dinamis (Dynamic Link Libraries) memastikan eksekusi kode dimuat ke memori aktif (RAM) hanya pada saat dipanggil (runtime) dan dapat dibagi, menjadikannya arsitektur jejak kaki ringan (light-footprint) berkinerja tinggi.
+}
+
+::Soal 50:: Manajer Sistem sedang bernegosiasi dengan perusahaan vendor Outsourcing mengenai parameter SLA (Service Level Agreement) atas ketersediaan layanan sistem SI baru. Dari segi kontrol analitis, elemen apa yang mutlak harus ada dalam SLA untuk memastikan kepatuhan pihak penyedia layanan awan? {
+~A. Rincian profil media sosial pengembang vendor.
+~B. Skema penggajian tahunan staf pelayan awan.
+=C. Metrik pelaporan kinerja yang terukur secara kuantitatif (KPI) beserta penalti finansial secara spesifik atas ketidakpatuhan target.
+~D. Janji pemasaran verbal atas kepuasan pelanggan global.
+#### Analisis Taksonomi Bloom (Analisis): SLA yang kuat harus bersifat mengikat secara perundang-undangan dan kuantitatif. Tanpa metrik yang jelas dan hukuman moneter sebagai kontrol pampasan (enforceability/penalty clause), tidak ada insentif ekonomi bagi penyedia layanan untuk mempertahankan standar operasional sesuai persetujuan awal proyek akuisisi.
+}
+
+// Soal 51 - 75: Domain 3 (IS Acquisition, Development, & Implementation)
+
+::Soal 51:: Zahwa sedang mengaudit proyek pengembangan aplikasi edukasi interaktif menggunakan metodologi Agile. Ia menemukan bahwa 'Product Owner' jarang hadir dalam rapat tinjauan sprint mingguan. Secara analitis, apa risiko tata kelola proyek paling kritis dari ketidakhadiran ini? {
+~A. Kecepatan penulisan kode sumber oleh tim pengembang akan melambat secara drastis.
+=B. Tanpa panduan dan validasi konstan dari perwakilan bisnis, tim pengembang berisiko membangun fitur yang menyimpang dari nilai dan kebutuhan fungsional pengguna akhir (misalignment).
+~C. Metodologi Agile akan secara otomatis berubah menjadi metodologi Waterfall.
+~D. Anggaran untuk infrastruktur perangkat keras tidak dapat dicairkan.
+#### Analisis Taksonomi Bloom (Analisis): Esensi metodologi Agile adalah iterasi yang digerakkan oleh umpan balik pelanggan secara langsung. Ketiadaan 'Product Owner' menghilangkan kontrol kualitas bisnis, sehingga tim teknis mungkin membuat asumsi yang salah tentang kebutuhan fitur aplikasi.
+}
+
+::Soal 52:: Tim proyek sedang merencanakan penerapan sistem kasir terintegrasi untuk cabang toko gorden. Miftahul menyarankan penggunaan pendekatan percontohan (Pilot Implementation) di satu toko terlebih dahulu sebelum diterapkan di toko lainnya. Apa keunggulan analitis mendasar dari strategi ini dibandingkan implementasi serentak (Big Bang)? {
+~A. Pendekatan percontohan tidak memerlukan pengujian penerimaan pengguna (UAT) sama sekali.
+~B. Pendekatan percontohan menjamin tidak akan ada bug dalam perangkat lunak saat diluncurkan.
+=C. Pendekatan percontohan mengisolasi risiko kegagalan; jika sistem runtuh, dampaknya hanya terbatas pada satu cabang operasional tanpa melumpuhkan seluruh pendapatan perusahaan.
+~D. Pendekatan percontohan jauh lebih cepat diselesaikan daripada pendekatan lainnya.
+#### Analisis Taksonomi Bloom (Analisis): Auditor menganalisis manajemen risiko implementasi. Strategi 'Pilot' atau 'Phased' bertindak sebagai zona karantina operasional. Kerusakan sistem dapat dipelajari dan diperbaiki di lingkungan terbatas sebelum membahayakan ekosistem bisnis secara keseluruhan.
+}
+
+::Soal 53:: Saat meninjau arsitektur basis data, Kristof mendapati bahwa tabel 'Transaksi Pelanggan' dan 'Inventaris Barang' memiliki banyak kolom yang berulang dan tidak terstruktur. Ia merekomendasikan proses normalisasi (Normalization). Apa tujuan analitis utama dari tata kelola struktur data ini? {
+=A. Menghilangkan redundansi data dan mencegah anomali manipulasi (seperti data yang tidak konsisten saat diperbarui), sehingga menjaga integritas pangkalan data.
+~B. Mengenkripsi semua data sensitif pelanggan secara otomatis.
+~C. Menggabungkan semua tabel ke dalam satu arsip datar (flat file) agar lebih mudah dibaca.
+~D. Meningkatkan latensi kueri pencarian di antarmuka pengguna.
+#### Analisis Taksonomi Bloom (Analisis): Memecah konsep integritas struktural. Normalisasi adalah teknik rekayasa yang mengorganisasi data untuk memastikan setiap atribut non-kunci bergantung sepenuhnya pada kunci utama, sehingga mencegah inkonsistensi jika satu fakta perlu diperbarui di masa mendatang.
+}
+
+::Soal 54:: Andini mendeteksi bahwa tim pengembang perangkat lunak menyimpan kode sumber mereka di komputer lokal masing-masing tanpa menggunakan sistem Kontrol Versi (Version Control System / Repositori Terpusat) seperti Git. Apa risiko analitis operasional tertinggi dari kondisi ini? {
+~A. Kapasitas hard disk lokal pengembang akan cepat penuh.
+~B. Kode sumber akan menjadi open-source dan terlihat oleh publik.
+=C. Kurangnya jejak audit terhadap perubahan kode, serta tingginya risiko kehilangan kode atau konflik saat menggabungkan pekerjaan dari beberapa pengembang (merge conflicts).
+~D. Aplikasi tidak akan dapat berjalan di sistem operasi seluler.
+#### Analisis Taksonomi Bloom (Analisis): Repositori kontrol versi adalah jantung dari tata kelola pengembangan tim. Tanpanya, auditor menganalisis bahwa tidak ada versi "kebenaran tunggal" (single source of truth), tidak ada mekanisme pengembalian (rollback) jika pembaruan gagal, dan kolaborasi menjadi rentan terhadap penimpaan data.
+}
+
+::Soal 55:: Prima bertugas meninjau kontrak pemeliharaan (SLA) dari vendor Sistem Manajemen Informasi yang baru diakuisisi. Kontrak tersebut hanya menyebutkan "Ketersediaan layanan 99%". Mengapa pernyataan ini dianalisis sebagai kontrol yang sangat lemah? {
+~A. 99% terlalu rendah; standar industri mewajibkan ketersediaan 100% tanpa kecuali.
+~B. SLA tidak seharusnya dicantumkan dalam kontrak legal.
+=C. SLA tersebut tidak mendefinisikan formula pengukuran yang jelas, jendela waktu pemeliharaan yang dikecualikan, maupun sanksi finansial (penalti) jika vendor gagal memenuhi metrik tersebut.
+~D. Ketersediaan layanan hanya menjadi tanggung jawab auditor internal.
+#### Analisis Taksonomi Bloom (Analisis): SLA harus bersifat deterministik dan mengikat. Angka persentase tanpa definisi bagaimana hal itu diukur (misalnya, apakah 99% itu per bulan atau per tahun?) dan tanpa mekanisme penegakan (penalti) membuat SLA tersebut tidak dapat ditindaklanjuti secara hukum jika vendor berkinerja buruk.
+}
+
+::Soal 56:: Dalam rekayasa kebutuhan (Requirements Engineering) untuk aplikasi anak berkebutuhan khusus, tim desain UI/UX tidak mematuhi standar aksesibilitas (seperti WCAG). Dari sudut pandang audit, apa dampak material dari kelemahan pada fase desain awal ini? {
+=A. Sistem berisiko melanggar undang-undang kesetaraan disabilitas, yang dapat mengakibatkan denda kepatuhan dan keharusan mendesain ulang sistem dengan biaya sangat tinggi.
+~B. Warna antarmuka aplikasi akan terlihat redup di semua perangkat keras.
+~C. Sistem basis data di belakangnya akan lebih mudah diretas oleh penyerang siber.
+~D. Waktu yang dibutuhkan untuk menulis kode sumber akan berkurang drastis.
+#### Analisis Taksonomi Bloom (Analisis): Auditor menganalisis kriteria kualitas dan kepatuhan. Mengabaikan aksesibilitas (terutama untuk target pengguna berkebutuhan khusus) bukan sekadar masalah estetika, melainkan kegagalan fungsional yang membawa risiko litigasi hukum dan biaya pengerjaan ulang (rework) yang masif pasca-rilis.
+}
+
+::Soal 57:: Saat fase pengujian sistem (System Testing), auditor menemukan bahwa penguji hanya memasukkan data yang valid dan mengharapkan hasil yang benar, tanpa pernah memasukkan data ekstrem atau format yang salah. Apa teknik pengujian kritis yang sedang diabaikan? {
+~A. Pengujian Kotak Putih (White-Box Testing)
+~B. Pengujian Penerimaan Pengguna (UAT)
+=C. Pengujian Negatif (Negative Testing / Exception Handling Test)
+~D. Pengujian Beban (Load Testing)
+#### Analisis Taksonomi Bloom (Analisis): Pengujian yang baik tidak hanya membuktikan sistem bekerja (positive testing), tetapi secara analitis harus membuktikan bahwa sistem "runtuh dengan aman" atau menolak instruksi saat diberikan input yang salah atau berbahaya (negative testing) untuk memvalidasi kontrol error-handling.
+}
+
+::Soal 58:: Sebuah perusahaan memutuskan untuk mengembangkan perangkat lunak secara internal (In-house Development) daripada membeli peranti lunak komersial (COTS). Berdasarkan analisis siklus hidup sistem, apa konsekuensi manajerial utama dari keputusan strategis ini? {
+~A. Organisasi terbebas dari keharusan merancang pemeliharaan masa depan.
+=B. Organisasi memikul tanggung jawab dan biaya pemeliharaan berkelanjutan, pembaruan keamanan, dan retensi staf teknis secara eksklusif seiring berjalannya waktu.
+~C. Perangkat lunak internal secara otomatis mematuhi semua regulasi keamanan internasional.
+~D. Organisasi akan dipaksa menyesuaikan proses bisnis mereka dengan alur kerja perangkat lunak.
+#### Analisis Taksonomi Bloom (Analisis): Keputusan *Build vs Buy*. Membangun sendiri (In-house) memberikan fleksibilitas kustomisasi maksimum. Namun, auditor menganalisis bahwa ini menciptakan "technical debt"; organisasi menjadi satu-satunya entitas yang bertanggung jawab atas setiap bug, pembaruan kerangka kerja, dan dokumentasi selamanya.
+}
+
+::Soal 59:: Auditor SI sedang meninjau Rencana Pemulihan Bencana (Disaster Recovery Plan / DRP) untuk platform e-commerce yang baru diakuisisi. Dokumen menyatakan bahwa data dicadangkan setiap 24 jam ke pita magnetik. Jika toleransi RPO (Recovery Point Objective) bisnis adalah 4 jam, apa analisis kesenjangan (gap analysis) yang paling akurat? {
+~A. Strategi pencadangan sudah sesuai karena pita magnetik sangat murah.
+~B. RPO bisnis terlalu agresif dan harus diubah menjadi 24 jam agar sesuai dengan infrastruktur TI.
+=C. Terdapat ketidakselarasan serius; desain strategi pencadangan saat ini berisiko kehilangan data transaksional hingga 24 jam, melanggar batas toleransi 4 jam yang ditetapkan bisnis.
+~D. Pita magnetik harus diganti dengan pencadangan inkremental mingguan.
+#### Analisis Taksonomi Bloom (Analisis): RPO mengukur toleransi *kehilangan data* bisnis. Jika bisnis hanya sanggup kehilangan data maksimal 4 jam (RPO=4), maka frekuensi pencadangan sistem (teknologi) harus dilakukan minimal setiap 4 jam atau kurang. Sinkronisasi 24 jam mewakili gap kontrol kritis.
+}
+
+::Soal 60:: Dalam memigrasikan sistem lama ke baru, tim memutuskan untuk menggunakan program penerjemah perantara (Middleware). Apa peran fungsional utama dari lapisan arsitektur analitis ini? {
+=A. Bertindak sebagai jembatan komunikasi yang memfasilitasi pertukaran dan konversi data antara dua aplikasi, platform, atau basis data yang berbeda secara logis dan struktural.
+~B. Menyediakan antarmuka grafis yang ramah pengguna.
+~C. Menghapus data duplikat dari perangkat keras secara otomatis.
+~D. Melakukan enkripsi lapisan fisik pada kabel jaringan.
+#### Analisis Taksonomi Bloom (Analisis): Middleware menganalisis dan mengatasi masalah interoperabilitas. Ini sering digunakan dalam akuisisi atau migrasi agar sistem baru (misal: Java) dapat berbicara dengan sistem warisan (misal: Mainframe COBOL) tanpa harus menulis ulang kode inti di kedua sisi.
+}
+
+::Soal 61:: Selama implementasi sistem keamanan, administrator jaringan diberikan akun otorisasi tingkat tinggi (`root` atau `Domain Admin`). Auditor menuntut penerapan solusi Manajemen Akses Istimewa (Privileged Access Management / PAM). Apa tujuan tata kelola analitis dari kontrol ini? {
+~A. Memastikan administrator tidak perlu lagi menggunakan kata sandi.
+~B. Memberikan akses tak terbatas ke semua fungsi sistem secara permanen untuk kenyamanan staf.
+=C. Memaksa administrator menggunakan prosedur "check-in/check-out" untuk kredensial sensitif, mendeteksi penggunaan akses di luar jam kerja, dan menyediakan log audit yang tidak dapat disangkal (non-repudiation) atas tindakan mereka.
+~D. Menurunkan anggaran pelatihan keamanan siber harian.
+#### Analisis Taksonomi Bloom (Analisis): Akses istimewa (Superuser) memiliki kekuatan merusak sistem sepenuhnya atau menyembunyikan penipuan. Alat PAM menganalisis dan memitigasi risiko ini dengan membatasi sesi superuser tepat waktu (Just-In-Time) dan merekam secara ketat apa yang dilakukan, memperkuat kontrol detektif.
+}
+
+::Soal 62:: Saat menyusun dokumen Permintaan Proposal (RFP) untuk vendor eksternal, komite pengadaan meminta daftar panjang fitur teknis tetapi lupa menyertakan kriteria evaluasi vendor (seperti kesehatan keuangan vendor dan metrik kinerja keamanan). Apa analisis konsekuensi paling fatalnya? {
+=A. Organisasi berisiko memilih vendor yang secara teknis kompeten tetapi secara komersial tidak stabil, yang dapat menyebabkan pengabaian proyek di masa depan jika vendor bangkrut.
+~B. RFP akan dikembalikan oleh badan regulasi pemerintah karena terlalu singkat.
+~C. Vendor akan memberikan harga perangkat keras secara gratis.
+~D. Proses pengembangan metodologi Agile tidak dapat diterapkan.
+#### Analisis Taksonomi Bloom (Analisis): Evaluasi pihak ketiga (Third-Party Risk Management). Kemampuan finansial vendor dan rekam jejak mereka sama pentingnya dengan spesifikasi produk. Kegagalan menganalisis kriteria bisnis ini dapat menyebabkan organisasi terikat dengan mitra yang akan runtuh di tengah jalan (Vendor Insolvency).
+}
+
+::Soal 63:: Tim perancang basis data menetapkan kontrol keamanan di tingkat sel (Cell-Level Security) untuk aplikasi SDM guna menyembunyikan gaji eksekutif dari staf junior. Konsep analitis tata kelola akses apa yang sedang ditegakkan di sini? {
+~A. Kontrol Akses Mandiri (Discretionary Access Control)
+=B. Prinsip Hak Istimewa Paling Rendah (Principle of Least Privilege / Need-to-Know)
+~C. Enkripsi Asimetris
+~D. Penyeimbangan Beban (Load Balancing)
+#### Analisis Taksonomi Bloom (Analisis): Mengurai kontrol akses logis. Menyembunyikan tampilan (masking) field spesifik kepada pengguna yang tidak berkepentingan menegakkan "Need-to-Know". Pengguna hanya diberikan akses minimum mutlak ke data yang diperlukan secara spesifik untuk melakukan pekerjaan mereka.
+}
+
+::Soal 64:: Manajer proyek perangkat lunak mempresentasikan Analisis Fungsi Poin (Function Point Analysis / FPA) selama fase perencanaan anggaran. Apa alasan analitis utama auditor mempercayai akurasi FPA dibandingkan mengukur 'Baris Kode' (Lines of Code / LOC) untuk mengestimasi biaya? {
+~A. FPA selalu menghasilkan angka biaya yang lebih rendah.
+=B. FPA tidak bergantung pada bahasa pemrograman spesifik yang digunakan, karena ia mengukur fungsionalitas dan kompleksitas logis yang akan diterima oleh pengguna akhir, bukan panjang skrip sintaksis.
+~C. FPA dapat dilakukan oleh staf akuntansi tanpa melibatkan analis sistem.
+~D. FPA otomatis menghitung waktu henti perangkat keras.
+#### Analisis Taksonomi Bloom (Analisis): LOC sangat bias; program 100 baris di bahasa Assembly bisa ditulis dalam 5 baris di bahasa Python. FPA lebih objektif karena menganalisis kerumitan proyek berdasarkan output dan transaksi bisnis, menjadikannya metrik estimasi produktivitas yang jauh lebih andal di fase awal.
+}
+
+::Soal 65:: Untuk mencegah penipuan manipulasi antarmuka, tim pemrograman mengimplementasikan teknik "Session Tokenization" dan rotasi cookie di setiap login pada sistem ERP. Ancaman kerentanan analitis utama yang sedang dimitigasi oleh arsitektur ini adalah: {
+~A. Injeksi SQL
+~B. Serangan Man-in-the-Middle (MitM)
+=C. Pembajakan Sesi (Session Hijacking / Cross-Site Request Forgery)
+~D. Kegagalan Skalabilitas Basis Data
+#### Analisis Taksonomi Bloom (Analisis): Mekanisme manajemen sesi. Jika ID sesi statis dan mudah ditebak, peretas dapat mencuri (membajak) ID tersebut untuk meniru pengguna sah. Token yang aman, acak, dan kadaluarsa secara dinamis menganalisis dan menutup celah otentikasi berkelanjutan ini.
+}
+
+::Soal 66:: Organisasi mengadakan uji penetrasi (Penetration Test) pada fase akhir implementasi sistem. Penguji (Ethical Hacker) diberikan salinan arsitektur jaringan, kode sumber, dan kredensial uji coba. Berdasarkan parameter informasi ini, metode evaluasi analitis apa yang sedang dijalankan? {
+=A. Pengujian Kotak Putih (White-Box / Crystal-Box Testing)
+~B. Pengujian Kotak Hitam (Black-Box Testing)
+~C. Pengujian Kotak Abu-abu (Gray-Box Testing)
+~D. Ujian Rekayasa Sosial (Social Engineering Test)
+#### Analisis Taksonomi Bloom (Analisis): Klasifikasi metodologi uji. Jika penyerang memulai dari posisi ketidaktahuan total, itu adalah Black-Box (menganalisis celah dari luar). Jika penguji memiliki transparansi struktural penuh (kode, diagram) untuk mengidentifikasi kelemahan logika terdalam secara komprehensif, itu adalah White-Box.
+}
+
+::Soal 67:: Sebuah proyek otomatisasi logistik besar mendekati fase akhir, tetapi pengujian sistem ditunda karena lingkungan pengujian tidak memiliki lisensi sistem operasi yang cukup. Berdasarkan analisis Jalur Kritis (Critical Path), bagaimana kelambatan ini mempengaruhi tenggat waktu go-live proyek? {
+~A. Proyek akan selesai lebih cepat karena ada waktu istirahat ekstra.
+~B. Tenggat waktu go-live tidak akan terpengaruh jika tugas ini memiliki "slack time" (waktu apung) yang besar.
+=C. Jika pengujian sistem berada di Jalur Kritis, penundaan apa pun di titik ini akan secara otomatis menggeser tenggat waktu penyelesaian keseluruhan proyek dengan durasi penundaan yang sama.
+~D. Manajemen hanya perlu memindahkan staf pemasaran untuk membantu pengujian.
+#### Analisis Taksonomi Bloom (Analisis): Memahami manajemen waktu CPM/PERT. Rangkaian tugas pada Jalur Kritis memiliki ambang batas waktu apung nol (zero slack). Menunda satu tugas kritis hari ini memastikan keterlambatan peluncuran satu hari kemudian tanpa bisa ditawar.
+}
+
+::Soal 68:: Selama fase implementasi, prosedur Pemisahan Tugas (SoD) sangat ditekankan oleh auditor. Di lingkungan SI konvensional, fungsi analitis mana yang secara mutlak harus diisolasi dari Administrator Keamanan (Security Administrator)? {
+~A. Pengembangan Kebijakan Keamanan (Security Policy Development)
+~B. Pemantauan Log Audit (Audit Log Monitoring)
+=C. Pemrograman Aplikasi (Application Programming) dan Operasi Pemrosesan Transaksi Harian
+~D. Manajemen Identitas (Identity Management)
+#### Analisis Taksonomi Bloom (Analisis): Analisis struktural organisasi TI. Administrator keamanan bertanggung jawab membuat aturan dan mengawasi kontrol (akses, log). Jika mereka juga memiliki kemampuan menulis program atau menjalankan transaksi bisnis (pengembang/operator), mereka dapat memanipulasi sistem dan menghapus jejak keamanan mereka sendiri.
+}
+
+::Soal 69:: Sistem informasi pelaporan pajak gagal mengekstrak data dari beberapa kantor wilayah. Setelah diselidiki, terungkap bahwa beberapa wilayah menggunakan koma (,) untuk desimal, sementara sistem pusat diatur untuk menggunakan titik (.). Analisis ini menunjuk pada kegagalan mendasar pada fase pengembangan siklus hidup apa? {
+~A. Manajemen Rilis (Release Management)
+=B. Standar dan Rekayasa Kebutuhan Fungsional (Requirements Engineering / Data Standardization)
+~C. Kriptografi Lapisan Transport (Transport Layer Cryptography)
+~D. Perencanaan Perangkat Keras Pusat Data
+#### Analisis Taksonomi Bloom (Analisis): Kegagalan membaca format karena masalah lokalisasi/format menunjukkan bahwa selama fase Pengumpulan Kebutuhan, arsitek sistem gagal menganalisis pedoman standardisasi dan normalisasi data dari berbagai titik input secara seragam.
+}
+
+::Soal 70:: Manajemen mempertimbangkan untuk mengakuisisi infrastruktur jaringan menggunakan model pembayaran *Leasing* (Sewa Guna Usaha) daripada membelinya secara tunai (Capital Expenditure). Dari perspektif tata kelola analisis keuangan teknologi, apa manfaat utama dari Leasing infrastruktur? {
+~A. Organisasi mendapatkan kepemilikan mutlak atas perangkat keras pada hari pertama.
+=B. Organisasi melindungi diri dari risiko keusangan teknologi (technology obsolescence) karena perangkat keras dapat ditingkatkan ke model terbaru di akhir periode sewa.
+~C. Biaya sewa jangka panjang selalu lebih murah secara total daripada pembelian tunai.
+~D. Vendor otomatis bertanggung jawab atas keamanan data bisnis organisasi.
+#### Analisis Taksonomi Bloom (Analisis): Peralatan TI terdepresiasi dengan cepat dan usang dalam 3-5 tahun. Leasing mengubah pengeluaran modal (CapEx) menjadi pengeluaran operasional (OpEx) dan secara analitis mentransfer risiko memegang aset mati yang usang kembali ke pihak vendor perangkat keras.
+}
+
+::Soal 71:: Auditor menemukan bahwa prosedur manajemen perubahan darurat (Emergency Change Management) perusahaan mengizinkan staf operasi untuk mem-bypass persetujuan Dewan Penasihat Perubahan (CAB) guna mempercepat perbaikan sistem yang mati. Kontrol analitis apa yang harus diverifikasi ada di tempat untuk menyeimbangkan kelonggaran ini? {
+=A. Harus ada mekanisme pelaporan otomatis, tinjauan manajemen secara retroaktif secepatnya pasca-insiden (Post-Incident Review), dan dokumentasi perbaikan setelah sistem stabil.
+~B. Kontrol CAB harus dihapus sepenuhnya untuk semua proyek di masa depan.
+~C. Pembaruan darurat hanya boleh dilakukan menggunakan akses nirkabel.
+~D. Sistem tidak boleh dimodifikasi sama sekali, meskipun hal itu berarti bisnis lumpuh berhari-hari.
+#### Analisis Taksonomi Bloom (Analisis): Perubahan darurat (hotfixes) wajar terjadi untuk memulihkan bisnis. Namun, kelonggaran otorisasi preventif (bypassing CAB) harus secara ketat dikompensasi dengan pengawasan detektif yang kuat di belakang (tinjauan retroaktif) untuk menganalisis dan mencegah penyalahgunaan proses darurat ini secara rutin.
+}
+
+::Soal 72:: Dalam metodologi pembangunan sistem yang aman, fase manakah dari SDLC yang paling kritis dan hemat biaya untuk memasukkan dan mendefinisikan kontrol keamanan (seperti metode otentikasi dan jejak audit)? {
+~A. Fase Uji Coba Penerimaan Pengguna (User Acceptance Testing)
+~B. Fase Tinjauan Pasca Implementasi (Post-Implementation Review)
+=C. Fase Rencana dan Penentuan Kebutuhan Sistem (System Requirements and Design Phase)
+~D. Fase Pemeliharaan Operasional (Operations and Maintenance Phase)
+#### Analisis Taksonomi Bloom (Analisis): 'Security by Design'. Analisis biaya dan risiko membuktikan bahwa "menanamkan" (baking in) persyaratan kontrol ke dalam fondasi arsitektur di fase desain awal jauh lebih efektif dan murah daripada mencoba "melapiskan" (bolting on) kontrol keamanan ke aplikasi yang sudah selesai dibangun.
+}
+
+::Soal 73:: Saat memigrasikan sistem pengelolaan arsip fisik ke sistem digital (Document Management System), auditor merekomendasikan penggunaan teknik *Optical Character Recognition* (OCR) dengan proses peninjauan manual untuk sampel dokumen. Tujuan analitis mendasar dari proses ini adalah: {
+~A. Mengurangi anggaran pelatihan staf administrasi.
+~B. Mempercepat siklus pembuatan arsip fisik baru di masa depan.
+=C. Memvalidasi bahwa proses konversi dan pemindaian beroperasi dengan akurasi terjemahan data yang memadai dan mendeteksi kesalahan pembacaan otomatis dari artefak fisik.
+~D. Menyembunyikan data arsip dari sistem operasi jaringan.
+#### Analisis Taksonomi Bloom (Analisis): Konversi data otomatis (seperti OCR memindai kertas ke teks digital) sering salah membaca karakter kotor. Pemeriksaan sampel manual adalah kontrol analitis detektif wajib untuk mengukur tingkat kesalahan (error rate) mesin dan memastikan kualitas rekaman hukum tidak rusak selama digitalisasi.
+}
+
+::Soal 74:: Dalam kerangka manajemen kualitas proyek (Project Quality Management), alat analitis apa yang digunakan untuk mengidentifikasi "akar penyebab" (root cause) dari suatu masalah keterlambatan peluncuran aplikasi secara visual dengan membaginya menjadi kategori metodologi, manusia, mesin, dan material? {
+~A. Diagram Gantt (Gantt Chart)
+=B. Diagram Tulang Ikan (Fishbone / Ishikawa / Cause-and-Effect Diagram)
+~C. Diagram Sebaran (Scatter Diagram)
+~D. Struktur Rincian Kerja (Work Breakdown Structure / WBS)
+#### Analisis Taksonomi Bloom (Analisis): Memecah alat manajemen kualitas. Ishikawa atau Fishbone Diagram secara spesifik didesain untuk curah pendapat sebab-akibat. Ini memberikan kerangka analitis terstruktur bagi tim proyek untuk melacak kembali dari efek negatif (keterlambatan/cacat) hingga menemukan sumber prosedural spesifiknya.
+}
+
+::Soal 75:: Pada saat eksekusi strategi "Direct Cutover", organisasi memutus sistem inventori lama pada hari Jumat malam dan menghidupkan sistem baru pada hari Senin pagi. Jika sistem baru gagal secara fatal pada hari Senin siang, opsi analitis terbaik yang tersedia bagi tim pemulihan adalah: {
+~A. Menjalankan skrip sinkronisasi antara sistem lama dan sistem baru.
+~B. Kembali beroperasi menggunakan sistem lama sepenuhnya dari titik hari Jumat malam tanpa ada kehilangan data yang berarti.
+=C. Organisasi mungkin harus menggunakan prosedur operasional manual sementara, karena kembali ke sistem lama (rollback) dalam 'Direct Cutover' seringkali sangat sulit, memakan waktu, atau data baru yang masuk pada hari Senin akan tidak selaras/hilang.
+~D. Memecat vendor pengembang pada hari itu juga.
+#### Analisis Taksonomi Bloom (Analisis): Mengevaluasi dampak kegagalan. Ciri khas dan risiko tertinggi dari 'Big Bang/Direct Cutover' adalah ketiadaan rencana mundur (fallback) yang mudah. Setelah transaksi baru diproses di sistem baru, memundurkannya ke sistem lama akan menciptakan kekacauan rekonsiliasi data, memaksa organisasi sering kali bertahan dengan sistem yang cacat atau proses manual.
+}
+
+// Soal 76 - 100: Domain 3 (IS Acquisition, Development, & Implementation)
+
+::Soal 76:: Zahwa sedang mengaudit lingkungan pengembangan aplikasi edukasi interaktif. Ia menemukan bahwa pengembang secara rutin menggunakan cuplikan data medis nyata dari pengguna untuk menguji fitur baru di lingkungan pengujian (Testing Environment). Secara analitis, mengapa praktik ini menjadi temuan audit yang berisiko tinggi? {
+=A. Lingkungan pengujian umumnya memiliki kontrol keamanan logis yang lebih lemah daripada lingkungan produksi, sehingga penggunaan data nyata tanpa penyamaran (data masking) berisiko besar melanggar regulasi privasi data.
+~B. Data nyata akan menyebabkan lingkungan pengujian berjalan lebih lambat daripada data buatan (dummy data).
+~C. Data nyata akan mengubah kode sumber aplikasi secara otomatis dan menyebabkan bug.
+~D. Penggunaan data nyata mengharuskan organisasi membayar biaya lisensi tambahan kepada penyedia basis data.
+#### Analisis Taksonomi Bloom (Analisis): Auditor menganalisis kontrol pelindungan data. Lingkungan non-produksi (Dev/Test) sering kali dapat diakses oleh banyak pengembang dan kontraktor luar. Memaparkan data sensitif/PII (Personally Identifiable Information) di area ini tanpa teknik anonimisasi melanggar kepatuhan privasi (seperti GDPR/HIPAA).
+}
+
+::Soal 77:: Tim yang terdiri dari Andini dan Miftahul menggunakan metodologi *Agile* untuk mengembangkan perangkat lunak. Auditor SI mencatat bahwa dokumentasi teknis sistem hampir tidak ada karena tim berprinsip "perangkat lunak yang berfungsi lebih penting daripada dokumentasi komprehensif". Apa analisis risiko jangka panjang terburuk dari kurangnya tata kelola dokumentasi ini? {
+~A. Aplikasi tidak akan dapat diluncurkan ke server awan komersial.
+~B. Siklus kerja (Sprint) berikutnya akan selalu gagal mencapai target.
+=C. Ketika anggota tim asli keluar (turnover), organisasi akan mengalami kesulitan ekstrem dan biaya tinggi untuk memelihara, memperbaiki, atau memodifikasi kode warisan tersebut (peningkatan utang teknis).
+~D. Pengguna akhir tidak akan tahu cara menggunakan antarmuka grafis aplikasi.
+#### Analisis Taksonomi Bloom (Analisis): Agile memang mengutamakan kecepatan, tetapi mengabaikan dokumentasi arsitektur dasar adalah jebakan analitis. 'Technical debt' (utang teknis) dan ketergantungan pada pengetahuan yang hanya ada di kepala pengembang (tribal knowledge) akan melumpuhkan fase pemeliharaan (Operations & Maintenance) di masa depan.
+}
+
+::Soal 78:: Dalam implementasi sistem kasir monitor ganda, Kristof selaku pimpinan proyek memutuskan untuk mengukur Earned Value Analysis (EVA). Jika Planned Value (PV) adalah Rp100 juta, Earned Value (EV) adalah Rp80 juta, dan Actual Cost (AC) adalah Rp90 juta, bagaimana analisis status proyek ini? {
+~A. Proyek mendahului jadwal dan di bawah anggaran (Under budget).
+~B. Proyek tepat waktu tetapi melebihi anggaran.
+=C. Proyek mengalami keterlambatan jadwal (Behind schedule) dan melebihi anggaran (Over budget).
+~D. Proyek selesai lebih cepat tetapi menghabiskan seluruh anggaran cadangan.
+#### Analisis Taksonomi Bloom (Analisis): Memecah rumus metrik proyek. Schedule Variance (SV) = EV - PV (80 - 100 = -20, berarti terlambat). Cost Variance (CV) = EV - AC (80 - 90 = -10, berarti melebihi anggaran). Nilai negatif pada kedua metrik ini menunjukkan kinerja proyek yang buruk di kedua aspek.
+}
+
+::Soal 79:: Saat mengawasi program digitalisasi demografi warga, Prima merekomendasikan penggunaan kontrol *Hash Totals* selama fase konversi data harian. Perbedaan fungsional analitis antara *Hash Totals* dan *Record Count* adalah: {
+~A. Record Count mengenkripsi data, sementara Hash Totals mendekripsi data.
+~B. Hash Totals hanya dihitung oleh auditor eksternal, sedangkan Record Count oleh staf internal.
+=C. Record Count hanya menghitung jumlah baris fisik, sedangkan Hash Totals menghitung jumlah matematis dari field numerik yang secara inheren tidak memiliki arti (seperti menjumlahkan nomor KTP) untuk memvalidasi bahwa tidak ada angka di dalam field yang terpotong atau berubah.
+~D. Hash Totals digunakan untuk menghitung anggaran, Record Count untuk menghitung jadwal.
+#### Analisis Taksonomi Bloom (Analisis): Kontrol konversi data. Menghitung baris (record count) membuktikan kelengkapan jumlah file. Namun, menjumlahkan nomor ID (hash total) membuktikan keutuhan intrinsik data; jika satu angka KTP berubah saat migrasi, total hash matematisnya akan langsung berbeda.
+}
+
+::Soal 80:: Sebuah organisasi bermaksud menandatangani Perjanjian Tingkat Layanan (SLA) dengan penyedia SaaS (Software as a Service) yang baru. Dari sudut pandang audit TI, klausul protektif analitis mana yang secara absolut harus dimasukkan untuk mengamankan data organisasi jika kontrak dihentikan di masa depan? {
+~A. Klausul yang melarang vendor melayani kompetitor organisasi.
+=B. Klausul Hak untuk Mengaudit (Right to Audit) dan Klausul Pengembalian/Penghancuran Data (Data Return and Destruction) dengan sertifikat bukti pemusnahan.
+~C. Klausul yang mengharuskan vendor menggunakan bahasa pemrograman yang sama dengan organisasi.
+~D. Klausul denda keterlambatan rapat bulanan.
+#### Analisis Taksonomi Bloom (Analisis): Manajemen Vendor. Ketika hubungan pihak ketiga berakhir (offboarding), risiko terbesar adalah vendor menyimpan data sensitif milik organisasi. Analisis tata kelola menuntut adanya jaminan hukum yang memaksa vendor mengembalikan semua data dan menghapus sisa salinan dari server mereka dengan bukti yang dapat diaudit.
+}
+
+::Soal 81:: Selama fase desain infrastruktur komputasi awan, arsitek sistem merancang penempatan pangkalan data di *Subnet Pribadi* (Private Subnet) yang tidak memiliki rute langsung ke internet, sementara server web ditempatkan di *Subnet Publik*. Tujuan keamanan analitis dari pemisahan logis ini adalah: {
+=A. Menegakkan pertahanan berlapis (Defense-in-Depth); bahkan jika server web di internet diretas, peretas tidak dapat langsung mengakses pangkalan data secara logis.
+~B. Mengurangi tagihan langganan internet bulanan dari penyedia layanan awan.
+~C. Mempercepat waktu kueri dari server web ke pangkalan data.
+~D. Mencegah pengguna internal mengakses internet.
+#### Analisis Taksonomi Bloom (Analisis): Memecah arsitektur keamanan jaringan. Memisahkan *frontend* yang menghadap publik dari *backend* yang menyimpan data (DMZ/Segmentasi Subnet) adalah kontrol arsitektur preventif yang mengisolasi aset paling berharga agar tidak dapat dijangkau oleh aktor eksternal secara langsung.
+}
+
+::Soal 82:: Saat mengevaluasi perangkat lunak sumber terbuka (Open-Source Software / OSS) untuk diintegrasikan ke dalam sistem komersial perusahaan, apa risiko operasional dan hukum tertinggi yang harus dianalisis oleh manajer TI? {
+~A. OSS selalu memiliki antarmuka pengguna yang sangat buruk.
+~B. Kode OSS tidak dapat dipelajari oleh programmer internal.
+=C. Pelanggaran persyaratan lisensi viral (seperti GNU GPL) yang dapat memaksa perusahaan merilis kode sumber aplikasi komersial properti mereka sendiri ke publik, serta potensi kurangnya dukungan teknis resmi saat terjadi kegagalan sistem.
+~D. OSS selalu berjalan lebih lambat daripada perangkat lunak berbayar.
+#### Analisis Taksonomi Bloom (Analisis): Risiko manajemen perangkat lunak pihak ketiga. OSS gratis, tetapi "lisensi copyleft/viral" mewajibkan setiap karya turunan ikut menjadi open-source. Jika pengembang sembarangan mencampur kode ini dengan produk rahasia perusahaan, pesaing bisa menuntut perusahaan membuka hak kekayaan intelektual (HAKI) mereka.
+}
+
+::Soal 83:: Tim QA melakukan pengujian di mana perangkat lunak dikirimkan jutaan permintaan log masuk (login requests) dalam waktu beberapa detik. Sistem akhirnya berhenti merespons, tetapi gagal dengan menampilkan layar kosong tanpa memunculkan kode sumber atau informasi sistem ke pengguna. Analisis dari skenario pengujian ini menunjukkan bahwa sistem: {
+~A. Gagal dalam Uji Beban (Load Testing) tetapi lulus Uji Fungsional (Functional Testing).
+=B. Dikenakan Uji Stres (Stress Testing) dan berhasil menunjukkan kontrol "Fail Secure" (gagal secara aman) tanpa membocorkan data sensitif saat runtuh.
+~C. Lulus Pengujian Regresi (Regression Testing).
+~D. Gagal dalam Pengujian Penerimaan Pengguna (UAT) karena layarnya kosong.
+#### Analisis Taksonomi Bloom (Analisis): Uji stres bertujuan melihat titik patah sistem. Konsep 'Fail Safe / Fail Secure' menganalisis bagaimana sistem mati. Jika sistem mati sambil memuntahkan kode kesalahan teknis (stack trace) yang berisi nama basis data, itu berbahaya. Mati dengan layar kosong adalah indikator penanganan kegagalan yang aman.
+}
+
+::Soal 84:: Auditor mengidentifikasi bahwa organisasi menggunakan metodologi SDLC tradisional (Waterfall) untuk proyek inovasi teknologi yang kebutuhannya belum jelas dan terus berubah dari minggu ke minggu. Mengapa kondisi ini secara analitis dipandang sebagai ketidaksesuaian metodologi? {
+=A. Metodologi Waterfall bersifat sangat kaku (rigid) dan mengharuskan seluruh spesifikasi kebutuhan dikunci di awal; metode ini tidak mengakomodasi perubahan ruang lingkup yang dinamis dan berulang.
+~B. Metodologi Waterfall tidak mendukung pembuatan basis data sama sekali.
+~C. Waterfall mengharuskan pengkodean dilakukan dalam bahasa tingkat rendah (Assembly).
+~D. Auditor tidak diizinkan meninjau proyek yang menggunakan metodologi Waterfall.
+#### Analisis Taksonomi Bloom (Analisis): Keselarasan metodologi dengan sifat proyek. Proyek dengan tingkat ketidakpastian tinggi dan kebutuhan yang berevolusi memerlukan fleksibilitas iteratif (seperti Agile/Scrum). Waterfall unggul untuk proyek infrastruktur terprediksi yang persyaratannya stabil sejak hari pertama.
+}
+
+::Soal 85:: Pada tahap mana dalam SDLC (System Development Life Cycle) proses *Data Mapping* (Pemetaan Data) secara analitis paling krusial untuk dilaksanakan secara mendetail guna mencegah kegagalan pada tahap akhir proyek? {
+~A. Fase Inisiasi (Initiation Phase)
+=B. Fase Desain Perangkat Lunak (Software Design Phase)
+~C. Fase Tinjauan Pasca-Implementasi (Post-Implementation Review)
+~D. Fase Uji Penetrasi Sistem (Penetration Testing)
+#### Analisis Taksonomi Bloom (Analisis): Pemetaan data mendefinisikan bagaimana field dari sistem sumber diterjemahkan ke sistem target. Analisis arsitektur membuktikan ini harus dilakukan saat fase Desain, sebelum satupun baris kode integrasi atau skrip migrasi ditulis, untuk mencegah kesalahan format data yang mahal di kemudian hari.
+}
+
+::Soal 86:: Sebuah sistem perbankan memiliki fitur di mana nasabah harus memasukkan nomor PIN. Jika nasabah salah memasukkan PIN sebanyak 3 kali, kartu otomatis terblokir. Fitur pencegahan serangan *brute-force* ini diklasifikasikan sebagai tipe kontrol aplikasi: {
+~A. Kontrol Transposisi Data (Data Transposition Control)
+~B. Total Hash (Hash Total Control)
+~C. Kontrol Integritas Rujukan (Referential Integrity Control)
+=D. Uji Batas (Limit Check / Threshold Control)
+#### Analisis Taksonomi Bloom (Analisis): Menganalisis fungsi batas. Uji batas mengevaluasi aktivitas terhadap batasan kuantitatif yang telah ditentukan sebelumnya. Membatasi upaya kegagalan login hingga angka maksimum (3 kali) adalah kontrol logika preventif berbasis ambang batas (threshold).
+}
+
+::Soal 87:: Perusahaan mempekerjakan konsultan ahli untuk melakukan *Code Review* (Tinjauan Kode) secara statis menggunakan alat SAST (Static Application Security Testing). Tujuan analitis dari metode pengujian keamanan terotomatisasi ini adalah: {
+~A. Mensimulasikan serangan phishing terhadap karyawan.
+=B. Memindai kode sumber (source code) aplikasi saat dalam keadaan diam (tidak dijalankan) untuk mendeteksi kerentanan keamanan bawaan seperti injeksi SQL dan penggunaan pustaka kriptografi yang usang.
+~C. Memonitor lalu lintas jaringan untuk mendeteksi penyusup yang aktif.
+~D. Menguji seberapa cepat perangkat keras server bisa mem-boot sistem operasi.
+#### Analisis Taksonomi Bloom (Analisis): SAST mengevaluasi anatomi statis dari aplikasi. Berbeda dengan DAST (Dynamic Testing) yang meretas aplikasi saat sedang hidup/berjalan, SAST bertindak layaknya "korektor tata bahasa" canggih yang membaca teks kode sumber untuk menemukan cacat logika keamanan sebelum kode dikompilasi.
+}
+
+::Soal 88:: Dalam mengevaluasi tingkat kematangan organisasi menggunakan *Capability Maturity Model Integration* (CMMI), auditor mencatat bahwa perusahaan terus menerus menggunakan metrik kuantitatif terukur untuk secara proaktif mendeteksi cacat pengembangan dan terus mengoptimalkan proses SDLC mereka dari waktu ke waktu. Organisasi ini berada di CMMI level: {
+~A. Level 1 (Initial)
+~B. Level 2 (Managed)
+~C. Level 3 (Defined)
+=D. Level 5 (Optimizing)
+#### Analisis Taksonomi Bloom (Analisis): Tingkatan kematangan tertinggi dalam CMMI (Level 5) dicirikan oleh perbaikan proses yang berkesinambungan (continuous process improvement) dan adaptasi inovatif yang didorong oleh umpan balik statistik dan metrik prediktif yang kuat.
+}
+
+::Soal 89:: Seorang pengembang baru saja selesai memprogram satu modul antarmuka pembayaran. Ia langsung menjalankan tes mandiri pada skrip tersebut untuk memastikan bahwa tombol "Kirim" mengirimkan data format numerik ke variabel yang benar. Pengujian granular yang dilakukan oleh penulis kode ini disebut: {
+=A. Uji Unit (Unit Testing / Module Testing)
+~B. Uji Regresi (Regression Testing)
+~C. Uji Integrasi (Integration Testing)
+~D. Uji Penerimaan Pengguna (User Acceptance Testing)
+#### Analisis Taksonomi Bloom (Analisis): Mengidentifikasi tingkat pengujian. Uji Unit adalah level pengujian terkecil dan paling awal dalam SDLC, yang berfokus pada verifikasi logika fungsional internal dari satu komponen, fungsi, atau modul secara terisolasi, biasanya dilakukan langsung oleh programmer (white-box).
+}
+
+::Soal 90:: Manajer Operasi TI sedang mengkaji metrik kepatuhan layanan meja bantuan (Helpdesk) setelah peluncuran sistem CRM baru. Indikator Kinerja Utama (KPI) analitis mana yang secara spesifik mengukur kecepatan tim TI dalam memulihkan gangguan aplikasi kembali ke status operasional normal? {
+~A. Recovery Point Objective (RPO)
+=B. Mean Time To Repair (MTTR)
+~C. Mean Time Between Failures (MTBF)
+~D. Cost Performance Index (CPI)
+#### Analisis Taksonomi Bloom (Analisis): Memecah metrik manajemen insiden. MTBF mengukur keandalan peralatan (seberapa jarang alat itu rusak). MTTR (Mean Time to Repair / Resolve) secara analitis mengukur efisiensi dukungan teknis dalam mendiagnosis, menambal, dan menghidupkan kembali layanan setelah masalah dilaporkan.
+}
+
+::Soal 91:: Organisasi memutuskan untuk memindahkan server fisik internal mereka ke lingkungan awan *Platform as a Service* (PaaS). Di bawah model PaaS, elemen tumpukan (stack) teknologi mana yang pengelolaannya, secara analitis, *bergeser* dari beban staf internal TI perusahaan kepada penyedia layanan awan? {
+~A. Tata kelola data pelanggan dan autentikasi pengguna akhir (Identities & Data).
+=B. Pengelolaan sistem operasi (OS patching), perangkat keras server basis data, media penyimpanan, dan tumpukan eksekusi jaringan dasar (Network/Servers).
+~C. Kode sumber perangkat lunak aplikasi bisnis kustom milik perusahaan.
+~D. Hanya penyesuaian warna antarmuka web (UI) saja.
+#### Analisis Taksonomi Bloom (Analisis): Model batas tanggung jawab. Pada PaaS, penyedia awan memberi "platform siap pakai". Vendor mengurus perbaruan sistem operasi dan mesin basis data di belakang layar. Pelanggan hanya fokus mengunggah "kode aplikasi" mereka dan mengelola "data" pengguna tanpa repot menyewa staf administrator server.
+}
+
+::Soal 92:: Selama perancangan basis data, seorang insinyur membuat tabel sementara yang digunakan untuk mempercepat kueri pelaporan yang rumit dengan cara menggabungkan (denormalization) beberapa atribut yang sering dicari. Apa risiko analitis tata kelola data jangka panjang dari tindakan ini? {
+=A. Meskipun mempercepat pelaporan (read speed), denormalisasi secara sengaja memasukkan kembali redundansi data yang meningkatkan risiko terjadinya anomali ketidakkonsistenan data (inconsistency) jika terjadi operasi pembaruan (update) di masa mendatang.
+~B. Tabel akan otomatis terhapus setiap malam oleh sistem operasi.
+~C. Data akan terenkripsi secara asimetris secara paksa.
+~D. Mengurangi kebutuhan memori RAM di server.
+#### Analisis Taksonomi Bloom (Analisis): Pertukaran (trade-off) desain basis data. Normalisasi mencegah anomali pembaruan tetapi memperlambat pembacaan karena butuh banyak proses penggabungan (JOIN). Denormalisasi mempercepat pembacaan laporan (OLAP), tetapi auditor harus mengingatkan bahwa ini membuka pintu bagi inkonsistensi data (data integrity risk).
+}
+
+::Soal 93:: Di tengah proyek migrasi perangkat lunak bernilai jutaan dolar, sponsor eksekutif utama tiba-tiba mengundurkan diri dari perusahaan. Menurut pedoman analitis tata kelola proyek (Project Governance), apa dampak terburuk bagi tim proyek tersebut? {
+~A. Tim pengembangan dapat melanjutkan proyek dengan otonomi penuh.
+~B. Manajer Proyek (PM) secara otomatis dipromosikan menjadi sponsor.
+=C. Proyek berisiko kehilangan advokasi strategis, pembiayaan yang berkelanjutan (budget approval), dan resolusi penyelesaian sengketa di tingkat dewan manajemen, yang dapat berujung pada pembatalan proyek.
+~D. Penguji akan menyelesaikan UAT dengan lebih cepat.
+#### Analisis Taksonomi Bloom (Analisis): Peran sponsor proyek (Project Sponsor) adalah tulang punggung politik dan finansial inisiatif TI. Mereka menyediakan dana, mengatasi rintangan antardepartemen, dan memastikan proyek tetap selaras secara strategis. Kehilangan sponsor tanpa pengganti sering kali membuat proyek menjadi 'yatim piatu' dan dibekukan.
+}
+
+::Soal 94:: Auditor meninjau kontrol aplikasi pengolahan *Batch* penggajian yang berjalan semalaman. Proses ini dilindungi oleh kontrol *Run-to-Run Totals*. Tujuan analitis spesifik dari prosedur validasi ini adalah untuk memastikan bahwa: {
+~A. Aplikasi penggajian dijalankan di komputer yang secara fisik aman.
+=B. Tidak ada catatan transaksi gaji individu yang hilang, terselip, atau ditambahkan tanpa otorisasi saat kumpulan data bergerak (dilempar) dari satu tahap program pemrosesan ke tahap berikutnya.
+~C. Karyawan yang telah mengundurkan diri otomatis dihapus dari direktori aktif.
+~D. Perangkat keras server selalu beroperasi di bawah suhu 30 derajat Celcius.
+#### Analisis Taksonomi Bloom (Analisis): Kontrol pemrosesan. *Run-to-Run totals* memverifikasi integritas perpindahan data. Sistem membaca total saldo/catatan pada akhir Fase 1, lalu mencocokkannya lagi saat masuk ke Fase 2. Jika nilainya berbeda, sistem dapat dihentikan (halt) untuk mencegah pemrosesan data yang cacat lebih lanjut.
+}
+
+::Soal 95:: Dalam praktik arsitektur *DevSecOps* modern, para insinyur keamanan sering menggunakan istilah *"Shift Left"*. Menganalisis makna metodologis dari konsep tersebut, apa yang sebenarnya "digeser ke kiri"? {
+~A. Menggeser peluncuran aplikasi ke jadwal waktu yang lebih awal di sisi kiri kalender proyek.
+~B. Memindahkan semua server pangkalan data secara fisik ke rak sebelah kiri pusat data untuk pendinginan.
+=C. Memasukkan pengujian keamanan, tinjauan kerentanan, dan otomatisasi kontrol sedini mungkin ke dalam fase perencanaan awal dan desain penulisan kode dalam siklus hidup (SDLC), alih-alih menunggu hingga tahap pengujian akhir.
+~D. Membiarkan pengguna bisnis menulis kode perangkat lunak mereka sendiri.
+#### Analisis Taksonomi Bloom (Analisis): Konsep tata kelola modern. Tradisionalnya, keamanan ditambahkan di ujung kanan garis waktu proyek (setelah produk jadi). 'Shift Left' berarti memajukan aktivitas keamanan ke tahap konseptualisasi dan penulisan awal (kiri garis waktu), yang secara radikal menurunkan biaya perbaikan bug keamanan.
+}
+
+::Soal 96:: Organisasi akan membeli sistem manajemen rumah sakit berskala penuh dari vendor terkemuka. Daripada mengembangkannya secara internal, organisasi menggunakan solusi *Commercial Off-The-Shelf* (COTS). Manfaat tata kelola analitis utama dari keputusan akuisisi perangkat lunak COTS adalah: {
+=A. Menghindari ketidakpastian biaya dan waktu dari siklus pengembangan perangkat lunak panjang, serta mendapatkan solusi stabil yang telah diuji oleh pasar secara luas.
+~B. Organisasi memiliki akses penuh untuk mengubah kode sumber asli sesuai keinginan hati.
+~C. Sistem COTS tidak pernah membutuhkan pembaruan perbaikan keamanan (patching) selamanya.
+~D. Sistem otomatis kebal dari regulasi privasi perawatan kesehatan lokal.
+#### Analisis Taksonomi Bloom (Analisis): *Buy vs Build*. Keunggulan utama COTS adalah percepatan implementasi dan pemindahan risiko litbang (Research & Development). Vendor mendistribusikan biaya penambalan keamanan dan peningkatan fitur ke ribuan pelanggan, menjadikan TCO (Total Cost of Ownership) pemeliharaan jangka panjang seringkali lebih murah daripada produk internal yang dipelihara sendiri.
+}
+
+::Soal 97:: Pada audit fase perancangan implementasi jaringan perangkat lunak-ditetapkan (Software-Defined Networking / SDN), fungsionalitas bidang kontrol (Control Plane) dipisahkan secara logis dari bidang pengiriman data lalu lintas (Data Plane). Kelemahan keamanan analitis baru apa yang muncul dari desain arsitektur terpusat ini? {
+~A. Tidak ada komputer yang dapat mengakses internet.
+~B. SDN membuat kabel jaringan optik menjadi usang secara instan.
+=C. Alat pengontrol terpusat (SDN Controller) menjadi Titik Kegagalan Tunggal (Single Point of Failure / SPoF) yang sangat bernilai tinggi; jika pengendali ini diretas, seluruh rute jaringan dapat dimanipulasi seketika.
+~D. Biaya pembelian router fisik akan meningkat drastis.
+#### Analisis Taksonomi Bloom (Analisis): Mengurai risiko teknologi baru. SDN memindahkan intelijen jaringan dari perangkat keras router fisik ke sebuah perangkat lunak pusat. Keuntungan efisiensinya besar, tetapi analitik risiko menetapkan bahwa "otak" pusat ini wajib dilindungi ekstrem tinggi karena ia memegang kendali atas seluruh arus data organisasi.
+}
+
+::Soal 98:: Auditor SI mengevaluasi kebijakan penonaktifan karyawan (Offboarding Policy) dari sistem informasi proyek yang dibatalkan. Mengapa pencabutan hak akses (Access Revocation) logis harus dianalisis terpisah dan dilakukan dengan tenggat waktu lebih cepat daripada pengumpulan aset perangkat keras (seperti mengembalikan laptop perusahaan)? {
+=A. Kerentanan serangan jarak jauh (remote access); mantan karyawan masih dapat meretas masuk secara logis dari luar menggunakan perangkat lain untuk mencuri/merusak data perusahaan meskipun laptop perusahaan telah disita.
+~B. Hak akses lebih mudah dinilai secara moneter daripada laptop.
+~C. Hal ini mempercepat proses pembayaran gaji terakhir.
+~D. Kebijakan ini memudahkan staf TI menghapus sistem operasi server secara paksa.
+#### Analisis Taksonomi Bloom (Analisis): Identifikasi ancaman keamanan informasi. Akses logis (kredensial VPN, cloud account) memisahkan identitas pengguna dari perangkat fisiknya. Mengambil laptop fisik sama sekali tidak mengamankan data perusahaan jika akun sistem pengguna tersebut tidak dinonaktifkan secara serentak dari direktori pusat (AD).
+}
+
+::Soal 99:: Manajer proyek ingin mencegah penipuan di mana seorang programmer menyisipkan kode rahasia yang membulatkan nilai pecahan gaji karyawan ke akun rekening bank miliknya (Salami Attack). Kontrol pengembangan perangkat lunak analitis mana yang paling krusial untuk mencegah serangan orang dalam ini? {
+~A. Mewajibkan penggunaan kartu ID pintar untuk memasuki kantor fisik.
+=B. Menerapkan Tinjauan Kode Sejawat Independen (Independent Peer Code Review) yang dikombinasikan dengan prosedur rilis Manajemen Perubahan (Change Management) yang terpisah secara tugas.
+~C. Memasang perangkat lunak antivirus di komputer programmer.
+~D. Menggunakan Enkripsi RSA 2048-bit pada tabel gaji.
+#### Analisis Taksonomi Bloom (Analisis): Pencegahan fraud pengembangan aplikasi. Penipuan Salami bersembunyi di dalam logika baris kode. Enkripsi atau antivirus tidak menangkap kode sah yang berbahaya secara logis. Hanya tinjauan matamata (four-eyes principle / peer review) oleh pemrogram lain yang independen sebelum rilis produksi yang dapat menganalisis dan mendeteksi anomali ini.
+}
+
+::Soal 100:: Berdasarkan standar ISACA untuk objektivitas profesional, manakah dari tindakan berikut yang sangat direkomendasikan secara analitis mengenai peran Auditor Sistem Informasi di dalam keseluruhan Siklus Hidup Pengembangan Sistem (SDLC)? {
+~A. Auditor harus bertindak sebagai Manajer Proyek dan bertanggung jawab atas anggaran penyelesaian aplikasi.
+~B. Auditor harus secara pribadi menulis kebijakan keamanan dan menyusun algoritma kontrol akses untuk proyek tersebut.
+=C. Auditor harus dilibatkan secara aktif dari fase inisiasi awal untuk memberi nasihat mengenai kecukupan kontrol keamanan (control adequacy), tanpa pernah mengambil alih tanggung jawab eksekutif dalam merancang atau mengimplementasikannya secara langsung.
+~D. Auditor harus mengabaikan fase SDLC sepenuhnya dan hanya memeriksa aplikasi setelah beroperasi selama setahun.
+#### Analisis Taksonomi Bloom (Analisis): Analisis etika dan peran independensi. Membawa auditor masuk di awal (Continuous Involvement) menghemat biaya koreksi jauh lebih murah (Security by Design). Namun, auditor hanya boleh berstatus sebagai penasihat kontrol objektif (advisory role). Jika auditor yang merancang kontrol tersebut, mereka kehilangan objektivitas untuk mengaudit hasil kerja mereka sendiri di tahun berikutnya (Self-Review Threat).
+}

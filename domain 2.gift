@@ -1,0 +1,902 @@
+// Batch 1: Governance and Management of IT (Soal 1-25)
+
+// Soal 1: Bloom - Mengingat (C1)
+::Q1:: Manakah dari berikut ini yang merupakan tanggung jawab utama dari Dewan Direksi (Board of Directors) terkait tata kelola TI? {
+    ~A. Melakukan konfigurasi teknis pada firewall perusahaan
+    ~B. Menulis kode program untuk aplikasi keuangan
+    =C. Menetapkan arahan strategis dan memantau pencapaian tujuan TI
+    ~D. Melakukan backup data harian secara manual
+    #### Feedback: Tata kelola (Governance) adalah tanggung jawab dewan direksi untuk menetapkan arah, memberikan kepemimpinan, dan memastikan tujuan organisasi tercapai.
+}
+
+// Soal 2: Bloom - Memahami (C2)
+::Q2:: Apa perbedaan mendasar antara Tata Kelola TI (IT Governance) dan Manajemen TI (IT Management)? {
+    ~A. Tata kelola berfokus pada eksekusi, manajemen berfokus pada strategi
+    =B. Tata kelola menetapkan arah dan kepatuhan, manajemen merencanakan dan membangun aktivitas untuk mencapai arah tersebut
+    ~C. Tata kelola dilakukan oleh staf teknis, manajemen oleh direksi
+    ~D. Tidak ada perbedaan, keduanya adalah istilah yang sama
+    #### Feedback: Tata kelola memastikan kebutuhan pemangku kepentingan dievaluasi, sedangkan manajemen adalah pelaksana dari arahan yang ditetapkan oleh tata kelola.
+}
+
+// Soal 3: Bloom - Menganalisis (C4)
+::Q3:: Seorang auditor IS menemukan bahwa strategi TI organisasi tidak selaras dengan strategi bisnis. Risiko utama dari kondisi ini adalah... {
+    ~A. Peningkatan kecepatan koneksi internet
+    =B. Investasi TI tidak memberikan nilai (value) bagi bisnis dan pemborosan sumber daya
+    ~C. Terlalu banyak staf TI yang memiliki sertifikasi profesional
+    ~D. Penggunaan perangkat lunak open source
+    #### Feedback: Keselarasan strategis (Strategic Alignment) sangat penting agar investasi TI benar-benar mendukung tujuan bisnis organisasi.
+}
+
+// Soal 4: Bloom - Mengingat (C1)
+::Q4:: Manakah dari kerangka kerja berikut yang paling dikenal secara internasional untuk tata kelola dan manajemen TI perusahaan? {
+    ~A. ISO 9001
+    ~B. PMBOK
+    =C. COBIT
+    ~D. PRINCE2
+    #### Feedback: COBIT (Control Objectives for Information and Related Technology) adalah kerangka kerja komprehensif untuk tata kelola dan manajemen TI.
+}
+
+// Soal 5: Bloom - Memahami (C2)
+::Q5:: Dalam konsep Tata Kelola TI, "Value Delivery" berfokus pada... {
+    ~A. Membeli perangkat keras paling mahal di pasar
+    ~B. Mengurangi jumlah karyawan TI seminimal mungkin
+    =C. Memastikan TI menghasilkan manfaat yang dijanjikan sesuai strategi
+    ~D. Menghilangkan semua risiko TI tanpa pengecualian
+    #### Feedback: Value delivery memastikan bahwa TI memberikan manfaat yang diharapkan tepat waktu dan sesuai anggaran.
+}
+
+// Soal 6: Bloom - Menerapkan (C3)
+::Q6:: Struktur organisasi TI yang paling efektif untuk mendukung pemisahan tugas (Segregation of Duties) adalah dengan memisahkan... {
+    ~A. Manajer TI dengan Manajer Keuangan
+    =B. Fungsi pengembangan (development) dengan fungsi operasional
+    ~C. Staf administrasi dengan staf kebersihan
+    ~D. Pengguna akhir dengan vendor luar
+    #### Feedback: Memisahkan pengembangan dan operasional mencegah personel yang menulis kode untuk memanipulasi data produksi tanpa terdeteksi.
+}
+
+// Soal 7: Bloom - Menganalisis (C4)
+::Q7:: Manakah dari indikator berikut yang menunjukkan tata kelola TI yang lemah dalam sebuah organisasi? {
+    ~A. Adanya komite pengarah TI (IT Steering Committee) yang aktif
+    ~B. Kebijakan TI ditinjau secara berkala setiap tahun
+    =C. Proyek TI seringkali melampaui anggaran tanpa justifikasi yang jelas
+    ~D. Auditor internal melaporkan langsung ke Komite Audit
+    #### Feedback: Kurangnya pengawasan terhadap anggaran dan manfaat proyek adalah tanda kegagalan fungsi kontrol dan tata kelola.
+}
+
+// Soal 8: Bloom - Mengingat (C1)
+::Q8:: Dokumen yang mendefinisikan tingkat layanan minimum yang diharapkan dari penyedia layanan pihak ketiga disebut... {
+    ~A. Business Case
+    =B. Service Level Agreement (SLA)
+    ~C. IT Charter
+    ~D. Feasibility Study
+    #### Feedback: SLA adalah perjanjian formal yang menetapkan target kinerja dan kualitas layanan antara penyedia dan pelanggan.
+}
+
+// Soal 9: Bloom - Memahami (C2)
+::Q10:: Komite Pengarah TI (IT Steering Committee) biasanya bertanggung jawab untuk... {
+    ~A. Melakukan instalasi sistem operasi pada server
+    =B. Meninjau dan menyetujui rencana strategis TI serta investasi besar
+    ~C. Menulis dokumentasi teknis untuk pengguna
+    ~D. Memperbaiki perangkat keras yang rusak
+    #### Feedback: Steering Committee berfungsi sebagai penghubung antara bisnis dan TI untuk memastikan prioritas investasi selaras dengan kebutuhan organisasi.
+}
+
+// Soal 10: Bloom - Menganalisis (C4)
+::Q10:: Jika sebuah organisasi memutuskan untuk melakukan "Outsourcing" pada fungsi pengembangan aplikasinya, tanggung jawab akhir terhadap keamanan data tetap berada pada... {
+    ~A. Vendor outsourcing tersebut
+    =B. Manajemen organisasi klien (pemilik data)
+    ~C. Auditor eksternal
+    ~D. Penyedia layanan internet
+    #### Feedback: Sesuai prinsip CISA, tanggung jawab (accountability) tidak dapat didelegasikan ke pihak ketiga, meskipun tugas (responsibility) dapat didelegasikan.
+}
+
+// Soal 11: Bloom - Memahami (C2)
+::Q11:: Apa tujuan utama dari Manajemen Risiko TI (IT Risk Management)? {
+    ~A. Menghilangkan semua risiko hingga nol persen
+    =B. Mengidentifikasi dan memitigasi risiko hingga ke tingkat yang dapat diterima organisasi
+    ~C. Menghindari penggunaan teknologi baru yang berisiko
+    ~D. Memindahkan semua tanggung jawab risiko ke asuransi
+    #### Feedback: Risiko tidak bisa dihilangkan sepenuhnya, tujuannya adalah menjaga agar risiko tetap berada dalam batas toleransi (risk appetite) organisasi.
+}
+
+// Soal 12: Bloom - Mengingat (C1)
+::Q12:: "Risk Appetite" didefinisikan sebagai... {
+    ~A. Jumlah total kerugian yang diderita perusahaan tahun lalu
+    =B. Jumlah risiko yang bersedia diterima organisasi dalam mengejar tujuannya
+    ~C. Daftar semua ancaman keamanan yang mungkin terjadi
+    ~D. Anggaran yang dialokasikan untuk membeli firewall
+    #### Feedback: Risk appetite adalah tingkat risiko yang dianggap wajar untuk diambil oleh dewan direksi demi mencapai nilai bisnis.
+}
+
+// Soal 13: Bloom - Menerapkan (C3)
+::Q13:: Manakah dari berikut ini yang merupakan contoh dari "Risk Mitigation"? {
+    ~A. Memutuskan untuk tidak meluncurkan produk baru karena terlalu berisiko
+    ~B. Membeli asuransi siber untuk menanggung kerugian finansial
+    =C. Menginstal perangkat lunak antivirus dan sistem deteksi intrusi
+    ~D. Menerima risiko karena biaya kontrol lebih mahal dari nilai aset
+    #### Feedback: Mitigasi risiko melibatkan penerapan kontrol untuk mengurangi kemungkinan atau dampak dari ancaman.
+}
+
+// Soal 14: Bloom - Memahami (C2)
+::Q14:: Dalam konsep pemisahan tugas, personel yang memiliki akses "Read-Only" ke data produksi biasanya adalah... {
+    ~A. Database Administrator
+    =B. Auditor Sistem Informasi
+    ~C. Programmer Aplikasi
+    ~D. Operator Data Entry
+    #### Feedback: Auditor memerlukan akses lihat saja (read-only) untuk memverifikasi data tanpa risiko mengubah atau merusak integritas data tersebut.
+}
+
+// Soal 15: Bloom - Menganalisis (C4)
+::Q15:: Auditor menemukan bahwa Rencana Pemulihan Bencana (Disaster Recovery Plan) belum pernah diuji dalam dua tahun terakhir. Langkah selanjutnya yang paling tepat bagi auditor adalah... {
+    ~A. Segera menulis laporan bahwa sistem tidak aman
+    ~B. Mengabaikan karena sistem saat ini berjalan normal
+    =C. Menilai dampak potensial dari kegagalan pemulihan dan merekomendasikan pengujian berkala
+    ~D. Melakukan pengujian sendiri tanpa izin manajemen
+    #### Feedback: Auditor harus mengevaluasi risiko dari tidak adanya pengujian dan memberikan rekomendasi perbaikan berbasis risiko kepada manajemen.
+}
+
+// Soal 16: Bloom - Mengingat (C1)
+::Q16:: Balanced Scorecard (BSC) dalam konteks TI digunakan untuk... {
+    ~A. Menghitung tagihan listrik server
+    =B. Mengukur kinerja TI dari berbagai perspektif (finansial, pelanggan, proses internal, pembelajaran)
+    ~C. Menentukan jumlah password yang salah
+    ~D. Membandingkan kecepatan CPU antar vendor
+    #### Feedback: BSC membantu organisasi mengukur kinerja TI melampaui sekadar angka finansial, mencakup efektivitas proses dan pertumbuhan.
+}
+
+// Soal 17: Bloom - Memahami (C2)
+::Q17:: Apa risiko terbesar dari "Shadow IT" (penggunaan sistem TI tanpa sepengetahuan departemen TI resmi)? {
+    ~A. Karyawan menjadi terlalu produktif
+    =B. Data organisasi terekspos pada risiko keamanan dan ketidakpatuhan karena tidak terpantau
+    ~C. Biaya lisensi menjadi lebih murah
+    ~D. Mempercepat inovasi di tingkat departemen
+    #### Feedback: Shadow IT menyebabkan hilangnya kontrol organisasi atas data dan standar keamanan, yang dapat berujung pada kebocoran data.
+}
+
+// Soal 18: Bloom - Menganalisis (C4)
+::Q18:: Organisasi menggunakan model kematangan (Maturity Model) untuk... {
+    ~A. Menentukan usia rata-rata karyawan TI
+    =B. Menilai tingkat kecanggihan dan efektivitas proses TI dibandingkan dengan standar industri
+    ~C. Menghitung jumlah komputer yang harus dipensiunkan
+    ~D. Menentukan kapan server akan rusak
+    #### Feedback: Maturity models (seperti CMMI) membantu organisasi memahami di mana posisi mereka saat ini dan langkah apa yang diperlukan untuk mencapai level berikutnya.
+}
+
+// Soal 19: Bloom - Mengingat (C1)
+::Q19:: Jabatan eksekutif yang bertanggung jawab atas keselarasan strategi TI dengan strategi bisnis adalah... {
+    =A. Chief Information Officer (CIO)
+    ~B. Chief Security Officer (CSO)
+    ~C. Database Administrator (DBA)
+    ~D. Network Engineer
+    #### Feedback: CIO adalah pemimpin senior yang memastikan TI mendukung tujuan strategis perusahaan.
+}
+
+// Soal 20: Bloom - Memahami (C2)
+::Q20:: "Quality Assurance" (QA) dalam tata kelola TI bertujuan untuk... {
+    ~A. Memperbaiki kesalahan setelah produk dirilis
+    =B. Memastikan proses pengembangan mengikuti standar dan prosedur yang ditetapkan
+    ~C. Menghukum pengembang yang melakukan kesalahan kode
+    ~D. Menurunkan biaya pengembangan aplikasi
+    #### Feedback: QA bersifat preventif, fokus pada proses untuk memastikan hasil akhir berkualitas tinggi.
+}
+
+// Soal 21: Bloom - Menganalisis (C4)
+::Q21:: Manakah dari kontrol berikut yang paling efektif untuk mencegah pengembang aplikasi melakukan perubahan yang tidak sah pada kode produksi? {
+    ~A. Memberikan akses administratif penuh kepada pengembang
+    ~B. Meminta pengembang menandatangani perjanjian kerahasiaan
+    =C. Menerapkan kontrol akses yang ketat sehingga pengembang tidak memiliki akses tulis ke lingkungan produksi
+    ~D. Melakukan audit tahunan setelah perubahan dilakukan
+    #### Feedback: Pembatasan akses teknis (technical restriction) adalah cara paling efektif untuk mencegah akses tidak sah ke data operasional yang sensitif.
+}
+
+// Soal 22: Bloom - Mengingat (C1)
+::Q22:: Dalam manajemen aset TI, "Inventory" yang akurat sangat penting untuk... {
+    ~A. Membuat ruangan terlihat rapi
+    =B. Memastikan semua aset terlindungi, berlisensi, dan terpantau
+    ~C. Mengetahui siapa yang paling sering merusak komputer
+    ~D. Menentukan warna kabel jaringan yang akan dibeli
+    #### Feedback: Inventaris yang baik adalah dasar dari manajemen keamanan, manajemen lisensi, dan pemeliharaan.
+}
+
+// Soal 23: Bloom - Memahami (C2)
+::Q23:: Apa peran audit internal dalam tata kelola TI? {
+    ~A. Mengambil keputusan strategis untuk dewan direksi
+    =B. Memberikan jaminan independen bahwa kontrol TI beroperasi secara efektif
+    ~C. Menjalankan operasional harian departemen TI
+    ~D. Membeli perangkat lunak keamanan untuk perusahaan
+    #### Feedback: Audit internal bertindak sebagai "lini pertahanan ketiga" yang memberikan evaluasi objektif atas efektivitas kontrol.
+}
+
+// Soal 24: Bloom - Menganalisis (C4)
+::Q24:: Ketika meninjau kebijakan TI organisasi, auditor harus memastikan bahwa kebijakan tersebut... {
+    ~A. Sangat teknis sehingga hanya dimengerti oleh pakar
+    =B. Disetujui oleh manajemen senior dan dikomunikasikan kepada seluruh karyawan
+    ~C. Tidak pernah berubah sejak perusahaan didirikan
+    ~D. Hanya disimpan di laci meja direktur
+    #### Feedback: Kebijakan harus memiliki dukungan dari atas (tone at the top) dan dipahami oleh mereka yang harus mematuhinya.
+}
+
+// Soal 25: Bloom - Mengingat (C1)
+::Q25:: Budaya organisasi (Organizational Culture) dianggap sebagai... {
+    ~A. Hal yang tidak relevan dengan keamanan siber
+    =B. Enabler (pendorong) penting dalam keberhasilan tata kelola TI
+    ~C. Gangguan bagi operasional TI yang cepat
+    ~D. Tanggung jawab departemen HR saja
+    #### Feedback: Budaya yang sadar akan risiko dan keamanan sangat menentukan apakah kebijakan dan kontrol TI akan benar-benar dijalankan oleh personel.
+}
+// Batch 2: Governance and Management of IT (Soal 26-50)
+
+// Soal 26: Bloom - Mengingat (C1)
+::Q26:: Manakah dari berikut ini yang merupakan pendorong utama (key driver) bagi tata kelola TI perusahaan? {
+    ~A. Keinginan untuk membeli teknologi terbaru
+    ~B. Kebutuhan untuk mengganti staf TI setiap tahun
+    =C. Kebutuhan akan transparansi dan akuntabilitas dalam penggunaan sumber daya TI
+    ~D. Menghapus kebutuhan akan audit eksternal
+    #### Feedback: Tata kelola TI didorong oleh kebutuhan untuk memastikan bahwa investasi TI memberikan nilai dan risiko TI dikelola secara transparan[cite: 43, 44].
+}
+
+// Soal 27: Bloom - Memahami (C2)
+::Q27:: Apa tujuan utama dari penyelarasan strategis (strategic alignment) antara bisnis dan TI? {
+    ~A. Memastikan departemen TI memiliki anggaran terbesar
+    =B. Menyelaraskan operasi TI dengan operasi bisnis untuk mencapai tujuan bersama
+    ~C. Memastikan semua karyawan menggunakan jenis komputer yang sama
+    ~D. Mengurangi interaksi antara manajer bisnis dan staf TI
+    #### Feedback: Penyelarasan strategis memastikan bahwa TI bekerja sama dengan bisnis untuk memberikan solusi yang mendukung tujuan organisasi[cite: 136, 137].
+}
+
+// Soal 28: Bloom - Menerapkan (C3)
+::Q28:: Saat mengevaluasi portofolio investasi TI, kriteria manakah yang paling penting bagi manajemen senior? {
+    ~A. Popularitas vendor di media sosial
+    ~B. Warna casing server yang akan dibeli
+    =C. Keselarasan proyek dengan tujuan bisnis dan potensi pengembalian investasi (ROI)
+    ~D. Jumlah baris kode yang ditulis oleh pengembang
+    #### Feedback: Manajemen portofolio memastikan investasi TI diprioritaskan berdasarkan nilai bisnis dan risiko[cite: 151, 160].
+}
+
+// Soal 29: Bloom - Menganalisis (C4)
+::Q29:: Seorang auditor IS menemukan bahwa IT Steering Committee jarang bertemu. Dampak paling signifikan dari temuan ini adalah... {
+    ~A. Ruang server menjadi berdebu
+    =B. Kurangnya pengawasan strategis dan potensi ketidakselarasan antara proyek TI dengan kebutuhan bisnis
+    ~C. Kecepatan internet perusahaan akan menurun secara otomatis
+    ~D. Staf TI akan bekerja lebih cepat tanpa gangguan rapat
+    #### Feedback: Tanpa pertemuan rutin Steering Committee, keputusan strategis dan prioritas investasi tidak terpantau dengan baik[cite: 136, 137].
+}
+
+// Soal 30: Bloom - Mengingat (C1)
+::Q30:: Manakah dari komponen berikut yang merupakan bagian dari "Resource Management" dalam tata kelola TI? {
+    ~A. Membeli makanan ringan untuk staf
+    =B. Optimalisasi investasi dan manajemen yang tepat atas infrastruktur, aplikasi, informasi, dan manusia
+    ~C. Menghitung jumlah klik mouse dalam sehari
+    ~D. Mengatur tata letak parkir kendaraan staf TI
+    #### Feedback: Manajemen sumber daya TI berfokus pada pengoptimalan aset TI (manusia dan teknologi) untuk mendukung organisasi[cite: 415, 419].
+}
+
+// Soal 31: Bloom - Memahami (C2)
+::Q31:: "IT Investment Portfolio" mencakup... {
+    ~A. Hanya perangkat keras yang sudah rusak
+    =B. Seluruh pengeluaran TI, termasuk proyek baru, pemeliharaan, dan operasional rutin
+    ~C. Daftar kata sandi admin perusahaan
+    ~D. Kumpulan brosur dari vendor komputer
+    #### Feedback: Portofolio investasi mencakup semua aset dan inisiatif TI untuk memastikan alokasi sumber daya yang optimal[cite: 151, 158].
+}
+
+// Soal 32: Bloom - Menerapkan (C3)
+::Q32:: Dalam mengukur kinerja TI, auditor harus mencari metrik yang... {
+    ~A. Hanya dipahami oleh staf teknis
+    ~B. Sangat mudah dimanipulasi oleh manajemen
+    =C. Terukur (measurable), relevan, dan selaras dengan tujuan bisnis (KPI)
+    ~D. Selalu menunjukkan hasil 100% sukses
+    #### Feedback: Metrik kinerja (seperti KPI) harus memberikan gambaran akurat tentang pencapaian tujuan TI dan bisnis[cite: 316, 1000].
+}
+
+// Soal 33: Bloom - Menganalisis (C4)
+::Q33:: Apa risiko utama dari struktur organisasi TI yang sangat tersentralisasi (highly centralized)? {
+    ~A. Terlalu banyak standar yang berbeda antar cabang
+    =B. Ketidakmampuan untuk merespon kebutuhan unik unit bisnis lokal dengan cepat
+    ~C. Biaya lisensi perangkat lunak menjadi lebih mahal
+    ~D. Manajemen senior kehilangan kendali atas anggaran TI
+    #### Feedback: Meskipun efisien dalam standarisasi, sentralisasi berlebih dapat menghambat fleksibilitas unit bisnis lokal[cite: 1335, 1337].
+}
+
+// Soal 34: Bloom - Mengingat (C1)
+::Q34:: Siapakah yang bertanggung jawab untuk menyetujui "IT Strategy Plan"? {
+    ~A. Staf help desk
+    ~B. Vendor perangkat lunak eksternal
+    =C. Dewan Direksi (Board of Directors) atau Komite Eksekutif
+    ~D. Junior Auditor
+    #### Feedback: Rencana strategi TI adalah dokumen tingkat tinggi yang memerlukan persetujuan dari tingkat pimpinan tertinggi organisasi[cite: 392, 399].
+}
+
+// Soal 35: Bloom - Memahami (C2)
+::Q35:: "Enterprise Architecture" (EA) bertujuan untuk... {
+    ~A. Merancang gedung kantor perusahaan
+    =B. Memberikan peta jalan (blueprint) terintegrasi antara proses bisnis, data, aplikasi, dan teknologi
+    ~C. Menentukan jadwal libur karyawan TI
+    ~D. Mengatur sistem pendingin udara di data center
+    #### Feedback: EA memastikan bahwa semua komponen teknologi dan bisnis bekerja secara harmonis[cite: 1333, 1334].
+}
+
+// Soal 36: Bloom - Menganalisis (C4)
+::Q36:: Auditor menemukan bahwa organisasi tidak memiliki kebijakan "Personal Data Protection". Risiko terbesar bagi organisasi adalah... {
+    ~A. Karyawan akan lupa nama mereka sendiri
+    =B. Pelanggaran hukum/regulasi (compliance) dan kerugian reputasi yang besar jika terjadi kebocoran data
+    ~C. Printer akan lebih cepat kehabisan tinta
+    ~D. Penggunaan media sosial akan dilarang sepenuhnya
+    #### Feedback: Ketiadaan kebijakan perlindungan data pribadi mengekspos perusahaan pada sanksi hukum yang berat[cite: 626, 636].
+}
+
+// Soal 37: Bloom - Mengingat (C1)
+::Q37:: Manakah dari berikut ini yang merupakan contoh dari "Human Resource Management" dalam audit TI? {
+    ~A. Menghitung jumlah langkah kaki karyawan
+    =B. Evaluasi terhadap proses perekrutan, pelatihan, dan penilaian kinerja staf TI
+    ~C. Mengatur menu makan siang di kantin
+    ~D. Memberikan hadiah ulang tahun kepada manajer
+    #### Feedback: Manajemen SDM TI memastikan organisasi memiliki personel dengan kompetensi yang tepat[cite: 418, 420].
+}
+
+// Soal 38: Bloom - Memahami (C2)
+::Q38:: Apa fungsi dari "IT Policy"? {
+    ~A. Memberikan instruksi teknis cara mengetik cepat
+    =B. Menetapkan aturan main dan batasan yang harus diikuti oleh seluruh anggota organisasi terkait penggunaan TI
+    ~C. Sebagai dokumen rahasia yang tidak boleh dibaca karyawan
+    ~D. Untuk menentukan harga jual produk perusahaan
+    #### Feedback: Kebijakan (Policy) adalah pernyataan formal manajemen tentang arah dan perilaku yang diharapkan[cite: 775, 776].
+}
+
+// Soal 39: Bloom - Menganalisis (C4)
+::Q39:: Mengapa pemisahan tugas (Segregation of Duties) antara admin database (DBA) dan pengembang aplikasi (Developer) sangat penting? {
+    ~A. Agar mereka tidak terlalu sering mengobrol saat jam kerja
+    =B. Untuk mencegah pengembang memodifikasi data produksi secara langsung tanpa melalui prosedur kontrol
+    ~C. Agar perusahaan tidak perlu membayar lembur
+    ~D. Karena sistem hanya bisa diakses oleh satu orang saja
+    #### Feedback: Pemisahan akses antara pengembang dan pengelola data produksi adalah kontrol kunci untuk integritas data[cite: 867, 1335].
+}
+
+// Soal 40: Bloom - Mengingat (C1)
+::Q40:: "Key Performance Indicators" (KPI) digunakan dalam tata kelola TI untuk... {
+    ~A. Menentukan merk laptop yang paling keren
+    =B. Mengukur seberapa baik sebuah proses TI mencapai tujuan yang ditetapkan
+    ~C. Menghitung jumlah file sampah di komputer
+    ~D. Menentukan siapa yang harus dipecat bulan ini
+    #### Feedback: KPI adalah metrik finansial atau non-finansial yang digunakan untuk membantu organisasi mengukur kemajuan terhadap tujuannya[cite: 316, 1000].
+}
+
+// Soal 41: Bloom - Memahami (C2)
+::Q41:: Apa risiko utama dari "Vendor Lock-in"? {
+    ~A. Vendor akan memberikan diskon terlalu besar
+    =B. Kesulitan dan biaya tinggi untuk berpindah ke vendor lain jika kinerja vendor saat ini menurun
+    ~C. Vendor akan membantu perusahaan selama 24 jam penuh
+    ~D. Karyawan menjadi terlalu ahli dalam menggunakan satu produk saja
+    #### Feedback: Ketergantungan berlebih pada satu vendor membatasi fleksibilitas organisasi di masa depan[cite: 433, 447].
+}
+
+// Soal 42: Bloom - Menganalisis (C4)
+::Q42:: Auditor IS meninjau "IT Strategic Plan" dan menemukan bahwa rencana tersebut tidak diperbarui selama 5 tahun. Tindakan terbaik auditor adalah... {
+    ~A. Memperbarui rencana tersebut sendiri
+    ~B. Menyuruh staf IT untuk menulis ulang rencana besok pagi
+    =C. Melaporkan ketidakselarasan rencana dengan kebutuhan bisnis saat ini dan merekomendasikan peninjauan rutin
+    ~D. Menganggap hal tersebut normal karena teknologi tidak banyak berubah
+    #### Feedback: Rencana strategis harus mencerminkan kondisi bisnis dan teknologi saat ini untuk tetap relevan[cite: 596, 597].
+}
+
+// Soal 43: Bloom - Mengingat (C1)
+::Q43:: "Value Management" dalam tata kelola TI berfokus pada... {
+    ~A. Menjual aset TI bekas dengan harga tinggi
+    =B. Memastikan bahwa TI memberikan nilai maksimal dengan biaya yang optimal melalui manajemen manfaat (benefit management)
+    ~C. Menghitung nilai tukar mata uang asing
+    ~D. Mengurangi gaji staf TI setiap tahun
+    #### Feedback: Fokus utama adalah memastikan investasi TI benar-benar menghasilkan nilai bagi bisnis[cite: 317, 411].
+}
+
+// Soal 44: Bloom - Memahami (C2)
+::Q44:: Apa kegunaan utama dari "RACI Chart" dalam organisasi TI? {
+    ~A. Untuk menentukan menu makanan saat rapat
+    =B. Menjelaskan peran dan tanggung jawab (Responsible, Accountable, Consulted, Informed) untuk tugas atau proses tertentu
+    ~C. Menghitung kecepatan transfer data di jaringan
+    ~D. Menentukan lokasi GPS kantor cabang
+    #### Feedback: RACI memastikan akuntabilitas dan tanggung jawab yang jelas untuk setiap aktivitas proses[cite: 398, 401].
+}
+
+// Soal 45: Bloom - Menganalisis (C4)
+::Q45:: Manakah dari kondisi berikut yang paling menunjukkan tata kelola TI yang BAIK? {
+    ~A. Departemen TI memiliki anggaran tidak terbatas
+    ~B. Semua keputusan TI diambil oleh manajer teknis terendah
+    =C. Adanya keselarasan yang jelas antara proyek TI, manajemen risiko, dan strategi bisnis organisasi
+    ~D. Perusahaan tidak pernah melakukan audit TI karena percaya pada stafnya
+    #### Feedback: Tata kelola yang baik mengintegrasikan strategi, risiko, dan penyampaian nilai[cite: 370, 411].
+}
+
+// Soal 46: Bloom - Mengingat (C1)
+::Q46:: "IT Balanced Scorecard" biasanya mencakup perspektif berikut, KECUALI... {
+    ~A. Kontribusi Bisnis (Financial)
+    ~B. Orientasi Pengguna (Customer)
+    ~C. Keunggulan Operasional (Internal Process)
+    =D. Jumlah Pengikut di Media Sosial (Social Media Followers)
+    #### Feedback: BSC fokus pada kinerja strategis, bukan metrik media sosial yang tidak relevan dengan tata kelola TI internal[cite: 317].
+}
+
+// Soal 47: Bloom - Memahami (C2)
+::Q47:: Apa yang dimaksud dengan "Risk Tolerance" dalam manajemen risiko TI? {
+    ~A. Ketidakmampuan organisasi menghadapi masalah apa pun
+    =B. Tingkat variasi yang dapat diterima dari pencapaian tujuan atau risk appetite yang ditetapkan
+    ~C. Daftar semua karyawan yang sering melakukan kesalahan
+    ~D. Keinginan untuk mengambil risiko sebesar mungkin tanpa batas
+    #### Feedback: Toleransi risiko memberikan ruang gerak operasional di sekitar target risiko yang ditetapkan[cite: 962].
+}
+
+// Soal 48: Bloom - Menganalisis (C4)
+::Q48:: Auditor menemukan bahwa manajer TI juga menjabat sebagai admin keamanan (security administrator). Risiko utama dari situasi ini adalah... {
+    ~A. Gaji manajer akan menjadi dua kali lipat
+    =B. Kurangnya pengawasan independen dan potensi konflik kepentingan atau penyalahgunaan otoritas
+    ~C. Manajer akan terlalu sibuk untuk rapat
+    ~D. Sistem akan berjalan lebih cepat karena hanya satu orang yang mengelola
+    #### Feedback: Konflik kepentingan dapat muncul jika orang yang sama membuat aturan keamanan dan mengawasi kepatuhannya sendiri[cite: 1335, 1338].
+}
+
+// Soal 49: Bloom - Mengingat (C1)
+::Q49:: "IT Portfolio Management" membantu organisasi untuk... {
+    ~A. Membeli semua produk yang ditawarkan vendor
+    =B. Memilih campuran investasi TI yang tepat untuk memaksimalkan nilai dan meminimalkan risiko bagi organisasi
+    ~C. Menghitung jumlah kertas yang digunakan di kantor TI
+    ~D. Menyimpan foto-foto kegiatan kantor
+    #### Feedback: Manajemen portofolio menyeimbangkan antara risiko dan imbal hasil dari berbagai proyek TI[cite: 151, 158].
+}
+
+// Soal 50: Bloom - Memahami (C2)
+::Q50:: Apa peran "Chief Information Officer" (CIO) dalam tata kelola TI? {
+    ~A. Memperbaiki komputer yang rusak di meja karyawan
+    =B. Menghubungkan strategi TI dengan tujuan bisnis serta memimpin fungsi TI secara strategis
+    ~C. Menjadi admin backup harian
+    ~D. Menangani keluhan pelanggan tentang harga produk
+    #### Feedback: CIO adalah pemimpin strategis yang memastikan TI menjadi pendorong nilai bagi bisnis[cite: 392, 411].
+// Batch 3: Governance and Management of IT (Soal 51-75)
+
+// Soal 51: Bloom - Memahami (C2)
+::Q51:: Manakah dari berikut ini yang merupakan perbedaan utama antara Information Systems (IS) dan Information Technology (IT)? {
+    ~A. IT mencakup aspek manusia, sedangkan IS hanya perangkat keras
+    =B. IS memiliki komponen IT yang berinteraksi dengan manusia dan proses, sedangkan IT berfokus pada hardware dan software [cite: 334, 335]
+    ~C. IS adalah istilah lama untuk IT
+    ~D. IT mencakup strategi bisnis, sedangkan IS hanya operasional
+    #### Feedback: IS mencakup aktivitas strategis, manajerial, dan operasional yang melibatkan interaksi antara IT, manusia, dan proses[cite: 333, 334].
+}
+
+// Soal 52: Bloom - Mengingat (C1)
+::Q52:: Apa tujuan utama dari Business Continuity Plan (BCP) dan Disaster Recovery Plan (DRP)? {
+    ~A. Meningkatkan kecepatan server saat beban tinggi
+    =B. Memastikan ketersediaan layanan IT dengan mengembangkan proses pemulihan dan backup [cite: 831]
+    ~C. Mengurangi jumlah karyawan di departemen IT
+    ~D. Menghapus kebutuhan akan asuransi perusahaan
+    #### Feedback: BCP dan DRP dirancang untuk memastikan ketersediaan layanan melalui proses pemulihan yang efisien[cite: 831].
+}
+
+// Soal 53: Bloom - Menganalisis (C4)
+::Q53:: Seorang auditor IS menemukan bahwa organisasi tidak memiliki Service Level Agreement (SLA) untuk proses IT yang di-outsource. Risiko utamanya adalah... {
+    ~A. Perangkat keras akan lebih cepat rusak
+    =B. Aset organisasi tidak terlindungi dan tujuan bisnis mungkin tidak tercapai [cite: 834]
+    ~C. Karyawan akan sering datang terlambat
+    ~D. Database akan otomatis terenkripsi
+    #### Feedback: Tanpa SLA yang jelas, organisasi berisiko gagal memenuhi tujuan bisnis dan kehilangan perlindungan atas asetnya[cite: 834].
+}
+
+// Soal 54: Bloom - Memahami (C2)
+::Q54:: "Capacity Management" dalam operasional TI bertujuan untuk... {
+    ~A. Menghitung jumlah kursi di ruang rapat
+    =B. Mengurangi kemungkinan terjadinya peristiwa ancaman dengan memantau sumber daya infrastruktur [cite: 899, 903]
+    ~C. Menentukan harga jual perangkat lunak
+    ~D. Membatasi jumlah email yang dikirim karyawan
+    #### Feedback: Manajemen kapasitas membantu mengurangi kemungkinan gangguan dengan memastikan infrastruktur mampu menangani beban kerja[cite: 902, 903, 909].
+}
+
+// Soal 55: Bloom - Menerapkan (C3)
+::Q55:: Manakah dari berikut ini yang merupakan contoh kontrol korektif dalam manajemen operasional TI? {
+    ~A. Melakukan pelatihan phishing untuk pengguna
+    =B. Prosedur pemulihan dari cadangan (backup and recovery) [cite: 890, 907]
+    ~C. Memasang firewall pada perimeter jaringan
+    ~D. Menggunakan enkripsi untuk data sensitif
+    #### Feedback: Prosedur backup dan recovery adalah kontrol korektif karena digunakan untuk memperbaiki dampak setelah masalah terjadi[cite: 890, 900, 908].
+}
+
+// Soal 56: Bloom - Mengingat (C1)
+::Q56:: Dalam klasifikasi kontrol, manakah yang berfungsi untuk memberikan peringatan adanya pelanggaran kebijakan keamanan tanpa menghentikan tindakan tersebut? {
+    ~A. Preventive Control
+    =B. Detective Control [cite: 890]
+    ~C. Corrective Control
+    ~D. Deterrent Control
+    #### Feedback: Kontrol detektif memberikan peringatan tentang pelanggaran atau upaya pelanggaran kebijakan keamanan[cite: 890].
+}
+
+// Soal 57: Bloom - Menganalisis (C4)
+::Q57:: Organisasi mengimplementasikan sistem SCADA untuk infrastruktur kritis. Auditor IS harus merekomendasikan kontrol apa untuk memitigasi risiko terhadap nyawa manusia? {
+    ~A. Mengganti semua kabel dengan serat optik
+    =B. Segmentasi jaringan dan autentikasi multifaktor [cite: 874]
+    ~C. Mengurangi jumlah sensor yang digunakan
+    ~D. Menggunakan perangkat lunak antivirus gratis
+    #### Feedback: Lingkungan berisiko tinggi seperti SCADA memerlukan kontrol kuat seperti segmentasi jaringan dan multifaktor autentikasi[cite: 874].
+}
+
+// Soal 58: Bloom - Memahami (C2)
+::Q58:: Apa fungsi utama dari Incident Response Plan dalam perlindungan aset informasi? {
+    ~A. Menghapus semua email masuk dari pihak luar
+    =B. Meningkatkan perlindungan data dan sistem melalui penanganan insiden yang terstruktur [cite: 832]
+    ~C. Menghitung biaya lembur staf IT
+    ~D. Menentukan jadwal libur departemen keamanan
+    #### Feedback: Rencana respon insiden bertujuan untuk memitigasi konsekuensi dari serangan dan melindungi sistem secara berkelanjutan[cite: 832, 907].
+}
+
+// Soal 59: Bloom - Mengingat (C1)
+::Q59:: Manakah dari berikut ini yang merupakan contoh kontrol administratif atau manajerial? {
+    =A. Kebijakan dan prosedur perusahaan [cite: 840]
+    ~B. Aturan firewall
+    ~C. Gembok fisik pada pintu ruang server
+    ~D. Perangkat lunak antimalware
+    #### Feedback: Kontrol manajerial berkaitan dengan pengawasan, pelaporan, prosedur, dan operasi proses[cite: 840].
+}
+
+// Soal 60: Bloom - Menganalisis (C4)
+::Q60:: Auditor menemukan penggunaan Artificial Intelligence (AI) dalam sistem pengambilan keputusan. Hal yang paling krusial untuk dievaluasi adalah... {
+    ~A. Warna antarmuka pengguna aplikasi
+    =B. Tingkat keahlian yang digunakan dalam mengembangkan asumsi dasar dan formula AI [cite: 874]
+    ~C. Jumlah memori RAM pada server AI
+    ~D. Merk mouse yang digunakan oleh pengembang AI
+    #### Feedback: Karena AI mengandalkan pohon keputusan yang bisa bias, auditor harus memastikan keahlian yang tepat terlibat dalam pembuatannya[cite: 874].
+}
+
+// Soal 61: Bloom - Memahami (C2)
+::Q61:: Apa yang membedakan "Deterrent Control" dari jenis kontrol lainnya? {
+    ~A. Menghapus data secara otomatis saat ada serangan
+    =B. Memberikan peringatan yang dapat mencegah upaya kompromi yang disengaja atau tidak disengaja [cite: 890]
+    ~C. Memperbaiki sistem setelah terjadi kerusakan
+    ~D. Menyalin data ke lokasi yang sangat jauh
+    #### Feedback: Kontrol pencegah (deterrent) memberikan panduan atau peringatan untuk mencegah niat buruk atau kelalaian[cite: 890].
+}
+
+// Soal 62: Bloom - Mengingat (C1)
+::Q62:: Contoh kontrol teknis (logical control) dalam operasional TI adalah... {
+    ~A. Kebijakan pelatihan karyawan
+    =B. Aturan firewall dan sistem deteksi intrusi (IDS) [cite: 840]
+    ~C. Pagar kawat di sekeliling gedung
+    ~D. Prosedur perekrutan staf baru
+    #### Feedback: Kontrol teknis disediakan melalui penggunaan teknologi, peralatan, atau perangkat[cite: 840].
+}
+
+// Soal 63: Bloom - Menganalisis (C4)
+::Q63:: Mengapa auditor IS harus mengevaluasi proses Change Management dalam tata kelola TI? {
+    ~A. Untuk memastikan semua komputer menggunakan wallpaper yang sama
+    =B. Untuk memastikan integritas dan keandalan sistem melalui prosedur perubahan yang efektif [cite: 833]
+    ~C. Untuk mengurangi jumlah rapat antar departemen
+    ~D. Untuk menentukan siapa yang paling sering melakukan kesalahan coding
+    #### Feedback: Manajemen perubahan sangat penting untuk menjaga integritas sistem dan mencegah gangguan operasional[cite: 833].
+}
+
+// Soal 64: Bloom - Memahami (C2)
+::Q64:: Apa yang dimaksud dengan "Compensating Control" dalam konteks keterbatasan teknis? {
+    ~A. Kontrol yang memberikan kompensasi finansial kepada korban serangan
+    =B. Kontrol yang mengimbangi kelemahan struktur kontrol karena baseline control tidak dapat dipenuhi [cite: 890]
+    ~C. Kontrol yang menggantikan posisi direktur TI saat cuti
+    ~D. Kontrol yang secara otomatis menghapus virus
+    #### Feedback: Kontrol kompensasi digunakan saat kontrol standar tidak dapat diimplementasikan karena batasan bisnis atau teknis yang sah[cite: 890, 963].
+}
+
+// Soal 65: Bloom - Mengingat (C1)
+::Q65:: "Service Desk" dalam operasional TI diklasifikasikan sebagai kontrol yang bertujuan untuk... {
+    ~A. Memperbaiki server yang terbakar
+    =B. Mengurangi kemungkinan terjadinya risiko [cite: 900, 903, 911]
+    ~C. Menghapus kebutuhan akan dokumentasi audit
+    ~D. Menjual tiket perjalanan bagi karyawan
+    #### Feedback: Service desk adalah bagian dari aktivitas yang bertujuan mengurangi kemungkinan terjadinya insiden[cite: 903, 911].
+}
+
+// Soal 66: Bloom - Memahami (C2)
+::Q66:: Manakah pernyataan yang benar mengenai hubungan antara risiko dan kontrol? {
+    ~A. Risiko tidak memiliki kaitan dengan kontrol
+    =B. Risiko ditangani melalui kontrol, dan kontrol dibenarkan oleh risiko yang ditanganinya [cite: 951]
+    ~C. Kontrol harus selalu lebih mahal daripada risiko
+    ~D. Manajemen tidak perlu memetakan kontrol kembali ke risiko
+    #### Feedback: Terdapat hubungan langsung di mana kontrol harus traceable (tertelusur) ke risiko yang ingin dimitigasi[cite: 951, 958].
+}
+
+// Soal 67: Bloom - Menganalisis (C4)
+::Q67:: Auditor menemukan bahwa organisasi menggunakan kerangka kerja "CIS 18 Critical Security Controls". Apa manfaat utama dari penggunaan kerangka kerja preskriptif ini? {
+    ~A. Membuat laporan audit menjadi sangat tebal
+    =B. Memberikan set praktik terbaik yang diprioritaskan untuk memperkuat postur keamanan siber [cite: 973]
+    ~C. Menghilangkan kebutuhan akan staf keamanan siber
+    ~D. Menjamin organisasi 100% aman dari semua jenis hacker
+    #### Feedback: Kerangka kerja preskriptif seperti CIS 18 menyediakan panduan standar yang diprioritaskan untuk mitigasi risiko[cite: 971, 973].
+}
+
+// Soal 68: Bloom - Mengingat (C1)
+::Q68:: Dalam manajemen layanan email, risiko utama serangan rekayasa sosial (social engineering) dapat dimitigasi dengan... {
+    ~A. Mematikan semua akses email ke luar
+    =B. Spam filtering, verifikasi hyperlink, dan pelatihan phishing [cite: 874]
+    ~C. Menambah kapasitas penyimpanan inbox
+    ~D. Menggunakan font yang lebih besar pada badan email
+    #### Feedback: Pelatihan dan filter teknis sangat efektif dalam mengurangi kemungkinan serangan phishing berbasis email[cite: 874].
+}
+
+// Soal 69: Bloom - Memahami (C2)
+::Q69:: Apa tanggung jawab utama manajemen terkait pemantauan kontrol (control monitoring)? {
+    ~A. Menunggu auditor datang setiap tahun
+    =B. Mengidentifikasi penyimpangan kontrol sebelum audit frekuensi rendah dilakukan [cite: 987]
+    ~C. Menghapus semua log sistem yang mencatat kesalahan
+    ~D. Melakukan audit terhadap pekerjaan auditor eksternal
+    #### Feedback: Monitoring oleh manajemen membantu identifikasi masalah lebih awal dan memungkinkan tindakan korektif segera[cite: 987].
+}
+
+// Soal 70: Bloom - Mengingat (C1)
+::Q70:: Contoh kontrol fisik yang memerlukan pemeliharaan dan monitoring adalah... {
+    =A. Badge akses fisik dan kunci [cite: 840]
+    ~B. Kata sandi yang rumit
+    ~C. Algoritma enkripsi AES-256
+    ~D. Kebijakan penggunaan internet
+    #### Feedback: Badge akses dan kunci fisik adalah contoh kontrol untuk membatasi akses secara fisik ke fasilitas[cite: 840].
+}
+
+// Soal 71: Bloom - Menganalisis (C4)
+::Q71:: Auditor menemukan bahwa sebuah sistem tidak mendukung akun login individu. Kontrol kompensasi apa yang PALING tepat disarankan? {
+    ~A. Membiarkan saja karena batasan sistem
+    =B. Menambahkan mekanisme tantangan-respons pihak ketiga [cite: 890, 967]
+    ~C. Menulis kata sandi di atas mesin tersebut
+    ~D. Menonaktifkan mesin tersebut sepenuhnya
+    #### Feedback: Mekanisme tambahan dapat ditambahkan sebagai kontrol kompensasi untuk sistem yang tidak mendukung fitur keamanan standar[cite: 890, 967].
+}
+
+// Soal 72: Bloom - Memahami (C2)
+::Q72:: Mengapa dokumentasi pengecualian kontrol (control exception) yang diidentifikasi oleh manajemen penting bagi auditor? {
+    ~A. Sebagai bahan untuk menghukum karyawan
+    =B. Memberikan keyakinan bahwa kontrol bekerja efektif selama periode tertentu atau sedang diperbaiki [cite: 991, 999]
+    ~C. Untuk mengurangi jumlah halaman kertas kerja
+    ~D. Sebagai bukti bahwa departemen TI gagal
+    #### Feedback: Hasil monitoring manajemen dapat digunakan auditor sebagai bukti bahwa kontrol dipantau dan diperbaiki secara berkelanjutan[cite: 991, 999].
+}
+
+// Soal 73: Bloom - Mengingat (C1)
+::Q73:: Dalam tata kelola TI, "Database Administration" bertujuan untuk memastikan hal berikut pada sistem rekam, KECUALI... {
+    ~A. Kerahasiaan (Confidentiality)
+    ~B. Integritas (Integrity)
+    ~C. Ketersediaan (Availability)
+    =D. Popularitas (Popularity) [cite: 828]
+    #### Feedback: Administrasi database berfokus pada prinsip CIA (Confidentiality, Integrity, Availability)[cite: 828].
+}
+
+// Soal 74: Bloom - Memahami (C2)
+::Q74:: Apa yang dimaksud dengan "Quality Assurance" (QA) dalam konteks operasional TI? {
+    ~A. Menjamin bahwa semua hardware tidak akan pernah rusak
+    =B. Prosedur untuk memastikan kualitas sistem dan kepatuhan terhadap standar organisasi [cite: 856, 858]
+    ~C. Menghitung jumlah klik pada situs web perusahaan
+    ~D. Mengganti semua staf senior dengan staf junior
+    #### Feedback: QA adalah prosedur untuk memastikan bahwa operasional dan pengembangan memenuhi standar kualitas yang ditetapkan[cite: 856, 858].
+}
+
+// Soal 75: Bloom - Menganalisis (C4)
+::Q75:: Seorang auditor mengevaluasi "Infrastructure Monitoring". Dalam kerangka manajemen risiko, pemantauan ini berfungsi untuk... {
+    ~A. Menghapus data yang sudah tua
+    =B. Mengurangi kemungkinan (likelihood) terjadinya insiden [cite: 900, 903, 905]
+    ~C. Menambah biaya operasional bulanan
+    ~D. Memilih vendor perangkat keras baru
+    #### Feedback: Pemantauan infrastruktur adalah kontrol detektif yang membantu mengurangi kemungkinan insiden melalui deteksi dini[cite: 900, 903, 905, 906].
+// Batch 4: Governance and Management of IT (Soal 76-100)
+
+// Soal 76: Bloom - Mengingat (C1)
+::Q76:: Dalam "Shared Responsibility Model" pada layanan Cloud, siapa yang bertanggung jawab atas keamanan fisik infrastruktur pusat data? {
+    =A. Penyedia Layanan Cloud (Cloud Service Provider)
+    ~B. Pelanggan Cloud (Cloud Customer)
+    ~C. Auditor Eksternal
+    ~D. ISP Lokal
+    #### Feedback: Dalam SRM, penyedia layanan cloud (CSP) bertanggung jawab penuh atas keamanan fisik fasilitas infrastruktur[cite: 2].
+}
+
+// Soal 77: Bloom - Memahami (C2)
+::Q77:: Apa risiko utama yang terkait dengan strategi "Bring Your Own Device" (BYOD) dalam sebuah organisasi? {
+    ~A. Karyawan akan berhenti bekerja lebih cepat
+    =B. Kesulitan dalam mengontrol keamanan data organisasi pada perangkat pribadi yang tidak dikelola secara terpusat
+    ~C. Biaya pembelian perangkat keras perusahaan menjadi lebih mahal
+    ~D. Karyawan akan meminta kenaikan gaji karena menggunakan HP pribadi
+    #### Feedback: BYOD menimbulkan tantangan dalam Mobile Device Management (MDM) karena data perusahaan berada di perangkat yang juga digunakan untuk keperluan pribadi[cite: 2].
+}
+
+// Soal 81: Bloom - Menganalisis (C4)
+::Q78:: Seorang auditor IS mengevaluasi lingkungan SDN (Software-Defined Networking). Risiko spesifik yang harus diperhatikan adalah... {
+    ~A. Kabel jaringan yang terlalu berwarna-warni
+    =B. Kompromi pada pengontrol pusat (centralized controller) dapat menyebabkan kegagalan seluruh jaringan
+    ~C. Penggunaan bandwidth yang terlalu rendah
+    ~D. Kurangnya debu di ruang server
+    #### Feedback: SDN memiliki kerentanan di mana serangan pada pengontrol pusat dapat berdampak pada seluruh infrastruktur jaringan[cite: 2].
+}
+
+// Soal 79: Bloom - Mengingat (C1)
+::Q79:: Protokol enkripsi mana yang dianggap paling aman untuk jaringan Wireless LAN saat ini? {
+    ~A. WEP
+    ~B. WPA (versi awal)
+    =C. WPA3 (atau minimal WPA2 Enterprise)
+    ~D. Telnet tanpa enkripsi
+    #### Feedback: WEP sangat rentan, sementara WPA2/WPA3 adalah standar modern yang direkomendasikan untuk keamanan wireless[cite: 10].
+}
+
+// Soal 80: Bloom - Memahami (C2)
+::Q80:: Apa risiko terbesar dari perangkat Internet of Things (IoT) dalam jaringan perusahaan? {
+    ~A. Perangkat IoT terlalu mahal untuk dibeli
+    =B. Banyak perangkat IoT tidak memiliki fitur keamanan bawaan yang kuat dan sulit untuk diperbarui (patched)
+    ~C. Perangkat IoT membuat kantor menjadi terlalu otomatis
+    ~D. Baterai perangkat IoT sangat cepat habis
+    #### Feedback: Risiko IoT mencakup kurangnya kontrol keamanan standar dan kesulitan dalam manajemen kerentanan[cite: 10].
+}
+
+// Soal 81: Bloom - Menerapkan (C3)
+::Q81:: Untuk melindungi kerahasiaan data saat migrasi ke Cloud, organisasi harus memastikan... {
+    ~A. Semua karyawan memiliki akses ke root cloud
+    =B. Enkripsi data dilakukan baik saat transit maupun saat diam (at rest)
+    ~C. Migrasi dilakukan saat jam kerja sibuk
+    ~D. Tidak menggunakan password untuk akses cloud
+    #### Feedback: Enkripsi adalah kontrol utama untuk melindungi kerahasiaan data dalam model migrasi cloud yang aman[cite: 2].
+}
+
+// Soal 82: Bloom - Menganalisis (C4)
+::Q82:: Auditor menemukan penggunaan "Containerization" (seperti Docker) tanpa monitoring keamanan. Dampak risiko utamanya adalah... {
+    ~A. Kontainer akan memakan terlalu banyak ruang disk
+    =B. Kerentanan pada satu kontainer atau kernel host dapat menyebar ke kontainer lain (breakout)
+    ~C. Aplikasi akan berjalan lebih lambat
+    ~D. Pengembang akan malas menulis kode
+    #### Feedback: Best practice keamanan kontainer mencakup isolasi dan pemindaian citra (image scanning) untuk mencegah eksploitasi[cite: 2].
+}
+
+// Soal 83: Bloom - Mengingat (C1)
+::Q83:: Manakah dari berikut ini yang merupakan teknik utama dalam "Digital Forensics"? {
+    ~A. Menghapus log secara permanen
+    =B. Menjaga rantai hak asuh (Chain of Custody) untuk integritas bukti
+    ~C. Mengubah data pada hard drive yang disita
+    ~D. Mengasumsikan tersangka bersalah tanpa bukti
+    #### Feedback: Chain of custody sangat penting dalam forensik digital untuk memastikan bukti tetap valid di pengadilan[cite: 26].
+}
+
+// Soal 84: Bloom - Memahami (C2)
+::Q84:: Apa perbedaan antara "Vulnerability Assessment" dan "Penetration Testing"? {
+    ~A. Tidak ada perbedaan, keduanya identik
+    =B. Vulnerability assessment mencari celah, sedangkan penetration testing mencoba mengeksploitasi celah tersebut
+    ~C. Penetration testing hanya dilakukan oleh pemerintah
+    ~D. Vulnerability assessment dilakukan setiap hari, penetration testing setiap jam
+    #### Feedback: Penilaian kerentanan bersifat identifikasi, sementara uji penetrasi adalah simulasi serangan nyata untuk membuktikan dampak[cite: 10].
+}
+
+// Soal 85: Bloom - Menganalisis (C4)
+::Q85:: Organisasi mengalami serangan "Ransomware". Tindakan pemulihan korektif yang paling efektif adalah... {
+    ~A. Membayar tebusan segera tanpa bertanya
+    =B. Memulihkan data dari cadangan (backup) yang terisolasi dan offline
+    ~C. Memformat seluruh server dan mulai dari nol tanpa backup
+    ~D. Mematikan listrik kantor selamanya
+    #### Feedback: Mitigasi aktif ransomware melibatkan pemulihan dari backup yang aman dan tidak terinfeksi[cite: 10].
+}
+
+// Soal 86: Bloom - Mengingat (C1)
+::Q86:: Apa kegunaan utama dari SIEM (Security Information and Event Management)? {
+    ~A. Untuk membuat website perusahaan
+    =B. Mengumpulkan, menganalisis, dan mengorelasikan log dari berbagai sumber untuk deteksi ancaman
+    ~C. Menghitung gaji karyawan TI
+    ~D. Mengatur jadwal piket satpam
+    #### Feedback: SIEM membantu dalam monitoring keamanan dan respon insiden secara terpusat[cite: 17].
+}
+
+// Soal 87: Bloom - Memahami (C2)
+::Q87:: Dalam fase forensik komputer, "Imaging" dilakukan dengan tujuan... {
+    ~A. Membuat foto selfie auditor
+    =B. Membuat salinan identik (bit-by-bit) dari media penyimpanan tanpa mengubah aslinya
+    ~C. Mencetak laporan audit di kertas berwarna
+    ~D. Menghapus data secara permanen
+    #### Feedback: Imaging memastikan bahwa analisis dilakukan pada salinan, sehingga data asli tetap terjaga integritasnya untuk kebutuhan hukum[cite: 17].
+}
+
+// Soal 88: Bloom - Menerapkan (C3)
+::Q88:: Manakah dari kontrol berikut yang paling efektif untuk memitigasi risiko "Phishing" pada akun administratif cloud? {
+    ~A. Menggunakan password yang sangat panjang
+    =B. Implementasi Multifactor Authentication (MFA)
+    ~C. Mengganti username setiap hari
+    ~D. Menyembunyikan URL login cloud
+    #### Feedback: MFA memberikan lapisan keamanan tambahan yang sangat efektif meski password berhasil dicuri melalui phishing[cite: 874].
+}
+
+// Soal 89: Bloom - Menganalisis (C4)
+::Q89:: Auditor IS menemukan bahwa log akses ke data sensitif tidak pernah ditinjau. Risiko utama dari kondisi ini adalah... {
+    ~A. Ukuran file log akan menjadi terlalu besar
+    =B. Aktivitas tidak sah atau kebocoran data mungkin terjadi tanpa terdeteksi dalam waktu lama
+    ~C. Server log akan mengalami overheat
+    ~D. Karyawan akan berhenti login ke sistem
+    #### Feedback: Logging tanpa review berkala (monitoring) membuat kontrol detektif menjadi tidak efektif[cite: 17].
+}
+
+// Soal 90: Bloom - Mengingat (C1)
+::Q90:: Manakah dari berikut ini yang merupakan contoh dari "Privacy Data" yang harus dilindungi menurut regulasi? {
+    ~A. Nomor seri printer kantor
+    =B. Data kesehatan pasien dan nomor identitas nasional (NIK/SSN)
+    ~C. Daftar harga menu kantin
+    ~D. Jadwal rilis film di bioskop
+    #### Feedback: Data pribadi (PII/PHI) memerlukan perlindungan khusus sesuai undang-undang privasi global[cite: 626, 641].
+}
+
+// Soal 91: Bloom - Memahami (C2)
+::Q91:: Apa peran dari "Honeypot" dalam jaringan keamanan? {
+    ~A. Untuk menyimpan cadangan data rahasia
+    =B. Sebagai umpan untuk mengalihkan dan mempelajari perilaku penyerang
+    ~C. Untuk mempercepat koneksi database
+    ~D. Sebagai filter spam utama
+    #### Feedback: Honeypot adalah sistem jebakan yang dirancang untuk didatangi penyerang guna pemantauan[cite: 17].
+}
+
+// Soal 92: Bloom - Menerapkan (C3)
+::Q92:: Untuk memastikan kepatuhan terhadap standar industri kartu kredit (PCI DSS), auditor harus memastikan... {
+    ~A. Data kartu kredit disimpan dalam teks biasa (cleartext)
+    =B. Data kartu kredit dienkripsi saat disimpan dan ditransmisikan
+    ~C. Semua karyawan mengetahui nomor kartu kredit pelanggan
+    ~D. Tidak ada firewall yang membatasi akses ke data kartu
+    #### Feedback: PCI DSS mewajibkan enkripsi dan perlindungan ketat terhadap data pemegang kartu[cite: 36].
+}
+
+// Soal 93: Bloom - Menganalisis (C4)
+::Q93:: Auditor menemukan bahwa tim pengembang (DevOps) memiliki akses penuh ke database produksi. Kontrol terbaik untuk memperbaiki situasi ini tanpa menghambat kecepatan adalah... {
+    ~A. Menghapus seluruh tim pengembang
+    =B. Mengimplementasikan DevSecOps dengan otomatisasi kontrol keamanan dan akses "Just-In-Time"
+    ~C. Mengunci ruang server secara permanen
+    ~D. Meminta pengembang berjanji tidak akan mengubah data
+    #### Feedback: DevSecOps mengintegrasikan keamanan ke dalam siklus hidup pengembangan secara otomatis dan terkontrol[cite: 2].
+}
+
+// Soal 94: Bloom - Mengingat (C1)
+::Q94:: Manakah dari fase berikut yang merupakan tahap PERTAMA dalam proses respon insiden? {
+    =A. Persiapan (Preparation)
+    ~B. Penghancuran server
+    ~C. Pembayaran tebusan
+    ~D. Pelaporan ke media massa
+    #### Feedback: Persiapan adalah fondasi utama untuk menangani insiden secara efektif sebelum insiden itu terjadi[cite: 17].
+}
+
+// Soal 95: Bloom - Memahami (C2)
+::Q95:: Apa kegunaan utama dari "Digital Certificates" dalam PKI (Public Key Infrastructure)? {
+    ~A. Sebagai bukti kelulusan kuliah
+    =B. Untuk memverifikasi identitas pemilik kunci publik dan memastikan komunikasi aman
+    ~C. Untuk menghitung kecepatan enkripsi
+    ~D. Sebagai pengganti tanda tangan basah di dokumen kertas
+    #### Feedback: Sertifikat digital mengikat identitas dengan kunci publik untuk menjamin otentikasi[cite: 2].
+}
+
+// Soal 96: Bloom - Menganalisis (C4)
+::Q96:: Dalam lingkungan virtualisasi, risiko "VM Sprawl" merujuk pada... {
+    ~A. Server virtual yang terlalu cepat panas
+    =B. Pertumbuhan jumlah mesin virtual yang tidak terkontrol sehingga sulit dikelola dan diamankan
+    ~C. Penggunaan memori RAM yang sangat sedikit
+    ~D. Kerusakan pada kabel fisik server host
+    #### Feedback: Tanpa manajemen yang ketat, kemudahan membuat VM dapat menyebabkan kelebihan beban administrasi dan celah keamanan[cite: 2].
+}
+
+// Soal 97: Bloom - Mengingat (C1)
+::Q97:: Protokol yang digunakan untuk mengecek status pencabutan sertifikat digital secara real-time adalah... {
+    ~A. CRL
+    =B. OCSP
+    ~C. HTTP
+    ~D. SMTP
+    #### Feedback: Online Certificate Status Protocol (OCSP) memungkinkan pengecekan status sertifikat secara langsung[cite: 2].
+}
+
+// Soal 98: Bloom - Memahami (C2)
+::Q98:: Apa yang dimaksud dengan "Data Sovereignty" dalam kebijakan cloud? {
+    ~A. Data harus selalu disimpan di awan
+    =B. Data tunduk pada hukum negara tempat data tersebut secara fisik disimpan
+    ~C. Pemilik data tidak memiliki hak atas datanya sendiri
+    ~D. Data hanya boleh diakses oleh presiden sebuah negara
+    #### Feedback: Kedaulatan data adalah isu hukum penting di mana lokasi fisik data menentukan yurisdiksi hukum yang berlaku[cite: 627].
+}
+
+// Soal 99: Bloom - Menganalisis (C4)
+::Q99:: Auditor IS menemukan bahwa kunci enkripsi disimpan di folder yang sama dengan data terenkripsi. Risiko utamanya adalah... {
+    ~A. Kunci enkripsi akan hilang jika data dihapus
+    =B. Jika folder tersebut diakses, penyerang dapat mendekripsi data dengan mudah (enkripsi menjadi sia-sia)
+    ~C. Ukuran folder akan menjadi dua kali lipat
+    ~D. Sistem operasi akan berjalan lebih lambat
+    #### Feedback: Manajemen kunci yang buruk (menyimpan kunci bersama data) menghancurkan tujuan dari enkripsi itu sendiri[cite: 2].
+}
+
+// Soal 100: Bloom - Memahami (C2)
+::Q100:: Berapa persen bobot Domain 5 (Protection of Information Assets) dalam ujian CISA? {
+    ~A. 18 persen
+    ~B. 12 persen
+    =C. 26 persen
+    ~D. 50 persen
+    #### Feedback: Domain 5 merupakan domain dengan bobot terbesar bersama Domain 4, masing-masing sebesar 26 persen[cite: 44].
+}

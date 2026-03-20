@@ -1,0 +1,1517 @@
+// Soal 1
+
+::D1_Q1:: Manakah dari berikut ini yang paling objektif untuk menentukan ruang lingkup audit TI? {
+
+    ~Permintaan dari manajer departemen TI.
+
+    =Hasil dari penilaian risiko (risk assessment).
+
+    ~Ketersediaan anggaran departemen audit.
+
+    ~Jumlah staf audit yang tersedia saat ini.
+
+}
+
+
+
+// Soal 2
+
+::D1_Q2:: Seorang auditor sistem informasi menemukan bahwa perusahaan tidak memiliki kebijakan klasifikasi data. Tindakan pertama yang harus dilakukan auditor adalah... {
+
+    ~Menyarankan penggunaan enkripsi pada semua data.
+
+    ~Menulis laporan temuan kepada dewan direksi segera.
+
+    =Mengevaluasi dampak dari tidak adanya kebijakan tersebut terhadap kontrol keamanan.
+
+    ~Membuatkan draf kebijakan klasifikasi data untuk perusahaan.
+
+}
+
+
+
+// Soal 3
+
+::D1_Q3:: Apa tujuan utama dari uji kepatuhan (compliance testing) dalam audit TI? {
+
+    ~Menentukan keakuratan nilai transaksi keuangan.
+
+    =Memastikan bahwa kontrol internal beroperasi sesuai dengan prosedur yang ditetapkan.
+
+    ~Mendeteksi adanya kecurangan (fraud) dalam sistem.
+
+    ~Menilai efisiensi operasional dari pusat data.
+
+}
+
+
+
+// Soal 4
+
+::D1_Q4:: Dalam sampling statistik, jika auditor menurunkan tingkat risiko deteksi yang dapat diterima, maka ukuran sampel harus... {
+
+    =Ditingkatkan.
+
+    ~Dikurangi.
+
+    ~Tetap sama.
+
+    ~Dihapuskan.
+
+}
+
+
+
+// Soal 5
+
+::D1_Q5:: Manakah dari teknik berikut yang paling efektif untuk memverifikasi bahwa program yang berjalan di produksi adalah versi yang sah? {
+
+    ~Wawancara dengan manajer rilis.
+
+    ~Meninjau dokumentasi perubahan program.
+
+    =Melakukan perbandingan kode sumber (source code comparison).
+
+    ~Mengamati operator saat menjalankan program.
+
+}
+
+
+
+// Soal 6
+
+::D1_Q6:: Auditor menemukan bahwa kontrol akses login sangat lemah. Apa langkah selanjutnya yang paling tepat? {
+
+    ~Langsung melaporkannya sebagai temuan kritis.
+
+    =Mencari keberadaan kontrol kompensasi (compensating controls).
+
+    ~Menghentikan audit hingga kontrol diperbaiki.
+
+    ~Meminta administrator untuk mengganti semua password.
+
+}
+
+
+
+// Soal 7
+
+::D1_Q7:: Keuntungan utama menggunakan pendekatan Continuous Auditing adalah... {
+
+    ~Mengurangi kebutuhan akan staf auditor profesional.
+
+    ~Menghilangkan kebutuhan akan sampling audit.
+
+    =Memberikan deteksi dini terhadap penyimpangan kontrol secara real-time.
+
+    ~Mengurangi biaya audit secara keseluruhan secara signifikan.
+
+}
+
+
+
+// Soal 8
+
+::D1_Q8:: Selama pertemuan penutup (closing meeting), auditee tidak setuju dengan temuan auditor. Apa yang harus dilakukan auditor? {
+
+    ~Menghapus temuan dari laporan akhir.
+
+    ~Memaksa auditee untuk setuju dengan menandatangani dokumen.
+
+    =Mencatat ketidaksetujuan auditee dan menyertakan penjelasan posisi auditor dalam laporan.
+
+    ~Meminta nasihat dari pengacara eksternal.
+
+}
+
+
+
+// Soal 9
+
+::D1_Q9:: Manakah yang merupakan bukti audit yang paling andal? {
+
+    ~Hasil wawancara dengan staf operasional.
+
+    ~Salinan dokumen asli yang dikirim melalui email.
+
+    =Hasil pengamatan langsung oleh auditor secara independen.
+
+    ~Daftar periksa (checklist) yang diisi oleh manajer TI.
+
+}
+
+
+
+// Soal 10
+
+::D1_Q10:: CSA (Control Self-Assessment) memberikan tanggung jawab utama untuk memantau kontrol kepada... {
+
+    ~Auditor eksternal.
+
+    ~Departemen audit internal.
+
+    =Manajemen operasional dan pemilik proses bisnis.
+
+    ~Komite audit dewan komisaris.
+
+}
+
+
+
+// Soal 11
+
+::D1_Q11:: Apa risiko utama terkait dengan penggunaan teknik CAAT (Computer-Assisted Audit Techniques)? {
+
+    ~Biaya lisensi perangkat lunak yang mahal.
+
+    =Ketidakakuratan data sumber yang diekstraksi dari sistem produksi.
+
+    ~Kebutuhan akan pelatihan bagi staf TI.
+
+    ~Kehilangan integritas fisik server audit.
+
+}
+
+
+
+// Soal 12
+
+::D1_Q12:: Manakah dari berikut ini yang merupakan keuntungan utama dari pendekatan audit terintegrasi (integrated audit)? {
+
+    ~Audit TI dan audit operasional dilakukan pada waktu yang berbeda.
+
+    =Memahami hubungan antara kontrol TI dan proses bisnis yang didukungnya.
+
+    ~Mengurangi jumlah temuan audit yang dilaporkan ke manajemen.
+
+    ~Menghilangkan kebutuhan akan pengujian substantif.
+
+}
+
+
+
+// Soal 13
+
+::D1_Q13:: Seorang auditor TI menemukan bahwa log akses server tidak ditinjau secara berkala. Apa langkah mitigasi terbaik yang harus disarankan? {
+
+    ~Menghapus semua log yang berumur lebih dari 30 hari.
+
+    ~Menugaskan administrator sistem untuk meninjau log mereka sendiri.
+
+    =Mengimplementasikan alat pemantauan otomatis yang memberikan peringatan (alert) untuk aktivitas mencurigakan.
+
+    ~Menonaktifkan logging untuk meningkatkan performa server.
+
+}
+
+
+
+// Soal 14
+
+::D1_Q14:: Manakah yang paling menggambarkan tujuan dari Piagam Audit (Audit Charter)? {
+
+    ~Menentukan anggaran tahunan untuk departemen audit.
+
+    =Menetapkan wewenang, tanggung jawab, dan ruang lingkup fungsi audit.
+
+    ~Memberikan panduan teknis langkah-demi-langkah untuk audit server.
+
+    ~Mendefinisikan kriteria penilaian kinerja auditor individu.
+
+}
+
+
+
+// Soal 15
+
+::D1_Q15:: Auditor TI sedang menguji efektivitas pengendalian umum (General Controls). Manakah yang termasuk dalam pengujian ini? {
+
+    ~Validasi input pada aplikasi penggajian.
+
+    ~Perhitungan total batch pada transaksi penjualan.
+
+    =Prosedur manajemen perubahan (change management).
+
+    ~Pengecekan batas (limit check) pada input data umur.
+
+}
+
+
+
+// Soal 16
+
+::D1_Q16:: Dalam sampling atribut, 'expected error rate' paling baik ditentukan berdasarkan... {
+
+    ~Tingkat risiko deteksi yang ditetapkan oleh dewan.
+
+    =Pengalaman audit tahun sebelumnya atau pengujian pendahuluan.
+
+    ~Jumlah total populasi transaksi.
+
+    ~Opini dari manajemen departemen yang diaudit.
+
+}
+
+
+
+// Soal 17
+
+::D1_Q17:: Selama audit, ditemukan bahwa rencana pemulihan bencana (DRP) belum diperbarui selama dua tahun. Risiko terbesar adalah... {
+
+    ~Temuan dari auditor eksternal tahun depan.
+
+    ~Ketidakpatuhan terhadap standar ISO terbaru.
+
+    =Rencana tersebut mungkin tidak mencerminkan infrastruktur TI saat ini.
+
+    ~Peningkatan biaya premi asuransi perusahaan.
+
+}
+
+
+
+// Soal 18
+
+::D1_Q18:: Apa tujuan utama dari 'walkthrough' dalam tahap perencanaan audit? {
+
+    ~Untuk melakukan pengujian substantif pada transaksi.
+
+    =Untuk mengonfirmasi pemahaman auditor terhadap desain proses dan kontrol.
+
+    ~Untuk memberikan pelatihan kepada staf operasional.
+
+    ~Untuk menggantikan kebutuhan akan dokumentasi sistem.
+
+}
+
+
+
+// Soal 19
+
+::D1_Q19:: Manakah yang merupakan 'compensating control' jika seorang karyawan memiliki akses yang tidak seharusnya (segregation of duties conflict)? {
+
+    ~Menghapus hak akses karyawan tersebut segera.
+
+    ~Mewajibkan karyawan tersebut mengambil cuti tahunan.
+
+    =Review supervisi yang ketat dan independen terhadap laporan aktivitas karyawan tersebut.
+
+    ~Menambahkan enkripsi pada database yang diakses.
+
+}
+
+
+
+// Soal 20
+
+::D1_Q20:: Materialitas dalam audit TI ditentukan berdasarkan... {
+
+    ~Hanya pada nilai nominal aset yang hilang.
+
+    =Dampak kegagalan kontrol terhadap operasi bisnis dan integritas data.
+
+    ~Waktu yang dibutuhkan untuk menyelesaikan audit.
+
+    ~Preferensi pribadi dari ketua tim audit.
+
+}
+
+
+
+// Soal 21
+
+::D1_Q21:: Saat menggunakan teknik 'Integrated Test Facility' (ITF), auditor harus memastikan bahwa... {
+
+    ~Data uji diproses dalam lingkungan pengembangan.
+
+    =Data uji tidak mempengaruhi laporan keuangan yang sebenarnya (dummy data diisolasi).
+
+    ~Operator sistem tidak mengetahui adanya data uji.
+
+    ~Sistem dimatikan selama proses pengujian berlangsung.
+
+}
+
+
+
+// Soal 22
+
+::D1_Q22:: Apa perbedaan utama antara audit berkelanjutan (Continuous Auditing) dan pemantauan berkelanjutan (Continuous Monitoring)? {
+
+    ~Keduanya adalah hal yang sama dengan istilah berbeda.
+
+    =Auditing dilakukan oleh auditor, sedangkan monitoring dilakukan oleh manajemen.
+
+    ~Monitoring selalu dilakukan secara manual.
+
+    ~Auditing hanya dilakukan sekali setahun.
+
+}
+
+
+
+// Soal 23
+
+::D1_Q23:: Manakah dari berikut ini yang merupakan bukti audit 'paling lemah'? {
+
+    ~Log sistem yang dihasilkan secara otomatis.
+
+    ~Konfirmasi saldo dari pihak ketiga (bank).
+
+    =Penjelasan lisan dari staf yang bertanggung jawab atas proses tersebut.
+
+    ~Hasil inspeksi fisik server yang dilakukan auditor.
+
+}
+
+
+
+// Soal 24
+
+::D1_Q24:: Seorang auditor TI menemukan bahwa beberapa perubahan mendesak (emergency changes) dilakukan tanpa persetujuan awal. Langkah pertama adalah... {
+
+    ~Melaporkan tindakan tersebut sebagai pelanggaran berat.
+
+    ~Meminta sistem dikembalikan ke versi sebelumnya.
+
+    =Memverifikasi apakah perubahan tersebut telah didokumentasikan dan disetujui pasca-implementasi.
+
+    ~Mengabaikan hal tersebut karena sifatnya mendesak.
+
+}
+
+
+
+// Soal 25
+
+::D1_Q25:: Dalam audit sistem berbasis cloud, fokus utama auditor harus pada... {
+
+    ~Lokasi fisik rak server di pusat data penyedia cloud.
+
+    =Kejelasan tanggung jawab keamanan antara penyedia dan pelanggan (Shared Responsibility Model).
+
+    ~Merek perangkat keras yang digunakan oleh penyedia cloud.
+
+    ~Jumlah karyawan yang dimiliki oleh penyedia cloud.
+
+}
+
+
+
+// Soal 26
+
+::D1_Q26:: Apa kegunaan utama dari Statistical Sampling dibandingkan Non-statistical Sampling? {
+
+    ~Lebih cepat untuk dilakukan.
+
+    =Memungkinkan auditor untuk mengukur risiko sampling secara matematis.
+
+    ~Tidak memerlukan penilaian profesional (professional judgment).
+
+    ~Selalu menghasilkan sampel yang lebih sedikit.
+
+}
+
+
+
+// Soal 27
+
+::D1_Q27:: Manakah yang merupakan risiko inheren (inherent risk) dalam sebuah sistem? {
+
+    ~Risiko bahwa auditor gagal mendeteksi kesalahan.
+
+    ~Risiko bahwa firewall tidak dikonfigurasi dengan benar.
+
+    =Risiko terjadinya kesalahan karena kompleksitas proses bisnis itu sendiri.
+
+    ~Risiko bahwa staf TI mengundurkan diri secara mendadak.
+
+}
+
+
+
+// Soal 28
+
+::D1_Q28:: Dalam mengevaluasi kontrol aplikasi, auditor melakukan 'data integrity test'. Ini bertujuan untuk... {
+
+    ~Memastikan server aman dari serangan fisik.
+
+    =Memastikan data tetap konsisten dan akurat selama pemrosesan.
+
+    ~Memverifikasi kecepatan transaksi per detik.
+
+    ~Mengetahui kapasitas penyimpanan hard drive.
+
+}
+
+
+
+// Soal 29
+
+::D1_Q29:: Manakah dokumen yang paling penting untuk ditinjau saat merencanakan audit terhadap penyedia layanan pihak ketiga? {
+
+    ~Laporan keuangan tahunan penyedia layanan.
+
+    =Laporan Service Organization Control (SOC) 2 atau setara.
+
+    ~Brosur pemasaran dari penyedia layanan.
+
+    ~Struktur organisasi internal penyedia layanan.
+
+}
+
+
+
+// Soal 30
+
+::D1_Q30:: Setelah audit selesai, auditor harus menyimpan kertas kerja (working papers) terutama untuk... {
+
+    ~Menunjukkan kepada manajemen betapa kerasnya mereka bekerja.
+
+    =Memberikan dasar pendukung bagi kesimpulan dan opini auditor.
+
+    ~Digunakan sebagai template untuk audit perusahaan lain.
+
+    ~Memenuhi kapasitas penyimpanan arsip kantor.
+
+}
+
+
+
+// Soal 31
+
+::D1_Q31:: Teknik audit manakah yang paling efektif untuk menguji efektivitas pengendalian akses fisik ke pusat data? {
+
+    ~Meninjau daftar karyawan yang memiliki kartu akses.
+
+    ~Mewawancarai manajer fasilitas keamanan.
+
+    =Melakukan pengamatan langsung (observation) terhadap pintu masuk dan keluar.
+
+    ~Membaca kebijakan keamanan fisik perusahaan.
+
+}
+
+
+
+// Soal 32
+
+::D1_Q32:: Tujuan utama dari pengujian substantif (substantive testing) adalah untuk... {
+
+    ~Menilai desain kontrol internal.
+
+    =Menemukan kesalahan material dalam integritas data dan saldo.
+
+    ~Mengetahui apakah karyawan mematuhi prosedur operasional.
+
+    ~Mengurangi biaya audit tahunan.
+
+}
+
+
+
+// Soal 33
+
+::D1_Q33:: Seorang auditor TI menemukan bahwa log firewall menunjukkan upaya akses yang tidak sah berulang kali. Tindakan pertama auditor adalah... {
+
+    ~Segera mematikan firewall tersebut.
+
+    ~Menghapus alamat IP penyerang dari sistem.
+
+    =Menilai apakah upaya akses tersebut berhasil menembus sistem (impact assessment).
+
+    ~Melaporkan kejadian tersebut ke pihak kepolisian.
+
+}
+
+
+
+// Soal 34
+
+::D1_Q34:: Apa fungsi utama dari "Control Risk" dalam model risiko audit? {
+
+    ~Risiko bahwa auditor akan memberikan opini yang salah.
+
+    ~Risiko yang ada tanpa adanya kontrol sama sekali.
+
+    =Risiko bahwa kontrol internal tidak akan mencegah atau mendeteksi kesalahan tepat waktu.
+
+    ~Risiko bahwa perusahaan akan bangkrut.
+
+}
+
+
+
+// Soal 35
+
+::D1_Q35:: Manakah dari berikut ini yang merupakan contoh dari "Detective Control"? {
+
+    ~Penggunaan firewall untuk memblokir port tertentu.
+
+    ~Pemisahan tugas antara pengembang dan operator.
+
+    =Rekonsiliasi harian terhadap total transaksi bank.
+
+    ~Mewajibkan penggunaan autentikasi dua faktor (2FA).
+
+}
+
+
+
+// Soal 36
+
+::D1_Q36:: Dalam audit berbasis risiko, auditor harus mengalokasikan sumber daya audit terutama pada... {
+
+    ~Departemen yang paling kooperatif selama audit.
+
+    ~Aktivitas yang memiliki biaya operasional terendah.
+
+    =Area bisnis dengan risiko sisa (residual risk) yang tidak dapat diterima.
+
+    ~Sistem yang paling lama belum diaudit secara historis.
+
+}
+
+
+
+// Soal 37
+
+::D1_Q37:: Apa yang dimaksud dengan "Confidence Level" dalam sampling audit? {
+
+    ~Tingkat keyakinan auditor terhadap kejujuran manajemen.
+
+    =Probabilitas bahwa sampel yang diambil mewakili karakteristik populasi yang sebenarnya.
+
+    ~Jumlah kesalahan yang diharapkan ditemukan dalam sampel.
+
+    ~Waktu yang dibutuhkan untuk menyelesaikan pengujian sampel.
+
+}
+
+
+
+// Soal 38
+
+::D1_Q38:: Auditor TI menemukan bahwa cadangan data (backup) disimpan di ruangan yang sama dengan server produksi. Risiko utamanya adalah... {
+
+    ~Data cadangan akan cepat rusak karena suhu ruangan.
+
+    ~Pencurian data oleh pihak internal menjadi lebih mudah.
+
+    =Bencana fisik (seperti kebakaran) dapat memusnahkan data utama dan cadangannya sekaligus.
+
+    ~Waktu pemulihan data (restore time) akan menjadi lebih lambat.
+
+}
+
+
+
+// Soal 39
+
+::D1_Q39:: Mengapa auditor harus meninjau hasil audit tahun-tahun sebelumnya sebelum memulai penugasan baru? {
+
+    ~Untuk menyalin temuan lama ke laporan yang baru.
+
+    ~Untuk mengetahui siapa staf yang paling sering membuat kesalahan.
+
+    =Untuk mengidentifikasi tren masalah dan menindaklanjuti status perbaikan temuan sebelumnya.
+
+    ~Agar tidak perlu melakukan penilaian risiko lagi.
+
+}
+
+
+
+// Soal 40
+
+::D1_Q40:: Manakah dari berikut ini yang merupakan indikator terbaik dari independensi fungsi audit internal? {
+
+    ~Auditor memiliki latar belakang pendidikan TI yang kuat.
+
+    =Piagam audit memberikan akses tak terbatas ke semua catatan, personel, dan aset fisik.
+
+    ~Auditor internal sering makan siang bersama manajer TI.
+
+    ~Laporan audit hanya diberikan kepada manajer operasional TI.
+
+}
+
+
+
+// Soal 41
+
+::D1_Q41:: Dalam teknik "Parallel Simulation", auditor menggunakan... {
+
+    ~Data simulasi yang dijalankan pada sistem operasional.
+
+    ~Data asli yang dijalankan pada sistem duplikat milik vendor.
+
+    =Data asli yang dijalankan melalui program buatan auditor untuk dibandingkan hasilnya dengan program klien.
+
+    ~Data palsu yang dimasukkan secara manual ke dalam sistem akuntansi.
+
+}
+
+
+
+// Soal 42
+
+::D1_Q42:: Audit "Post-Implementation Review" (PIR) dilakukan untuk... {
+
+    ~Menyetujui anggaran proyek yang baru dimulai.
+
+    =Menilai apakah sistem yang baru diimplementasikan memenuhi tujuan bisnis dan kebutuhan pengguna.
+
+    ~Menentukan siapa yang bertanggung jawab atas kegagalan proyek selama pengembangan.
+
+    ~Menggantikan fase pengujian penerimaan pengguna (UAT).
+
+}
+
+
+
+// Soal 43
+
+::D1_Q43:: Apa langkah terpenting bagi auditor saat menemukan bukti adanya kecurangan (fraud) selama audit rutin? {
+
+    ~Menghadapi tersangka secara langsung untuk mendapatkan pengakuan.
+
+    ~Menghapus akses akun tersangka dengan segera.
+
+    =Melaporkan temuan tersebut kepada manajemen senior atau komite audit sesuai protokol.
+
+    ~Mempublikasikan temuan tersebut di papan pengumuman perusahaan.
+
+}
+
+
+
+// Soal 44
+
+::D1_Q44:: Penggunaan "Hash Totals" dalam kontrol aplikasi bertujuan untuk memverifikasi... {
+
+    ~Keaslian identitas pengguna yang melakukan input.
+
+    =Integritas data selama transmisi atau pemrosesan batch.
+
+    ~Jumlah uang yang ditransfer dalam satu periode.
+
+    ~Kerahasiaan data sensitif yang disimpan di database.
+
+}
+
+
+
+// Soal 45
+
+::D1_Q45:: Manakah dari berikut ini yang merupakan kelemahan utama dari wawancara sebagai teknik pengumpulan bukti audit? {
+
+    ~Wawancara memakan waktu terlalu lama.
+
+    =Informasi yang diberikan mungkin bersifat subyektif atau tidak akurat.
+
+    ~Auditor tidak diizinkan merekam pembicaraan.
+
+    ~Staf TI biasanya terlalu sibuk untuk diwawancarai.
+
+}
+
+
+
+// Soal 46
+
+::D1_Q46:: Apa tujuan dari "Exit Interview" di akhir penugasan audit? {
+
+    ~Memberikan surat peringatan kepada staf yang gagal dalam audit.
+
+    =Memastikan fakta-fakta dalam temuan audit sudah akurat dan dipahami oleh auditee.
+
+    ~Meminta auditee untuk menuliskan laporan audit final.
+
+    ~Menentukan bonus bagi tim audit.
+
+}
+
+
+
+// Soal 47
+
+::D1_Q47:: Seorang auditor menemukan bahwa sistem tidak memiliki log untuk aktivitas administrator (privileged users). Risiko tertingginya adalah... {
+
+    ~Sistem akan berjalan lebih lambat.
+
+    =Aktivitas berbahaya oleh pengguna dengan hak istimewa tidak dapat dilacak atau dideteksi.
+
+    ~Pengguna biasa tidak bisa login ke dalam sistem.
+
+    ~Kapasitas hard drive server akan cepat penuh.
+
+}
+
+
+
+// Soal 48
+
+::D1_Q48:: "Sampling Risk" adalah risiko bahwa... {
+
+    ~Auditor salah memilih perangkat lunak audit.
+
+    =Kesimpulan auditor berdasarkan sampel berbeda dengan kesimpulan jika seluruh populasi diuji.
+
+    ~Sampel yang diambil terlalu banyak sehingga menghabiskan biaya.
+
+    ~Data sampel hilang sebelum sempat dianalisis.
+
+}
+
+
+
+// Soal 49
+
+::D1_Q49:: Manakah yang paling tepat menggambarkan peran auditor TI dalam pengembangan sistem baru? {
+
+    ~Menulis kode program untuk fitur keamanan.
+
+    ~Mengelola anggaran proyek pengembangan.
+
+    =Menilai apakah kontrol keamanan yang memadai telah dirancang dan diuji.
+
+    ~Memilih vendor perangkat keras yang akan digunakan.
+
+}
+
+
+
+// Soal 50
+
+::D1_Q50:: Audit TI seringkali mencakup tinjauan terhadap SLA (Service Level Agreement). Fokus audit pada SLA adalah untuk memastikan... {
+
+    ~Penyedia layanan mendapatkan keuntungan yang maksimal.
+
+    =Layanan TI yang diberikan memenuhi kebutuhan bisnis dan ekspektasi yang disepakati.
+
+    ~Karyawan TI tidak bekerja lembur terlalu sering.
+
+    ~Perusahaan tidak membayar pajak yang terlalu tinggi untuk layanan tersebut.
+
+}
+
+
+
+// Soal 51
+
+::D1_Q51:: Manakah dari berikut ini yang paling baik mendeteksi modifikasi data yang tidak sah dalam database? {
+
+    ~Kebijakan kata sandi yang kuat.
+
+    =Meninjau log audit database (database audit logs).
+
+    ~Pemindaian kerentanan mingguan.
+
+    ~Penggunaan sistem deteksi intrusi (IDS).
+
+}
+
+
+
+// Soal 52
+
+::D1_Q52:: Apa tujuan utama dari pengujian "Black Box" dalam audit keamanan? {
+
+    ~Menguji pemahaman pengembang terhadap kode.
+
+    =Mensimulasikan serangan dari sudut pandang penyerang eksternal tanpa pengetahuan internal.
+
+    ~Memastikan seluruh baris kode telah dieksekusi.
+
+    ~Memeriksa dokumentasi arsitektur jaringan secara mendalam.
+
+}
+
+
+
+// Soal 53
+
+::D1_Q53:: Auditor TI menemukan bahwa beberapa temuan audit dari tahun lalu belum diperbaiki. Tindakan terbaik adalah... {
+
+    ~Mengabaikan temuan tersebut dan fokus pada hal baru.
+
+    ~Memperbaiki sendiri masalah tersebut untuk membantu manajemen.
+
+    =Menilai alasan keterlambatan dan melaporkan risiko sisa kepada komite audit.
+
+    ~Meminta departemen kepolisian untuk menyelidiki kelalaian tersebut.
+
+}
+
+
+
+// Soal 54
+
+::D1_Q54:: "Attribute Sampling" paling tepat digunakan ketika auditor ingin menguji... {
+
+    ~Kebenaran nilai moneter dalam saldo piutang.
+
+    =Keberadaan atau ketiadaan kontrol (Ya/Tidak).
+
+    ~Estimasi total berat fisik inventaris hardware.
+
+    ~Variabel numerik dalam laporan laba rugi.
+
+}
+
+
+
+// Soal 55
+
+::D1_Q55:: Dalam metodologi audit berbasis risiko, langkah pertama yang harus dilakukan adalah... {
+
+    ~Melakukan pengujian substantif.
+
+    =Mengidentifikasi proses bisnis utama dan aset TI terkait.
+
+    ~Menulis laporan audit final.
+
+    ~Menentukan ukuran sampel untuk setiap departemen.
+
+}
+
+
+
+// Soal 56
+
+::D1_Q56:: Apa kegunaan utama dari "Check Digit" dalam kontrol aplikasi? {
+
+    ~Mencegah akses yang tidak sah ke terminal input.
+
+    =Mendeteksi kesalahan transposisi atau transkripsi pada data identifikasi.
+
+    ~Menghitung total nilai transaksi dalam satu batch.
+
+    ~Memastikan data telah dienkripsi sebelum dikirim.
+
+}
+
+
+
+// Soal 57
+
+::D1_Q57:: Auditor TI sedang meninjau "Business Continuity Plan" (BCP). Indikator paling penting dari efektivitas BCP adalah... {
+
+    ~Rencana tersebut telah disetujui oleh CEO.
+
+    ~Dokumen rencana disimpan di lokasi yang aman.
+
+    =Hasil dari pengujian rencana secara berkala dan terdokumentasi.
+
+    ~Rencana tersebut ditulis oleh konsultan eksternal ternama.
+
+}
+
+
+
+// Soal 58
+
+::D1_Q58:: "Regression Testing" dilakukan setelah perubahan sistem untuk... {
+
+    ~Memastikan sistem berjalan lebih cepat dari sebelumnya.
+
+    =Memastikan bahwa perubahan baru tidak merusak fungsi yang sudah ada sebelumnya.
+
+    ~Melatih pengguna baru tentang cara menggunakan sistem.
+
+    ~Menghapus data lama yang tidak terpakai lagi.
+
+}
+
+
+
+// Soal 59
+
+::D1_Q59:: Manakah yang merupakan contoh "Preventive Control"? {
+
+    ~Log aktivitas sistem.
+
+    ~Alarm kebakaran yang berbunyi saat ada asap.
+
+    =Pemisahan tugas (Segregation of Duties) antara input dan otorisasi.
+
+    ~Laporan pengecualian (exception reports) mingguan.
+
+}
+
+
+
+// Soal 60
+
+::D1_Q60:: Auditor menemukan bahwa manajemen menerima risiko tinggi yang diidentifikasi dalam laporan audit tanpa melakukan perbaikan. Auditor harus... {
+
+    ~Memaksa manajemen untuk segera melakukan perbaikan.
+
+    ~Mengundurkan diri karena saran tidak didengarkan.
+
+    =Memastikan bahwa penerimaan risiko tersebut telah disetujui secara resmi oleh pimpinan senior atau dewan.
+
+    ~Mengubah temuan menjadi risiko rendah agar tidak menjadi masalah.
+
+}
+
+
+
+// Soal 61
+
+::D1_Q61:: Teknik "Snapshot" dalam CAAT digunakan untuk... {
+
+    ~Mengambil foto fisik pusat data.
+
+    =Menangkap jalur pemrosesan transaksi tertentu saat melewati logika program.
+
+    ~Menghapus log yang sudah terlalu besar.
+
+    ~Mencadangkan seluruh database ke media penyimpanan eksternal.
+
+}
+
+
+
+// Soal 62
+
+::D1_Q62:: Manakah dari berikut ini yang paling meningkatkan risiko sampling? {
+
+    ~Menggunakan perangkat lunak audit yang canggih.
+
+    =Ukuran sampel yang terlalu kecil.
+
+    ~Melakukan audit di luar jam kerja.
+
+    ~Memilih sampel secara acak menggunakan tabel statistik.
+
+}
+
+
+
+// Soal 63
+
+::D1_Q63:: "Materiality" dalam konteks audit sistem informasi paling tepat didefinisikan sebagai... {
+
+    ~Biaya untuk mengganti server yang rusak.
+
+    =Tingkat kesalahan atau kelalaian yang dapat mempengaruhi keputusan pengguna laporan.
+
+    ~Jumlah total perangkat lunak yang terpasang di perusahaan.
+
+    ~Berat fisik dari dokumen kertas kerja audit.
+
+}
+
+
+
+// Soal 64
+
+::D1_Q64:: Apa risiko utama dari "End-user Computing" (EUC) bagi organisasi? {
+
+    ~Karyawan menjadi terlalu mahir menggunakan komputer.
+
+    =Kurangnya kontrol pengembangan dan integritas data pada aplikasi buatan pengguna (seperti spreadsheet kompleks).
+
+    ~Peningkatan biaya listrik di kantor.
+
+    ~Karyawan menghabiskan waktu terlalu banyak untuk belajar software baru.
+
+}
+
+
+
+// Soal 65
+
+::D1_Q65:: Auditor TI menemukan bahwa cadangan data tidak pernah diuji untuk pemulihan (restore). Apa saran terbaik auditor? {
+
+    ~Membeli perangkat cadangan yang lebih mahal.
+
+    =Melakukan uji coba pemulihan data secara berkala untuk memastikan data dapat dibaca.
+
+    ~Menyimpan cadangan data di tiga lokasi berbeda.
+
+    ~Menghentikan proses cadangan karena tidak terjamin.
+
+}
+
+
+
+// Soal 66
+
+::D1_Q66:: "Social Engineering" paling efektif dicegah melalui... {
+
+    ~Pemasangan firewall generasi terbaru.
+
+    =Program kesadaran keamanan (security awareness) bagi karyawan.
+
+    ~Penggunaan enkripsi pada tingkat database.
+
+    ~Penerapan kebijakan kata sandi yang sangat panjang.
+
+}
+
+
+
+// Soal 67
+
+::D1_Q67:: Apa fungsi dari "Audit Trail"? {
+
+    ~Memberikan peta jalan bagi auditor menuju kantin perusahaan.
+
+    =Menyediakan rekaman kronologis aktivitas sistem untuk merekonstruksi kejadian.
+
+    ~Meningkatkan kecepatan pemrosesan transaksi harian.
+
+    ~Mengurangi penggunaan ruang disk pada server.
+
+}
+
+
+
+// Soal 68
+
+::D1_Q68:: Saat melakukan audit terhadap manajemen perubahan, auditor harus memverifikasi bahwa... {
+
+    ~Semua perubahan dilakukan oleh manajer senior secara langsung.
+
+    =Ada pemisahan tugas antara orang yang membuat perubahan dan orang yang menyetujuinya.
+
+    ~Perubahan tidak pernah dilakukan selama jam kerja.
+
+    ~Dokumentasi perubahan dibuang setelah satu bulan.
+
+}
+
+
+
+// Soal 69
+
+::D1_Q69:: Auditor TI menggunakan alat ekstraksi data untuk menganalisis seluruh populasi transaksi. Ini adalah contoh dari... {
+
+    ~Sampling statistik.
+
+    =Pengujian substantif (Substantive Testing).
+
+    ~Uji kepatuhan (Compliance Testing).
+
+    ~Penilaian risiko inheren.
+
+}
+
+
+
+// Soal 70
+
+::D1_Q70:: Manakah yang paling menunjukkan bahwa fungsi audit internal memiliki kualitas yang baik? {
+
+    ~Tidak pernah menemukan kesalahan di departemen TI.
+
+    =Adanya program penjaminan kualitas dan peningkatan berkelanjutan (QAIP).
+
+    ~Semua auditor memiliki masa kerja lebih dari 20 tahun.
+
+    ~Laporan audit selalu sangat singkat dan mudah dibaca.
+
+}
+
+
+
+// Soal 71
+
+::D1_Q71:: Auditor menemukan bahwa staf TI memiliki akses administratif ke sistem akuntansi. Risiko terbesarnya adalah... {
+
+    ~Staf TI akan merasa kewalahan dengan pekerjaan tambahan.
+
+    =Kemampuan untuk memodifikasi data keuangan tanpa meninggalkan jejak yang terdeteksi oleh kontrol bisnis.
+
+    ~Sistem akan sering mengalami crash karena beban akses.
+
+    ~Lisensi perangkat lunak akan menjadi lebih mahal.
+
+}
+
+
+
+// Soal 72
+
+::D1_Q72:: "Judgmental Sampling" digunakan ketika auditor... {
+
+    ~Ingin menggunakan rumus statistik yang rumit.
+
+    =Ingin memilih sampel berdasarkan pengetahuan dan pengalaman profesional mereka pada area berisiko tinggi.
+
+    ~Tidak memiliki waktu untuk memilih sampel.
+
+    ~Diminta oleh manajemen untuk memilih transaksi tertentu saja.
+
+}
+
+
+
+// Soal 73
+
+::D1_Q73:: Apa tujuan dari pengujian "Unit Testing" dalam pengembangan sistem? {
+
+    ~Menguji bagaimana seluruh sistem berinteraksi dengan sistem lain.
+
+    =Memastikan setiap modul atau komponen kecil kode berfungsi dengan benar secara individu.
+
+    ~Mendapatkan persetujuan dari pengguna akhir.
+
+    ~Menguji kecepatan jaringan antar kantor cabang.
+
+}
+
+
+
+// Soal 74
+
+::D1_Q74:: Manakah yang merupakan bukti audit yang paling kredibel saat memeriksa konfigurasi firewall? {
+
+    ~Pernyataan tertulis dari administrator jaringan.
+
+    =Tinjauan langsung terhadap file konfigurasi sistem (system-generated configuration).
+
+    ~Diagram jaringan yang digambar secara manual oleh staf TI.
+
+    ~Hasil wawancara dengan manajer keamanan informasi.
+
+}
+
+
+
+// Soal 75
+
+::D1_Q75:: Apa risiko utama dari "BYOD" (Bring Your Own Device) di lingkungan perusahaan? {
+
+    ~Karyawan meminta tunjangan pulsa lebih besar.
+
+    =Potensi kebocoran data perusahaan melalui perangkat pribadi yang tidak dikelola dengan baik.
+
+    ~Perangkat pribadi karyawan menjadi lebih cepat rusak.
+
+    ~Kesulitan dalam mengisi daya baterai perangkat di kantor.
+
+}
+
+
+
+// Soal 76
+
+::D1_Q76:: Auditor sedang mengevaluasi "Change Control Log". Apa yang harus ada dalam log tersebut untuk setiap entri? {
+
+    ~Nama anggota keluarga pengembang.
+
+    =Nomor referensi tiket permintaan, deskripsi perubahan, dan tanda tangan persetujuan.
+
+    ~Alamat rumah orang yang melakukan perubahan.
+
+    ~Merek komputer yang digunakan untuk melakukan perubahan.
+
+}
+
+
+
+// Soal 77
+
+::D1_Q77:: "Inherent Risk" dalam audit TI akan tetap tinggi jika... {
+
+    ~Kontrol internal diperkuat setiap hari.
+
+    =Proses bisnis sangat kompleks dan melibatkan volume transaksi yang sangat besar.
+
+    ~Auditor bekerja dengan sangat teliti.
+
+    ~Manajemen sering mengadakan rapat evaluasi.
+
+}
+
+
+
+// Soal 78
+
+::D1_Q78:: Manakah yang merupakan contoh dari "Corrective Control"? {
+
+    ~Firewall.
+
+    ~Password.
+
+    =Prosedur pemulihan dari cadangan (backup restoration) setelah serangan ransomware.
+
+    ~Kamera CCTV.
+
+}
+
+
+
+// Soal 79
+
+::D1_Q79:: Auditor menemukan bahwa "Service Desk" tidak mencatat semua keluhan pengguna. Apa dampak utamanya terhadap audit? {
+
+    ~Peningkatan biaya operasional departemen TI.
+
+    =Ketidakmampuan untuk menganalisis tren masalah sistem secara akurat.
+
+    ~Karyawan akan merasa lebih bahagia karena tidak ada catatan keluhan.
+
+    ~Server akan membutuhkan memori tambahan.
+
+}
+
+
+
+// Soal 80
+
+::D1_Q80:: Apa kegunaan dari "Engagement Letter" dalam audit eksternal? {
+
+    ~Sebagai surat lamaran kerja bagi auditor.
+
+    =Kontrak formal yang mendefinisikan tanggung jawab, ruang lingkup, dan biaya audit.
+
+    ~Daftar temuan audit yang harus segera diperbaiki.
+
+    ~Ucapan terima kasih dari auditee kepada auditor.
+
+}
+
+
+
+// Soal 81
+
+::D1_Q81:: Auditor TI menemukan bahwa kunci fisik ke ruang server disimpan di laci meja yang tidak terkunci. Langkah pertama adalah... {
+
+    ~Membeli kunci baru dengan biaya sendiri.
+
+    =Mendokumentasikan temuan dan menilai siapa saja yang memiliki akses ke area laci tersebut.
+
+    ~Melaporkan staf kebersihan ke pihak keamanan.
+
+    ~Memindahkan server ke ruangan lain.
+
+}
+
+
+
+// Soal 82
+
+::D1_Q82:: Dalam "Agile Development", dokumentasi seringkali minimal. Auditor harus... {
+
+    ~Memaksa tim untuk berhenti bekerja sampai dokumentasi lengkap.
+
+    =Mencari bukti kontrol melalui partisipasi dalam stand-up meeting atau tinjauan backlog.
+
+    ~Melaporkan proyek tersebut sebagai kegagalan total.
+
+    ~Menulis sendiri dokumentasi sistem untuk tim tersebut.
+
+}
+
+
+
+// Soal 83
+
+::D1_Q83:: Apa yang dimaksud dengan "Cold Site" dalam konteks pemulihan bencana? {
+
+    ~Pusat data yang suhunya sangat dingin.
+
+    =Lokasi alternatif yang memiliki infrastruktur dasar (listrik, AC) tetapi tidak ada perangkat keras komputer siap pakai.
+
+    ~Lokasi yang sudah memiliki data dan perangkat keras yang berjalan secara sinkron.
+
+    ~Ruangan khusus untuk menyimpan cadangan kaset tape.
+
+}
+
+
+
+// Soal 84
+
+::D1_Q84:: Penggunaan "Biometric Authentication" paling efektif untuk mengatasi risiko... {
+
+    ~Pencurian perangkat keras.
+
+    =Penyalahgunaan kredensial (seperti berbagi kata sandi antar karyawan).
+
+    ~Kerusakan data akibat virus.
+
+    ~Kegagalan pasokan listrik.
+
+}
+
+
+
+// Soal 85
+
+::D1_Q85:: Manakah yang merupakan langkah terakhir dalam proses audit? {
+
+    ~Pengumpulan bukti.
+
+    ~Penilaian risiko.
+
+    =Pemantauan tindak lanjut (follow-up) terhadap rekomendasi audit.
+
+    ~Pertemuan pembukaan (opening meeting).
+
+}
+
+
+
+// Soal 86
+
+::D1_Q86:: Apa risiko dari "Shadow IT" (penggunaan sistem TI tanpa sepengetahuan departemen TI)? {
+
+    ~Karyawan menjadi terlalu kreatif.
+
+    =Ketidakpatuhan terhadap standar keamanan dan kebijakan retensi data perusahaan.
+
+    ~Pengurangan beban kerja staf TI pusat.
+
+    ~Harga perangkat lunak menjadi lebih murah karena dibeli secara individu.
+
+}
+
+
+
+// Soal 87
+
+::D1_Q87:: "Vulnerability Assessment" bertujuan untuk... {
+
+    ~Mengeksploitasi sistem sampai rusak.
+
+    =Mengidentifikasi dan mengklasifikasikan kelemahan keamanan dalam sistem.
+
+    ~Memperbaiki semua lubang keamanan secara otomatis.
+
+    ~Menghukum staf TI yang lalai.
+
+}
+
+
+
+// Soal 88
+
+::D1_Q88:: Manakah dari berikut ini yang merupakan "Soft Skill" terpenting bagi seorang auditor TI? {
+
+    ~Kemampuan menulis kode dalam bahasa Python.
+
+    =Kemampuan komunikasi dan negosiasi yang efektif dengan auditee.
+
+    ~Keahlian dalam merakit server fisik.
+
+    ~Pengetahuan mendalam tentang sirkuit elektronik.
+
+}
+
+
+
+// Soal 89
+
+::D1_Q89:: Auditor menemukan banyak akun pengguna yang masih aktif meskipun karyawannya sudah keluar. Saran terbaik adalah... {
+
+    ~Menghapus akun tersebut setahun sekali.
+
+    =Mengintegrasikan proses pemutusan hubungan kerja (HR) dengan manajemen akses TI (provisioning/de-provisioning).
+
+    ~Mengganti kata sandi semua akun tersebut.
+
+    ~Membiarkan akun tersebut untuk berjaga-jaga jika karyawan kembali bekerja.
+
+}
+
+
+
+// Soal 90
+
+::D1_Q90:: "Steering Committee" TI bertanggung jawab untuk... {
+
+    ~Menulis kode program aplikasi bisnis.
+
+    =Memastikan proyek TI selaras dengan tujuan strategis organisasi.
+
+    ~Memperbaiki komputer karyawan yang rusak.
+
+    ~Melakukan audit harian terhadap database.
+
+}
+
+// Soal 91
+::D1_Q91:: Apa keuntungan utama dari "Cloud Computing" bagi audit? {
+    ~Auditor tidak perlu melakukan audit lagi.
+    =Adanya laporan audit standar (seperti SOC) dari penyedia layanan yang dapat ditinjau.
+    ~Data perusahaan menjadi tidak mungkin bisa dicuri.
+    ~Biaya audit menjadi nol rupiah.
+}
+
+// Soal 92
+::D1_Q92:: "Root Cause Analysis" dalam temuan audit bertujuan untuk... {
+    ~Menemukan siapa yang harus disalahkan.
+    =Mengidentifikasi masalah mendasar sehingga tindakan perbaikan dapat mencegah terulangnya masalah tersebut.
+    ~Menambah jumlah halaman dalam laporan audit.
+    ~Mempercepat waktu penyelesaian audit.
+}
+
+// Soal 93
+::D1_Q93:: Auditor TI sedang meninjau "Data Privacy Policy". Hal terpenting yang harus ada adalah... {
+    ~Daftar hobi semua karyawan.
+    =Pernyataan tentang bagaimana data pribadi dikumpulkan, digunakan, dan dilindungi.
+    ~Instruksi cara merakit komputer.
+    ~Sejarah berdirinya perusahaan.
+}
+
+// Soal 94
+::D1_Q94:: Manakah yang merupakan risiko terkait dengan "Outsourcing" fungsi TI? {
+    ~Peningkatan kendali manajemen internal atas proses TI.
+    =Ketergantungan yang berlebihan pada stabilitas keuangan dan kinerja vendor pihak ketiga.
+    ~Penurunan biaya komunikasi antar departemen.
+    ~Karyawan internal menjadi terlalu banyak waktu luang.
+}
+
+// Soal 95
+::D1_Q95:: "Quality Assurance" (QA) dalam pengembangan software bertujuan untuk... {
+    ~Memasarkan software ke pelanggan.
+    =Memastikan proses pengembangan mengikuti standar yang telah ditetapkan untuk menghasilkan produk berkualitas.
+    ~Menulis dokumentasi bantuan (help) bagi pengguna.
+    ~Menentukan harga jual software.
+}
+
+// Soal 96
+::D1_Q96:: Auditor menemukan bahwa file log disimpan tanpa enkripsi. Risiko utamanya adalah... {
+    ~File log akan menghabiskan ruang penyimpanan.
+    =Informasi sensitif atau kredensial dalam log dapat dibaca oleh pihak yang tidak berwenang.
+    ~Sistem akan menolak untuk menulis ke file log.
+    ~Auditor akan kesulitan membaca log tersebut.
+}
+
+// Soal 97
+::D1_Q97:: Apa tujuan dari "Pre-audit Meeting"? {
+    ~Untuk merayakan selesainya audit.
+    =Membahas ruang lingkup, jadwal, dan persyaratan data dengan auditee.
+    ~Menentukan hukuman bagi departemen yang diaudit.
+    ~Menandatangani laporan audit final.
+}
+
+// Soal 98
+::D1_Q98:: Manakah dari berikut ini yang merupakan kontrol terbaik terhadap "Data Entry Errors"? {
+    ~Mematikan monitor saat menginput data.
+    =Validasi input (seperti range checks dan format checks).
+    ~Menggunakan keyboard yang paling mahal.
+    ~Meminta karyawan bekerja lebih cepat.
+}
+
+// Soal 99
+::D1_Q99:: "Segregation of Duties" (SoD) paling sulit diterapkan di... {
+    ~Perusahaan multinasional besar.
+    =Organisasi atau departemen TI kecil dengan jumlah staf terbatas.
+    ~Instansi pemerintah pusat.
+    ~Bank internasional.
+}
+
+// Soal 100
+::D1_Q100:: Hasil akhir yang paling penting dari sebuah penugasan audit adalah... {
+    ~Kertas kerja yang sangat tebal.
+    =Laporan audit yang menyajikan temuan secara akurat dan rekomendasi yang memberikan nilai tambah.
+    ~Daftar kesalahan staf TI.
+    ~Sertifikat penghargaan untuk auditor.
+}
